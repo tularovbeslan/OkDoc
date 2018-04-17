@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Regular.otf">
+            <string>AvertaCY-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileInfoCell" rowHeight="303" id="2XA-id-s6w" customClass="ProfileInfoCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="303"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2XA-id-s6w" id="mKK-ZU-tA4">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="302.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курсы повышения квалификации" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfa-BC-sjc">
+                        <rect key="frame" x="18" y="10" width="295" height="49.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Az0-2r-AYQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-P6-8RP">
+                        <rect key="frame" x="18" y="74.5" width="295" height="218"/>
+                        <string key="text">• Диплом по специальности "Педиатрия", Смоленский медицинский государственный институт (1987 г.)
+
+• Интернатура по специальности "Педиатрия", (1988 г.) Диплом по специальности 
+
+• Диплом по специальности "Физиотерапия", Учебный центр при Смоленской областной клинической больнице (1996 г.)</string>
+                        <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dfa-BC-sjc" firstAttribute="top" secondItem="mKK-ZU-tA4" secondAttribute="top" constant="10" id="RLK-fW-9ON"/>
+                    <constraint firstAttribute="trailing" secondItem="dfa-BC-sjc" secondAttribute="trailing" constant="18" id="b5i-TD-Ifo"/>
+                    <constraint firstAttribute="bottom" secondItem="iey-P6-8RP" secondAttribute="bottom" constant="10" id="dBw-CR-bz7"/>
+                    <constraint firstItem="iey-P6-8RP" firstAttribute="leading" secondItem="mKK-ZU-tA4" secondAttribute="leading" constant="18" id="pDi-eT-QR4"/>
+                    <constraint firstAttribute="trailing" secondItem="iey-P6-8RP" secondAttribute="trailing" constant="18" id="rnN-YQ-iNL"/>
+                    <constraint firstItem="iey-P6-8RP" firstAttribute="top" secondItem="dfa-BC-sjc" secondAttribute="bottom" constant="15" id="xxT-3x-dIm"/>
+                    <constraint firstItem="dfa-BC-sjc" firstAttribute="leading" secondItem="mKK-ZU-tA4" secondAttribute="leading" constant="18" id="z9v-oY-HYd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="2.5" y="144.5"/>
+        </tableViewCell>
+    </objects>
+</document>

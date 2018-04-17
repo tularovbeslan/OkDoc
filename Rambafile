@@ -1,0 +1,41 @@
+### Headers settings
+company: BTR
+
+### Xcode project settings
+project_name: OkDoc
+xcodeproj_path: OkDoc.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: OkDoc
+
+# The file path for new modules
+project_file_path: OkDoc/PresentationLayer/
+
+# The Xcode group path to new modules
+project_group_path: OkDoc/PresentationLayer/
+
+### Tests generation settings section
+# The tests target name
+test_target: OkDocTests
+
+# The file path for new tests
+test_file_path: OkDocTests/
+
+# The Xcode group path to new tests
+test_group_path: OkDocTests/
+
+### Dependencies settings section
+podfile_path:
+
+### Templates
+templates:
+- {name: swifty_viper}
+
+### Create a reusable module in the specified directory
+#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/ReusableComponents'
+
+#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/Components'
+
+### Create a specific module in the specified directory
+#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/UserStories'

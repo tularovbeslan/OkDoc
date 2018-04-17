@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fK-Qo-KBE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Categoryselection View Controller-->
+        <scene sceneID="CMo-0p-3we">
+            <objects>
+                <viewController storyboardIdentifier="CategorySelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7fK-Qo-KBE" customClass="CategorySelectionViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdc-Dr-34C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наши врачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKB-rx-Qcv">
+                                <rect key="frame" x="18" y="22" width="201" height="43"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TKB-rx-Qcv" firstAttribute="leading" secondItem="iuJ-t1-Xj6" secondAttribute="leading" constant="18" id="bAk-QL-VVU"/>
+                            <constraint firstItem="TKB-rx-Qcv" firstAttribute="top" secondItem="iuJ-t1-Xj6" secondAttribute="top" constant="2" id="lA4-2m-6MK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iuJ-t1-Xj6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hz3-91-PwA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ggK-HX-uYb"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="74t-V4-yRh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kcV-FU-YRq">
+                                <rect key="frame" x="313" y="0.0" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="burger"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="titlelb" destination="TKB-rx-Qcv" id="TLX-lD-wTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2J-Sa-C5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="OPe-tN-EOf" customClass="CategorySelectionModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="categoryselectionViewController" destination="7fK-Qo-KBE" id="EY4-jL-1MI"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="527.20000000000005" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="burger" width="44" height="44"/>
+    </resources>
+</document>

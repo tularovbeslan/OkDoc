@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d2f-6Z-S7v">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="Ttb-wQ-xdS">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d2f-6Z-S7v" customClass="CategoryViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6c-cy-1ND">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTS-f5-I90">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="scrollIndicatorInsets" minX="18" minY="20" maxX="18" maxY="18"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FTS-f5-I90" firstAttribute="leading" secondItem="qeS-cK-GLu" secondAttribute="leading" id="W4A-cC-5PI"/>
+                            <constraint firstItem="qeS-cK-GLu" firstAttribute="bottom" secondItem="FTS-f5-I90" secondAttribute="bottom" id="ddS-Uz-aSd"/>
+                            <constraint firstItem="qeS-cK-GLu" firstAttribute="trailing" secondItem="FTS-f5-I90" secondAttribute="trailing" id="rj2-z7-Ge5"/>
+                            <constraint firstItem="FTS-f5-I90" firstAttribute="top" secondItem="qeS-cK-GLu" secondAttribute="top" id="syu-CP-Jq8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qeS-cK-GLu"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FTS-f5-I90" id="YcV-e6-8YA"/>
+                        <segue destination="TRY-df-mg1" kind="show" identifier="DoctorsListViewController" id="58u-dS-VCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5O-9r-veN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Rxs-CO-VsT" customClass="CategoryModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="categoryViewController" destination="d2f-6Z-S7v" id="e8b-8t-uyd"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="146" y="54"/>
+        </scene>
+        <!--DoctorsListViewController-->
+        <scene sceneID="DxC-Vr-BGP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DoctorsListViewController" id="TRY-df-mg1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHO-3C-VFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="52"/>
+        </scene>
+    </scenes>
+</document>
