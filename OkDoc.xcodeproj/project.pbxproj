@@ -7,23 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D11307FA5FEC456503E226 /* DialogModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289666241EDDF0E3731D9012 /* DialogModuleInput.swift */; };
 		026211C4AB1BA5EAB175FE73 /* CategoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEEDDDDD8BAB5E91BDF183C /* CategoryConfigurator.swift */; };
 		046183BAF81BED14F1AEA162 /* CategorySelectionViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331D6F4BB1537858974F91D /* CategorySelectionViewOutput.swift */; };
+		046789CFF7923E1E62FAA908 /* AppointmentInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219252A6ECDFCBAD48C2FA80 /* AppointmentInfoConfigurator.swift */; };
+		04C40493C1EA2506D65DDF37 /* QuestionnaireModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F749ED0C130A51287C3577 /* QuestionnaireModuleInput.swift */; };
+		081B8EBB7A0219E025AC85AE /* AppointmentInfoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE0E4FD2D377EBF2E33EFDD /* AppointmentInfoInteractorInput.swift */; };
+		0B75A6430369D29EA3E03631 /* AnalyzesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB664CC08742D1F7E6A0AE31 /* AnalyzesInteractorOutput.swift */; };
 		11293840D3DED723C4071DF7 /* CategorySelectionInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CB90CCDCE9994A47DD4A7 /* CategorySelectionInteractorInput.swift */; };
+		144D1CD4010FBFD072B40BB9 /* ConsultationAppointmentModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3169A609914D4CA53482C15 /* ConsultationAppointmentModuleInput.swift */; };
 		163F31CE52E899A15C3456CF /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D27B14849B947672F0B82 /* DoctorDetailViewController.swift */; };
+		195F164D0CE1D0E6D03A5F11 /* AppointmentInfoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90DBB40787B1B3F7258D16 /* AppointmentInfoViewInput.swift */; };
+		1A3190CC636892E9DBE56A17 /* DialogRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939EA2E61F9DB19BCCFB19A /* DialogRouterInput.swift */; };
+		1A4F20668A1AD05B45703740 /* ConsultationAppointmentRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48C166DF278F4729C15CF1 /* ConsultationAppointmentRouterInput.swift */; };
+		1A5D63345F9B3267D10569C8 /* DialogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C66F2E8902D6F4642044F /* DialogsInteractor.swift */; };
 		1BDF1DF81C61AA2FF5C6E5B6 /* DoctorDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F744499F57C2A746B66905 /* DoctorDetailConfigurator.swift */; };
 		1CF99A951241B827C99634E8 /* CategoryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90301F495D96975BE15FDC /* CategoryInteractorInput.swift */; };
 		20D3A7EED47EEE63BF6EFCAF /* CategorySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FFDB63EAD1BDECBC1AC734 /* CategorySelectionPresenter.swift */; };
 		23755E4EE21162B12A1FE4D6 /* SegmentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6898E04E6DAC9FE1A66E8DE9 /* SegmentBar.swift */; };
+		270FC5465F9E0C1DD3D5DD4C /* AnalyzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0436CB873ABD8E829A732AA /* AnalyzesViewController.swift */; };
 		283C6D063CC33459142EFACA /* DoctorsListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACFA72CFD80141BF639C374 /* DoctorsListInteractorInput.swift */; };
 		289B2D51BAE8A6BF0FE0B436 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A54C59DAB2E0EE44E3FCB /* CategoryViewController.swift */; };
+		2A4ACA050CE55B9D2B416BE0 /* ConsultationAppointmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC667CD9A483EB4655E936CB /* ConsultationAppointmentPresenter.swift */; };
 		2D7DD4C0B22208340B10BCC8 /* DoctorDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976627A39C1FEF284C48AE2 /* DoctorDetailInteractor.swift */; };
 		335ECFAF8D7487197B2CC1A1 /* CategoryViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB489F4985BB9B8218E573 /* CategoryViewOutput.swift */; };
 		341C818EA31E50D502576FDD /* CategoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44896E58436C99AD2E76B513 /* CategoryInteractorOutput.swift */; };
+		34F1F52CBCE1564E83FCBA44 /* DialogsModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC05C7F34E00BE504F9B1E /* DialogsModuleInput.swift */; };
 		386D6B5AE9C1204CB3DC7433 /* DoctorsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D02F7972C8FEA3CD7086F /* DoctorsListPresenter.swift */; };
+		38740782EBE6388D44AF97EE /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4165FA471760BA545241C5C /* QuestionnaireViewController.swift */; };
+		392D48E639D5B30256AFD71A /* AnalyzesModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6F3447F1CA88701C8192 /* AnalyzesModuleInput.swift */; };
+		3AD60DE43347D2958064B2BA /* QuestionnaireInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33BEC3BFFA7A5CAA80135 /* QuestionnaireInteractor.swift */; };
+		3E4A2C66BAE1C3DCBACEA7A1 /* AppointmentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFCF16A6C370D2C56F0ACA /* AppointmentInfoViewController.swift */; };
+		3F1B5F9D93511DE96F75BA09 /* ConsultationAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805915A887E3CF5B0B54661F /* ConsultationAppointmentViewController.swift */; };
 		407626AB7C82CFDC9CCC0456 /* CategorySelectionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9892A2006096680C60282 /* CategorySelectionViewInput.swift */; };
+		43F4B2F01E7840591576CAF4 /* DialogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CEF6369B47DF9E95A6FEC /* DialogInteractor.swift */; };
+		466BA809542E3E1593DD0181 /* DialogInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4900FDA1062A571640586 /* DialogInteractorOutput.swift */; };
+		47137116357C20F4AD6C4852 /* DialogsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B2A40EB29F99C37F54732 /* DialogsViewOutput.swift */; };
 		4913F58929F8B6814E7CA28E /* DoctorsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A12E967596E0747DC6A6F96 /* DoctorsListRouter.swift */; };
+		4A8184A24778A660609609FA /* QuestionnairePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0C99AEEA7973DAB3C572B /* QuestionnairePresenter.swift */; };
 		4BAC90547DE8F991464464BE /* DoctorDetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908F45AE42E70232D2A0328A /* DoctorDetailInteractorInput.swift */; };
+		4FCD2FACD09CC2C420B6FEDB /* DialogsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C46466AA9EEF75E148E2E /* DialogsRouterInput.swift */; };
+		51D22E5483D7F392E2C0E763 /* AppointmentInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5661CEAA350F3A39354DE /* AppointmentInfoInteractor.swift */; };
+		5253BAD09E74304335024D10 /* DialogsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16656C65533EEDE6F42E075 /* DialogsPresenter.swift */; };
 		562465DD207E589D0007751D /* DoctorInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562465DC207E589D0007751D /* DoctorInfoCell.swift */; };
 		562465DF207E58A70007751D /* DoctorInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562465DE207E58A70007751D /* DoctorInfoCell.xib */; };
 		562465E2207E8CA10007751D /* DoctorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562465E1207E8CA10007751D /* DoctorsViewModel.swift */; };
@@ -83,36 +108,83 @@
 		56EF4B3D2073F02200E48942 /* AppTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B3C2073F02200E48942 /* AppTabbar.swift */; };
 		56EF4B3F2073F1A500E48942 /* CategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */; };
 		56EF4B412073F3E300E48942 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B402073F3E300E48942 /* CategoryViewModel.swift */; };
+		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
+		5B7CBBBB512B9C24C038F9B9 /* AnalyzesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C661DF38C3AA361BBA92443 /* AnalyzesConfigurator.swift */; };
+		5D8310F0A4C6038E3349ACCF /* AnalyzesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C6D1B9BB0D46A8998A67E /* AnalyzesRouterInput.swift */; };
+		64766E3C2154764D527CBE51 /* QuestionnaireInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0EFC8A5C58C7E2F18002F /* QuestionnaireInteractorInput.swift */; };
 		665F01456A6AF48E70C299E7 /* DoctorDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80559A3B6B3BCA46C35106C9 /* DoctorDetailRouter.swift */; };
 		6AA5029573FA1434D85B656A /* CategorySelectionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D42624E7FD2A384E0799EF /* CategorySelectionRouterInput.swift */; };
+		6BEE14BE8D4A475F3E7127C6 /* AnalyzesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A230EB0764C3192C4366AA22 /* AnalyzesPresenter.swift */; };
 		6CEA321DF6CEDFD5F4D6A697 /* DoctorsListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71F4768FDF0F05ED8B6C44 /* DoctorsListViewInput.swift */; };
 		6F00B57ECE36581D01B8253A /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65991C60CA851FBD3864EB9D /* CategoryPresenter.swift */; };
 		6F208BF6F3F5A7E83C7710EA /* CategoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D830F1370D70B338FE8350 /* CategoryModuleInput.swift */; };
 		71D5D24B29E893D9F67BC450 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C2F4A27EFB708770C6C57F /* CategorySelectionViewController.swift */; };
+		72CEBC710A9E47FB8F23992F /* ConsultationAppointmentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C6BC0CFB9B02AA1D2A857 /* ConsultationAppointmentInteractor.swift */; };
+		7953B359F036AA64491A9A15 /* QuestionnaireViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29BCD5F42B6A21DF976A3BA /* QuestionnaireViewInput.swift */; };
 		7F5DD57C812328252C80F8D9 /* DoctorDetailInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE16B33FB82927BBD5A460D /* DoctorDetailInitializer.swift */; };
+		7FC9FE094EEF580527EF500F /* QuestionnaireViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07405017BF04043B41ABF6A7 /* QuestionnaireViewOutput.swift */; };
 		8114686663256D47B93E6BF4 /* CategoryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC02CABAE805745596ED5A1 /* CategoryInitializer.swift */; };
 		81D8DD5CEE23D1A336B5A140 /* CategoryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AB0C35E0726F4D93F5588 /* CategoryViewInput.swift */; };
+		8268DC7AB93EB2BF661643EA /* QuestionnaireRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281A9DCB7782CC1C0B4EB32E /* QuestionnaireRouterInput.swift */; };
 		84ED5866AB369C33B70EF2C0 /* DoctorsListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECECFCB673E7804C76E72BC /* DoctorsListRouterInput.swift */; };
+		85D50E8B6D77EF6B6180D77D /* ConsultationAppointmentViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4429218083D5179B79EC51 /* ConsultationAppointmentViewOutput.swift */; };
+		8653E8D1388618CB88A55D3C /* DialogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8BF5C95A2CA2558C0200C4 /* DialogPresenter.swift */; };
 		8984492C966112C11D07D5E4 /* CategorySelectionInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A720954E4FC19B3F5D6A9A41 /* CategorySelectionInitializer.swift */; };
+		8B6EAC27CBEDC16C3718F7E6 /* DialogViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B554F7652BDD6DF6846631 /* DialogViewInput.swift */; };
+		8B909C348C939BD76FB87473 /* ConsultationAppointmentInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7DAF138DAF822732A6CD5B /* ConsultationAppointmentInitializer.swift */; };
 		8BA2B96726F17EE36A3FAF6E /* CategorySelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58C560B1390FD251A7139E /* CategorySelectionRouter.swift */; };
 		8E81877A67A91E44218AEB8A /* CategorySelectionInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3778F342898743BB2E3E108B /* CategorySelectionInteractorOutput.swift */; };
+		8EC200C023B380438AE3A2D9 /* AnalyzesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979884CB83DDEFE604DCDF4A /* AnalyzesViewOutput.swift */; };
 		93AFABE414BE34713F0A8302 /* DoctorsListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998FC8BB5181F29C0D65DF31 /* DoctorsListModuleInput.swift */; };
+		970BE23BE2D3A28D60E53604 /* ConsultationAppointmentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605EA8BBE8F1A3B1094BA09 /* ConsultationAppointmentRouter.swift */; };
 		9C5FC87A6A71FFFA4B99D799 /* DoctorDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F835D2DC3DB8C59C1C3F8 /* DoctorDetailViewOutput.swift */; };
+		9EB03FEF55F4EECC9274C70D /* AnalyzesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7BB4AFCF7E4F1583381A3C /* AnalyzesInteractor.swift */; };
+		9FD59D9CC07BA97D7507A8EC /* AppointmentInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729152661ECA054FCA875BB /* AppointmentInfoPresenter.swift */; };
 		A10FE6C22BFE54421E876A28 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815CABB372B4B94CD3F006C /* CategoryInteractor.swift */; };
+		A2BED0BC1151DF605BCFE6F0 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5F4F7E40CC4BFC2DB88B /* DialogsViewController.swift */; };
 		A48CB0FC431EB9F8A40AA361 /* DoctorDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F1646BB9D18DFC5D687D29 /* DoctorDetailViewInput.swift */; };
+		A63635CF126CBB4B186B4695 /* ConsultationAppointmentViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE63149CCB38BB8FC7B9CF /* ConsultationAppointmentViewInput.swift */; };
+		AB623B563D0C9AC8AD786773 /* AppointmentInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97593D5E89AD7805918F19 /* AppointmentInfoRouter.swift */; };
+		AC70D504485FF244EB7C49D8 /* AppointmentInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F33AE9E21884EEB5B6F85B /* AppointmentInfoRouterInput.swift */; };
+		ADFA777981EA59E230E1CCDE /* AppointmentInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE4DDFAA9303EE107BA729 /* AppointmentInfoInteractorOutput.swift */; };
+		AE4776ED1FD0F9D13B1889C7 /* DialogsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CD806A6622AA33A6DFB1DB /* DialogsConfigurator.swift */; };
 		B51CC6AFD17402C9D394F97A /* DoctorsListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AF5ABB0635CFE8D627FF88 /* DoctorsListInteractorOutput.swift */; };
+		B5E5B783B9EC2894FCE627C4 /* AppointmentInfoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771CDFB03BEA1D6FA0479AD /* AppointmentInfoViewOutput.swift */; };
+		B77C895A2BF21E27F4BE889D /* AnalyzesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB2C0881552478690E9475 /* AnalyzesRouter.swift */; };
+		B8E3E078655A97476C8013D2 /* ConsultationAppointmentInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45612E01E32FD6CB765740B7 /* ConsultationAppointmentInteractorOutput.swift */; };
 		B9E6CEE61A9D01D2846C3DDD /* DoctorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C37A0102BB91E78F1E0F6FB /* DoctorsListViewController.swift */; };
 		BB2F726E2B649A45B7DF3249 /* CategorySelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FCCF10DBAF4E65C8B9045C /* CategorySelectionInteractor.swift */; };
+		BC299CCECE9327336BCEE007 /* ConsultationAppointmentInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EE1E26B2ABA93C0902E77D /* ConsultationAppointmentInteractorInput.swift */; };
 		BEEBBBB6A452C25A3A9B4833 /* DoctorsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164EACB263F59DCB2F715AE /* DoctorsListConfigurator.swift */; };
+		BF0BD7047B37CECFEC40E0D1 /* DialogInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D901FE03CDCEADDEF2F87C /* DialogInitializer.swift */; };
+		C02218D2EB81467180ECA224 /* AnalyzesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988166CF992589245B22AD5 /* AnalyzesViewInput.swift */; };
+		C0B0F219934EEA33783F69ED /* QuestionnaireInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686CA0AC97914F176C23988 /* QuestionnaireInitializer.swift */; };
 		C3403AFA0B2A558B25D7C7B3 /* DoctorDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255AA6AD65CFCFDD05B0A9F /* DoctorDetailPresenter.swift */; };
 		C56777144A81F3918423E1D6 /* CategorySelectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE096AD94A99E06415FABDD /* CategorySelectionConfigurator.swift */; };
+		C5F87779E519EABBF61E8DD7 /* DialogsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE0583C696EBA915769667 /* DialogsRouter.swift */; };
+		C6F1EC2FDCF1E1A88465A53C /* AnalyzesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6520C053B3346B5B7F82C /* AnalyzesInteractorInput.swift */; };
+		C9A1EC5BC7625EFE632BB8F7 /* AnalyzesInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02E9405C87C7E3A942205B /* AnalyzesInitializer.swift */; };
 		C9A953288A668E764473D4F9 /* DoctorsListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED0E396BFC71F29588792 /* DoctorsListViewOutput.swift */; };
+		C9F90C5B3D0210237CFF087B /* DialogsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F838A06B3D8FDC917B2D0 /* DialogsInteractorInput.swift */; };
 		CA72A3898C5BF1E8EDECBEA6 /* DoctorsListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E0299E80AE7D7CDE4175F /* DoctorsListInitializer.swift */; };
+		CB70428A2DF98F157CC31D94 /* DialogsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C741ACCF0113C0277238BAA2 /* DialogsViewInput.swift */; };
 		CBD24127B347344BE020AD37 /* DoctorDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322DC24D12D07D7CF7C41A9 /* DoctorDetailRouterInput.swift */; };
 		CE93BAB0390FD57561224541 /* DoctorDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24FC3ECE4A3548123991438 /* DoctorDetailModuleInput.swift */; };
+		D08FD9C724FFB11AECAC015C /* AppointmentInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6198C56F3FE7EAB47EFA0 /* AppointmentInfoModuleInput.swift */; };
+		D1420A13129A7BEF89348450 /* DialogsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C098FBDCC46B3229BDB803 /* DialogsInitializer.swift */; };
 		D46FB9618881E61AED112628 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B8B152FC6774B29893682 /* CategoryRouter.swift */; };
+		D63403C9225721503BE9133E /* QuestionnaireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CB03250CBB34DA708EB5 /* QuestionnaireRouter.swift */; };
 		D822DBC335643F85B233896C /* CategorySelectionModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB560EEE5084BB42F8D9883 /* CategorySelectionModuleInput.swift */; };
+		D93D81CAF70D515CBA2EC59F /* DialogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC18745A618872EB2A50F0 /* DialogViewOutput.swift */; };
+		DFFB2E512C1730DCEE029785 /* DialogInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5CA5205E4C1269B6F8F5F /* DialogInteractorInput.swift */; };
+		E01494B1D6736329840E9FED /* DialogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E29AF4A7B6302E90E7BFB /* DialogRouter.swift */; };
+		E1EA6A98AD778739A97CD4E1 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B467BDD03FBE48860498BD0 /* DialogViewController.swift */; };
+		E77752F05A10612D6B19F8A0 /* ConsultationAppointmentConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F5B42E7E4BDDFA9AA6346 /* ConsultationAppointmentConfigurator.swift */; };
+		F16E672C22521719FF7644E1 /* QuestionnaireInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02475A4861B8C9F38E519FA8 /* QuestionnaireInteractorOutput.swift */; };
+		F22E8B4CB70F594C3C1398AD /* AppointmentInfoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450AC0C3ADE2BEBBC48AF1C /* AppointmentInfoInitializer.swift */; };
+		FB6B8F0425068691B2DD3BDC /* QuestionnaireConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD8C2A97307669EFA5F16E /* QuestionnaireConfigurator.swift */; };
 		FBCECB8B70A3C122284203BC /* DoctorsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D05C5317C8ECDE588AB4D /* DoctorsListInteractor.swift */; };
+		FC0A653AD5324DA30BC1341F /* DialogsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8939EB6E08CAE2999F897A /* DialogsInteractorOutput.swift */; };
 		FDC0234C5BEB5A18A6C0E6E3 /* DoctorDetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B372DBDFE1843EC926877A /* DoctorDetailInteractorOutput.swift */; };
 /* End PBXBuildFile section */
 
@@ -135,18 +207,46 @@
 
 /* Begin PBXFileReference section */
 		01FCCF10DBAF4E65C8B9045C /* CategorySelectionInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionInteractor.swift; sourceTree = "<group>"; };
+		022CEF6369B47DF9E95A6FEC /* DialogInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogInteractor.swift; sourceTree = "<group>"; };
+		023E29AF4A7B6302E90E7BFB /* DialogRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogRouter.swift; sourceTree = "<group>"; };
+		02475A4861B8C9F38E519FA8 /* QuestionnaireInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInteractorOutput.swift; sourceTree = "<group>"; };
+		03F33AE9E21884EEB5B6F85B /* AppointmentInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoRouterInput.swift; sourceTree = "<group>"; };
+		07405017BF04043B41ABF6A7 /* QuestionnaireViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewOutput.swift; sourceTree = "<group>"; };
+		07FE4DDFAA9303EE107BA729 /* AppointmentInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoInteractorOutput.swift; sourceTree = "<group>"; };
+		09B554F7652BDD6DF6846631 /* DialogViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogViewInput.swift; sourceTree = "<group>"; };
 		09BC615A90C4E219D5BF69D4 /* CategoryRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryRouterInput.swift; sourceTree = "<group>"; };
 		10F744499F57C2A746B66905 /* DoctorDetailConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailConfigurator.swift; sourceTree = "<group>"; };
 		185F835D2DC3DB8C59C1C3F8 /* DoctorDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewOutput.swift; sourceTree = "<group>"; };
 		1976627A39C1FEF284C48AE2 /* DoctorDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailInteractor.swift; sourceTree = "<group>"; };
+		1B8939EB6E08CAE2999F897A /* DialogsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsInteractorOutput.swift; sourceTree = "<group>"; };
 		1BA9892A2006096680C60282 /* CategorySelectionViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewInput.swift; sourceTree = "<group>"; };
 		1D3CB90CCDCE9994A47DD4A7 /* CategorySelectionInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionInteractorInput.swift; sourceTree = "<group>"; };
+		219252A6ECDFCBAD48C2FA80 /* AppointmentInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoConfigurator.swift; sourceTree = "<group>"; };
+		281A9DCB7782CC1C0B4EB32E /* QuestionnaireRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireRouterInput.swift; sourceTree = "<group>"; };
+		289666241EDDF0E3731D9012 /* DialogModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogModuleInput.swift; sourceTree = "<group>"; };
+		2939EA2E61F9DB19BCCFB19A /* DialogRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogRouterInput.swift; sourceTree = "<group>"; };
+		2B1C6D1B9BB0D46A8998A67E /* AnalyzesRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesRouterInput.swift; sourceTree = "<group>"; };
+		2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogConfigurator.swift; sourceTree = "<group>"; };
 		2C37A0102BB91E78F1E0F6FB /* DoctorsListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListViewController.swift; sourceTree = "<group>"; };
 		2CEED0E396BFC71F29588792 /* DoctorsListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListViewOutput.swift; sourceTree = "<group>"; };
+		2E7DAF138DAF822732A6CD5B /* ConsultationAppointmentInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentInitializer.swift; sourceTree = "<group>"; };
+		2F35CB03250CBB34DA708EB5 /* QuestionnaireRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireRouter.swift; sourceTree = "<group>"; };
+		31D901FE03CDCEADDEF2F87C /* DialogInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogInitializer.swift; sourceTree = "<group>"; };
 		333D05C5317C8ECDE588AB4D /* DoctorsListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListInteractor.swift; sourceTree = "<group>"; };
+		3686CA0AC97914F176C23988 /* QuestionnaireInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInitializer.swift; sourceTree = "<group>"; };
 		3778F342898743BB2E3E108B /* CategorySelectionInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionInteractorOutput.swift; sourceTree = "<group>"; };
+		38CD806A6622AA33A6DFB1DB /* DialogsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsConfigurator.swift; sourceTree = "<group>"; };
+		3B8B2A40EB29F99C37F54732 /* DialogsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsViewOutput.swift; sourceTree = "<group>"; };
+		3E02E9405C87C7E3A942205B /* AnalyzesInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesInitializer.swift; sourceTree = "<group>"; };
+		41E33BEC3BFFA7A5CAA80135 /* QuestionnaireInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInteractor.swift; sourceTree = "<group>"; };
 		432D27B14849B947672F0B82 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
 		44896E58436C99AD2E76B513 /* CategoryInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryInteractorOutput.swift; sourceTree = "<group>"; };
+		45612E01E32FD6CB765740B7 /* ConsultationAppointmentInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentInteractorOutput.swift; sourceTree = "<group>"; };
+		467F838A06B3D8FDC917B2D0 /* DialogsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsInteractorInput.swift; sourceTree = "<group>"; };
+		4B467BDD03FBE48860498BD0 /* DialogViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		4ED0C99AEEA7973DAB3C572B /* QuestionnairePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnairePresenter.swift; sourceTree = "<group>"; };
+		50FE6F3447F1CA88701C8192 /* AnalyzesModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesModuleInput.swift; sourceTree = "<group>"; };
+		51B4900FDA1062A571640586 /* DialogInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogInteractorOutput.swift; sourceTree = "<group>"; };
 		51D42624E7FD2A384E0799EF /* CategorySelectionRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionRouterInput.swift; sourceTree = "<group>"; };
 		5255AA6AD65CFCFDD05B0A9F /* DoctorDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailPresenter.swift; sourceTree = "<group>"; };
 		53C2F4A27EFB708770C6C57F /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
@@ -214,39 +314,83 @@
 		56EF4B3C2073F02200E48942 /* AppTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbar.swift; sourceTree = "<group>"; };
 		56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryViewController.storyboard; sourceTree = "<group>"; };
 		56EF4B402073F3E300E48942 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		5988166CF992589245B22AD5 /* AnalyzesViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesViewInput.swift; sourceTree = "<group>"; };
+		5A4429218083D5179B79EC51 /* ConsultationAppointmentViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentViewOutput.swift; sourceTree = "<group>"; };
+		5D90DBB40787B1B3F7258D16 /* AppointmentInfoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewInput.swift; sourceTree = "<group>"; };
+		5DE0EFC8A5C58C7E2F18002F /* QuestionnaireInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInteractorInput.swift; sourceTree = "<group>"; };
+		64EC05C7F34E00BE504F9B1E /* DialogsModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsModuleInput.swift; sourceTree = "<group>"; };
 		65991C60CA851FBD3864EB9D /* CategoryPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		6898E04E6DAC9FE1A66E8DE9 /* SegmentBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SegmentBar.swift; sourceTree = "<group>"; };
+		69EE1E26B2ABA93C0902E77D /* ConsultationAppointmentInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentInteractorInput.swift; sourceTree = "<group>"; };
 		6A12E967596E0747DC6A6F96 /* DoctorsListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListRouter.swift; sourceTree = "<group>"; };
 		6A4A54C59DAB2E0EE44E3FCB /* CategoryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6A4B8B152FC6774B29893682 /* CategoryRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		6A8BF5C95A2CA2558C0200C4 /* DialogPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogPresenter.swift; sourceTree = "<group>"; };
 		6BB560EEE5084BB42F8D9883 /* CategorySelectionModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionModuleInput.swift; sourceTree = "<group>"; };
+		71A5CA5205E4C1269B6F8F5F /* DialogInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogInteractorInput.swift; sourceTree = "<group>"; };
+		7450AC0C3ADE2BEBBC48AF1C /* AppointmentInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoInitializer.swift; sourceTree = "<group>"; };
+		7605EA8BBE8F1A3B1094BA09 /* ConsultationAppointmentRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentRouter.swift; sourceTree = "<group>"; };
+		7771CDFB03BEA1D6FA0479AD /* AppointmentInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewOutput.swift; sourceTree = "<group>"; };
+		79CC18745A618872EB2A50F0 /* DialogViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogViewOutput.swift; sourceTree = "<group>"; };
+		7C661DF38C3AA361BBA92443 /* AnalyzesConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesConfigurator.swift; sourceTree = "<group>"; };
 		7DE16B33FB82927BBD5A460D /* DoctorDetailInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailInitializer.swift; sourceTree = "<group>"; };
 		7ECECFCB673E7804C76E72BC /* DoctorsListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListRouterInput.swift; sourceTree = "<group>"; };
+		7FDFCF16A6C370D2C56F0ACA /* AppointmentInfoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewController.swift; sourceTree = "<group>"; };
 		80559A3B6B3BCA46C35106C9 /* DoctorDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailRouter.swift; sourceTree = "<group>"; };
+		805915A887E3CF5B0B54661F /* ConsultationAppointmentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentViewController.swift; sourceTree = "<group>"; };
 		8164EACB263F59DCB2F715AE /* DoctorsListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListConfigurator.swift; sourceTree = "<group>"; };
 		817E0299E80AE7D7CDE4175F /* DoctorsListInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListInitializer.swift; sourceTree = "<group>"; };
 		87D830F1370D70B338FE8350 /* CategoryModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryModuleInput.swift; sourceTree = "<group>"; };
 		8ACFA72CFD80141BF639C374 /* DoctorsListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListInteractorInput.swift; sourceTree = "<group>"; };
+		8B97593D5E89AD7805918F19 /* AppointmentInfoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoRouter.swift; sourceTree = "<group>"; };
 		8DC02CABAE805745596ED5A1 /* CategoryInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryInitializer.swift; sourceTree = "<group>"; };
 		908F45AE42E70232D2A0328A /* DoctorDetailInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailInteractorInput.swift; sourceTree = "<group>"; };
 		9322DC24D12D07D7CF7C41A9 /* DoctorDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailRouterInput.swift; sourceTree = "<group>"; };
+		979884CB83DDEFE604DCDF4A /* AnalyzesViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesViewOutput.swift; sourceTree = "<group>"; };
 		998FC8BB5181F29C0D65DF31 /* DoctorsListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListModuleInput.swift; sourceTree = "<group>"; };
+		9BBE63149CCB38BB8FC7B9CF /* ConsultationAppointmentViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentViewInput.swift; sourceTree = "<group>"; };
 		9C90301F495D96975BE15FDC /* CategoryInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryInteractorInput.swift; sourceTree = "<group>"; };
+		9FCE0583C696EBA915769667 /* DialogsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsRouter.swift; sourceTree = "<group>"; };
+		A0CB2C0881552478690E9475 /* AnalyzesRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesRouter.swift; sourceTree = "<group>"; };
+		A230EB0764C3192C4366AA22 /* AnalyzesPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesPresenter.swift; sourceTree = "<group>"; };
+		A29BCD5F42B6A21DF976A3BA /* QuestionnaireViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewInput.swift; sourceTree = "<group>"; };
+		A2C6520C053B3346B5B7F82C /* AnalyzesInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesInteractorInput.swift; sourceTree = "<group>"; };
 		A56AB0C35E0726F4D93F5588 /* CategoryViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryViewInput.swift; sourceTree = "<group>"; };
 		A720954E4FC19B3F5D6A9A41 /* CategorySelectionInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionInitializer.swift; sourceTree = "<group>"; };
+		AB664CC08742D1F7E6A0AE31 /* AnalyzesInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesInteractorOutput.swift; sourceTree = "<group>"; };
 		AC71F4768FDF0F05ED8B6C44 /* DoctorsListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListViewInput.swift; sourceTree = "<group>"; };
 		B24FC3ECE4A3548123991438 /* DoctorDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailModuleInput.swift; sourceTree = "<group>"; };
 		B815CABB372B4B94CD3F006C /* CategoryInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
+		B8C098FBDCC46B3229BDB803 /* DialogsInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsInitializer.swift; sourceTree = "<group>"; };
+		BC667CD9A483EB4655E936CB /* ConsultationAppointmentPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentPresenter.swift; sourceTree = "<group>"; };
+		BD48C166DF278F4729C15CF1 /* ConsultationAppointmentRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentRouterInput.swift; sourceTree = "<group>"; };
+		BD5F5B42E7E4BDDFA9AA6346 /* ConsultationAppointmentConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentConfigurator.swift; sourceTree = "<group>"; };
 		BEEEDDDDD8BAB5E91BDF183C /* CategoryConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryConfigurator.swift; sourceTree = "<group>"; };
+		C0436CB873ABD8E829A732AA /* AnalyzesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesViewController.swift; sourceTree = "<group>"; };
+		C16656C65533EEDE6F42E075 /* DialogsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsPresenter.swift; sourceTree = "<group>"; };
 		C2FFDB63EAD1BDECBC1AC734 /* CategorySelectionPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionPresenter.swift; sourceTree = "<group>"; };
+		C4165FA471760BA545241C5C /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
+		C6A6198C56F3FE7EAB47EFA0 /* AppointmentInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoModuleInput.swift; sourceTree = "<group>"; };
+		C741ACCF0113C0277238BAA2 /* DialogsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsViewInput.swift; sourceTree = "<group>"; };
 		CD58C560B1390FD251A7139E /* CategorySelectionRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionRouter.swift; sourceTree = "<group>"; };
 		D1AF5ABB0635CFE8D627FF88 /* DoctorsListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListInteractorOutput.swift; sourceTree = "<group>"; };
 		D2F1646BB9D18DFC5D687D29 /* DoctorDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewInput.swift; sourceTree = "<group>"; };
+		D3169A609914D4CA53482C15 /* ConsultationAppointmentModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentModuleInput.swift; sourceTree = "<group>"; };
+		D31C66F2E8902D6F4642044F /* DialogsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsInteractor.swift; sourceTree = "<group>"; };
 		D331D6F4BB1537858974F91D /* CategorySelectionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewOutput.swift; sourceTree = "<group>"; };
+		D3AE5F4F7E40CC4BFC2DB88B /* DialogsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
+		D729152661ECA054FCA875BB /* AppointmentInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoPresenter.swift; sourceTree = "<group>"; };
+		D8F749ED0C130A51287C3577 /* QuestionnaireModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireModuleInput.swift; sourceTree = "<group>"; };
 		DFE096AD94A99E06415FABDD /* CategorySelectionConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionConfigurator.swift; sourceTree = "<group>"; };
 		E2B372DBDFE1843EC926877A /* DoctorDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailInteractorOutput.swift; sourceTree = "<group>"; };
+		E45C46466AA9EEF75E148E2E /* DialogsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsRouterInput.swift; sourceTree = "<group>"; };
 		E55D02F7972C8FEA3CD7086F /* DoctorsListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorsListPresenter.swift; sourceTree = "<group>"; };
+		EC7BB4AFCF7E4F1583381A3C /* AnalyzesInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesInteractor.swift; sourceTree = "<group>"; };
+		EE8C6BC0CFB9B02AA1D2A857 /* ConsultationAppointmentInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentInteractor.swift; sourceTree = "<group>"; };
 		EEAB489F4985BB9B8218E573 /* CategoryViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryViewOutput.swift; sourceTree = "<group>"; };
+		F1F5661CEAA350F3A39354DE /* AppointmentInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoInteractor.swift; sourceTree = "<group>"; };
+		FBCD8C2A97307669EFA5F16E /* QuestionnaireConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireConfigurator.swift; sourceTree = "<group>"; };
+		FCE0E4FD2D377EBF2E33EFDD /* AppointmentInfoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoInteractorInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +460,81 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		1053D10C9A593C0E2DC50E7B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A2C6520C053B3346B5B7F82C /* AnalyzesInteractorInput.swift */,
+				AB664CC08742D1F7E6A0AE31 /* AnalyzesInteractorOutput.swift */,
+				EC7BB4AFCF7E4F1583381A3C /* AnalyzesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		12693DF1BAD27D3D078093B5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				7C661DF38C3AA361BBA92443 /* AnalyzesConfigurator.swift */,
+				3E02E9405C87C7E3A942205B /* AnalyzesInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		13E593A896DE1BC9D012929D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				69EE1E26B2ABA93C0902E77D /* ConsultationAppointmentInteractorInput.swift */,
+				45612E01E32FD6CB765740B7 /* ConsultationAppointmentInteractorOutput.swift */,
+				EE8C6BC0CFB9B02AA1D2A857 /* ConsultationAppointmentInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		167ACBC109355EB8D354E73D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FBCD8C2A97307669EFA5F16E /* QuestionnaireConfigurator.swift */,
+				3686CA0AC97914F176C23988 /* QuestionnaireInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		17AB796246AA5D70FADD1799 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				281A9DCB7782CC1C0B4EB32E /* QuestionnaireRouterInput.swift */,
+				2F35CB03250CBB34DA708EB5 /* QuestionnaireRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		19BE0805A031FCBE8F8CE529 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E45C46466AA9EEF75E148E2E /* DialogsRouterInput.swift */,
+				9FCE0583C696EBA915769667 /* DialogsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1BCBCB5AB6C4009771B7030B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5DE0EFC8A5C58C7E2F18002F /* QuestionnaireInteractorInput.swift */,
+				02475A4861B8C9F38E519FA8 /* QuestionnaireInteractorOutput.swift */,
+				41E33BEC3BFFA7A5CAA80135 /* QuestionnaireInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1C337F138E0A1095B3DB5736 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				289666241EDDF0E3731D9012 /* DialogModuleInput.swift */,
+				6A8BF5C95A2CA2558C0200C4 /* DialogPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		2649A90CD73DF93087DD270E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,11 +545,25 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		2ABC85F3659D434D36C7AC2A /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C411601ABEFCBA584E4CA /* View */,
+				1C337F138E0A1095B3DB5736 /* Presenter */,
+				7C00014AEDA6E8FA59E430A9 /* Interactor */,
+				7FE638242B563378DA4FF38C /* Router */,
+				8DFB4FB0C63F093A0B7DFB34 /* Configurator */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 		2F5151DC1C037DCE9E883710 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
 				079E0B8BA9A31DAC3412407D /* DoctorDetail */,
 				421CECFA3C38F817B31A3ABC /* CategorySelection */,
+				567C018D9969D94CDACC0D58 /* Dialogs */,
+				7F97038F0E2C3A1C1C595000 /* ConsultationAppointment */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -342,6 +575,16 @@
 				80559A3B6B3BCA46C35106C9 /* DoctorDetailRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		31BFAD78F0C99B009A888F6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C741ACCF0113C0277238BAA2 /* DialogsViewInput.swift */,
+				3B8B2A40EB29F99C37F54732 /* DialogsViewOutput.swift */,
+				D3AE5F4F7E40CC4BFC2DB88B /* DialogsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		32E68D2723CC89C85F4DDF88 /* View */ = {
@@ -364,6 +607,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		40EFFC122E49F13BE6AD1B5F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				219252A6ECDFCBAD48C2FA80 /* AppointmentInfoConfigurator.swift */,
+				7450AC0C3ADE2BEBBC48AF1C /* AppointmentInfoInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		421CECFA3C38F817B31A3ABC /* CategorySelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +635,16 @@
 				6A12E967596E0747DC6A6F96 /* DoctorsListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		4AFB9774CD22E92DE4EC0D3C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				467F838A06B3D8FDC917B2D0 /* DialogsInteractorInput.swift */,
+				1B8939EB6E08CAE2999F897A /* DialogsInteractorOutput.swift */,
+				D31C66F2E8902D6F4642044F /* DialogsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		562465DB207E588F0007751D /* DoctorInfoCell */ = {
@@ -417,6 +679,18 @@
 				562465EB207EDE1C0007751D /* SegmentViewModel.swift */,
 			);
 			path = SegmentViewModel;
+			sourceTree = "<group>";
+		};
+		567C018D9969D94CDACC0D58 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				31BFAD78F0C99B009A888F6B /* View */,
+				943A164269D66E49B5CCB351 /* Presenter */,
+				4AFB9774CD22E92DE4EC0D3C /* Interactor */,
+				19BE0805A031FCBE8F8CE529 /* Router */,
+				D2A2D98D06F16212D9A9419D /* Configurator */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 		567DE8B420810A20003A91C4 /* Frameworks */ = {
@@ -470,6 +744,15 @@
 			path = DoctorDetailInfoViewModel;
 			sourceTree = "<group>";
 		};
+		56E8BEC41D1423FE65B2C8E1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD48C166DF278F4729C15CF1 /* ConsultationAppointmentRouterInput.swift */,
+				7605EA8BBE8F1A3B1094BA09 /* ConsultationAppointmentRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		56EF4A60206FE92300E48942 = {
 			isa = PBXGroup;
 			children = (
@@ -494,10 +777,10 @@
 			isa = PBXGroup;
 			children = (
 				56EF4AA5206FE99A00E48942 /* ApplicationLayer */,
+				56EF4AC9206FE99A00E48942 /* PresentationLayer */,
 				56EF4AC8206FE99A00E48942 /* BusinessLogicLayer */,
 				56EF4AA4206FE99A00E48942 /* CoreLayer */,
 				56EF4A9D206FE99A00E48942 /* Model */,
-				56EF4AC9206FE99A00E48942 /* PresentationLayer */,
 				56EF4AC2206FE99A00E48942 /* Resources */,
 				56EF4AA2206FE99A00E48942 /* Supporting Files */,
 			);
@@ -724,6 +1007,24 @@
 			path = StoryboardInitializable;
 			sourceTree = "<group>";
 		};
+		5782E14AAD478AF12C5150FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D3169A609914D4CA53482C15 /* ConsultationAppointmentModuleInput.swift */,
+				BC667CD9A483EB4655E936CB /* ConsultationAppointmentPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		663BBFD6436AC9AA5EA6997F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C6A6198C56F3FE7EAB47EFA0 /* AppointmentInfoModuleInput.swift */,
+				D729152661ECA054FCA875BB /* AppointmentInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		6B9EDA3AB1E84086C752777E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,6 +1043,59 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		78B11119D14C87D8DD6C39C1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FCE0E4FD2D377EBF2E33EFDD /* AppointmentInfoInteractorInput.swift */,
+				07FE4DDFAA9303EE107BA729 /* AppointmentInfoInteractorOutput.swift */,
+				F1F5661CEAA350F3A39354DE /* AppointmentInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7C00014AEDA6E8FA59E430A9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				71A5CA5205E4C1269B6F8F5F /* DialogInteractorInput.swift */,
+				51B4900FDA1062A571640586 /* DialogInteractorOutput.swift */,
+				022CEF6369B47DF9E95A6FEC /* DialogInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7D7E2AC22968D856F8E6F1D5 /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				F37E463441F3D8D4E65BE86B /* View */,
+				CF61297ECFF0B7B01E47D681 /* Presenter */,
+				1BCBCB5AB6C4009771B7030B /* Interactor */,
+				17AB796246AA5D70FADD1799 /* Router */,
+				167ACBC109355EB8D354E73D /* Configurator */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		7F97038F0E2C3A1C1C595000 /* ConsultationAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				E8C15B81984445AE9E7EE845 /* View */,
+				5782E14AAD478AF12C5150FF /* Presenter */,
+				13E593A896DE1BC9D012929D /* Interactor */,
+				56E8BEC41D1423FE65B2C8E1 /* Router */,
+				D1E81FD7261E4D87416C694F /* Configurator */,
+			);
+			path = ConsultationAppointment;
+			sourceTree = "<group>";
+		};
+		7FE638242B563378DA4FF38C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2939EA2E61F9DB19BCCFB19A /* DialogRouterInput.swift */,
+				023E29AF4A7B6302E90E7BFB /* DialogRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		84AA57DA6A14FB2C40656A4F /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,6 +1103,36 @@
 				CD58C560B1390FD251A7139E /* CategorySelectionRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8DFB4FB0C63F093A0B7DFB34 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */,
+				31D901FE03CDCEADDEF2F87C /* DialogInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		91DFA47D73DFE09B9EAC1D6D /* Analyzes */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7B9FA581EE8589A142D1D /* View */,
+				E3800A968655BB2913E9158E /* Presenter */,
+				1053D10C9A593C0E2DC50E7B /* Interactor */,
+				C57AF2512027807054250647 /* Router */,
+				12693DF1BAD27D3D078093B5 /* Configurator */,
+			);
+			path = Analyzes;
+			sourceTree = "<group>";
+		};
+		943A164269D66E49B5CCB351 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				64EC05C7F34E00BE504F9B1E /* DialogsModuleInput.swift */,
+				C16656C65533EEDE6F42E075 /* DialogsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		954D7277F2DFB8F968A0A4BE /* Presenter */ = {
@@ -802,6 +1186,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AC551429934DDB997FFEBAD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D90DBB40787B1B3F7258D16 /* AppointmentInfoViewInput.swift */,
+				7771CDFB03BEA1D6FA0479AD /* AppointmentInfoViewOutput.swift */,
+				7FDFCF16A6C370D2C56F0ACA /* AppointmentInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE7B9FA581EE8589A142D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5988166CF992589245B22AD5 /* AnalyzesViewInput.swift */,
+				979884CB83DDEFE604DCDF4A /* AnalyzesViewOutput.swift */,
+				C0436CB873ABD8E829A732AA /* AnalyzesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C2988D6DAEDAEB6FBDB12770 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,6 +1213,61 @@
 				8DC02CABAE805745596ED5A1 /* CategoryInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C57AF2512027807054250647 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C6D1B9BB0D46A8998A67E /* AnalyzesRouterInput.swift */,
+				A0CB2C0881552478690E9475 /* AnalyzesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C84BF03EABAE43ECC8B649B9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				03F33AE9E21884EEB5B6F85B /* AppointmentInfoRouterInput.swift */,
+				8B97593D5E89AD7805918F19 /* AppointmentInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CF61297ECFF0B7B01E47D681 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D8F749ED0C130A51287C3577 /* QuestionnaireModuleInput.swift */,
+				4ED0C99AEEA7973DAB3C572B /* QuestionnairePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D1E81FD7261E4D87416C694F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BD5F5B42E7E4BDDFA9AA6346 /* ConsultationAppointmentConfigurator.swift */,
+				2E7DAF138DAF822732A6CD5B /* ConsultationAppointmentInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D2A2D98D06F16212D9A9419D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				38CD806A6622AA33A6DFB1DB /* DialogsConfigurator.swift */,
+				B8C098FBDCC46B3229BDB803 /* DialogsInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		DF0C411601ABEFCBA584E4CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09B554F7652BDD6DF6846631 /* DialogViewInput.swift */,
+				79CC18745A618872EB2A50F0 /* DialogViewOutput.swift */,
+				4B467BDD03FBE48860498BD0 /* DialogViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DF5A6A8A10654978CB6AC71F /* Interactor */ = {
@@ -821,6 +1280,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		E3800A968655BB2913E9158E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50FE6F3447F1CA88701C8192 /* AnalyzesModuleInput.swift */,
+				A230EB0764C3192C4366AA22 /* AnalyzesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		E8AB39A9811FCDE23DF2C84D /* DoctorsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +1299,28 @@
 				9FD3FC3698730411A9EF0EF2 /* Configurator */,
 			);
 			path = DoctorsList;
+			sourceTree = "<group>";
+		};
+		E8C15B81984445AE9E7EE845 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BBE63149CCB38BB8FC7B9CF /* ConsultationAppointmentViewInput.swift */,
+				5A4429218083D5179B79EC51 /* ConsultationAppointmentViewOutput.swift */,
+				805915A887E3CF5B0B54661F /* ConsultationAppointmentViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E93E562FAB740550B7D4CD6C /* AppointmentInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AC551429934DDB997FFEBAD6 /* View */,
+				663BBFD6436AC9AA5EA6997F /* Presenter */,
+				78B11119D14C87D8DD6C39C1 /* Interactor */,
+				C84BF03EABAE43ECC8B649B9 /* Router */,
+				40EFFC122E49F13BE6AD1B5F /* Configurator */,
+			);
+			path = AppointmentInfo;
 			sourceTree = "<group>";
 		};
 		ECBEEFF7AEE15EEEA4004DC6 /* Interactor */ = {
@@ -862,8 +1352,22 @@
 				E8AB39A9811FCDE23DF2C84D /* DoctorsList */,
 				EDF701DDCCE0B23082200C69 /* Category */,
 				FE505724CC493343EFE6375A /* Segment */,
+				2ABC85F3659D434D36C7AC2A /* Dialog */,
+				E93E562FAB740550B7D4CD6C /* AppointmentInfo */,
+				91DFA47D73DFE09B9EAC1D6D /* Analyzes */,
+				7D7E2AC22968D856F8E6F1D5 /* Questionnaire */,
 			);
 			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		F37E463441F3D8D4E65BE86B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A29BCD5F42B6A21DF976A3BA /* QuestionnaireViewInput.swift */,
+				07405017BF04043B41ABF6A7 /* QuestionnaireViewOutput.swift */,
+				C4165FA471760BA545241C5C /* QuestionnaireViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F91D92D440C8D0A755D997FD /* Configurator */ = {
@@ -1134,6 +1638,78 @@
 				8114686663256D47B93E6BF4 /* CategoryInitializer.swift in Sources */,
 				23755E4EE21162B12A1FE4D6 /* SegmentBar.swift in Sources */,
 				56D37EC420809FAA00C8F65B /* DoctorDetailCommonInfoViewModel.swift in Sources */,
+				CB70428A2DF98F157CC31D94 /* DialogsViewInput.swift in Sources */,
+				47137116357C20F4AD6C4852 /* DialogsViewOutput.swift in Sources */,
+				A2BED0BC1151DF605BCFE6F0 /* DialogsViewController.swift in Sources */,
+				34F1F52CBCE1564E83FCBA44 /* DialogsModuleInput.swift in Sources */,
+				5253BAD09E74304335024D10 /* DialogsPresenter.swift in Sources */,
+				C9F90C5B3D0210237CFF087B /* DialogsInteractorInput.swift in Sources */,
+				FC0A653AD5324DA30BC1341F /* DialogsInteractorOutput.swift in Sources */,
+				1A5D63345F9B3267D10569C8 /* DialogsInteractor.swift in Sources */,
+				4FCD2FACD09CC2C420B6FEDB /* DialogsRouterInput.swift in Sources */,
+				C5F87779E519EABBF61E8DD7 /* DialogsRouter.swift in Sources */,
+				AE4776ED1FD0F9D13B1889C7 /* DialogsConfigurator.swift in Sources */,
+				D1420A13129A7BEF89348450 /* DialogsInitializer.swift in Sources */,
+				8B6EAC27CBEDC16C3718F7E6 /* DialogViewInput.swift in Sources */,
+				D93D81CAF70D515CBA2EC59F /* DialogViewOutput.swift in Sources */,
+				E1EA6A98AD778739A97CD4E1 /* DialogViewController.swift in Sources */,
+				01D11307FA5FEC456503E226 /* DialogModuleInput.swift in Sources */,
+				8653E8D1388618CB88A55D3C /* DialogPresenter.swift in Sources */,
+				DFFB2E512C1730DCEE029785 /* DialogInteractorInput.swift in Sources */,
+				466BA809542E3E1593DD0181 /* DialogInteractorOutput.swift in Sources */,
+				43F4B2F01E7840591576CAF4 /* DialogInteractor.swift in Sources */,
+				1A3190CC636892E9DBE56A17 /* DialogRouterInput.swift in Sources */,
+				E01494B1D6736329840E9FED /* DialogRouter.swift in Sources */,
+				572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */,
+				BF0BD7047B37CECFEC40E0D1 /* DialogInitializer.swift in Sources */,
+				A63635CF126CBB4B186B4695 /* ConsultationAppointmentViewInput.swift in Sources */,
+				85D50E8B6D77EF6B6180D77D /* ConsultationAppointmentViewOutput.swift in Sources */,
+				3F1B5F9D93511DE96F75BA09 /* ConsultationAppointmentViewController.swift in Sources */,
+				144D1CD4010FBFD072B40BB9 /* ConsultationAppointmentModuleInput.swift in Sources */,
+				2A4ACA050CE55B9D2B416BE0 /* ConsultationAppointmentPresenter.swift in Sources */,
+				BC299CCECE9327336BCEE007 /* ConsultationAppointmentInteractorInput.swift in Sources */,
+				B8E3E078655A97476C8013D2 /* ConsultationAppointmentInteractorOutput.swift in Sources */,
+				72CEBC710A9E47FB8F23992F /* ConsultationAppointmentInteractor.swift in Sources */,
+				1A4F20668A1AD05B45703740 /* ConsultationAppointmentRouterInput.swift in Sources */,
+				970BE23BE2D3A28D60E53604 /* ConsultationAppointmentRouter.swift in Sources */,
+				E77752F05A10612D6B19F8A0 /* ConsultationAppointmentConfigurator.swift in Sources */,
+				8B909C348C939BD76FB87473 /* ConsultationAppointmentInitializer.swift in Sources */,
+				195F164D0CE1D0E6D03A5F11 /* AppointmentInfoViewInput.swift in Sources */,
+				B5E5B783B9EC2894FCE627C4 /* AppointmentInfoViewOutput.swift in Sources */,
+				3E4A2C66BAE1C3DCBACEA7A1 /* AppointmentInfoViewController.swift in Sources */,
+				D08FD9C724FFB11AECAC015C /* AppointmentInfoModuleInput.swift in Sources */,
+				9FD59D9CC07BA97D7507A8EC /* AppointmentInfoPresenter.swift in Sources */,
+				081B8EBB7A0219E025AC85AE /* AppointmentInfoInteractorInput.swift in Sources */,
+				ADFA777981EA59E230E1CCDE /* AppointmentInfoInteractorOutput.swift in Sources */,
+				51D22E5483D7F392E2C0E763 /* AppointmentInfoInteractor.swift in Sources */,
+				AC70D504485FF244EB7C49D8 /* AppointmentInfoRouterInput.swift in Sources */,
+				AB623B563D0C9AC8AD786773 /* AppointmentInfoRouter.swift in Sources */,
+				046789CFF7923E1E62FAA908 /* AppointmentInfoConfigurator.swift in Sources */,
+				F22E8B4CB70F594C3C1398AD /* AppointmentInfoInitializer.swift in Sources */,
+				C02218D2EB81467180ECA224 /* AnalyzesViewInput.swift in Sources */,
+				8EC200C023B380438AE3A2D9 /* AnalyzesViewOutput.swift in Sources */,
+				270FC5465F9E0C1DD3D5DD4C /* AnalyzesViewController.swift in Sources */,
+				392D48E639D5B30256AFD71A /* AnalyzesModuleInput.swift in Sources */,
+				6BEE14BE8D4A475F3E7127C6 /* AnalyzesPresenter.swift in Sources */,
+				C6F1EC2FDCF1E1A88465A53C /* AnalyzesInteractorInput.swift in Sources */,
+				0B75A6430369D29EA3E03631 /* AnalyzesInteractorOutput.swift in Sources */,
+				9EB03FEF55F4EECC9274C70D /* AnalyzesInteractor.swift in Sources */,
+				5D8310F0A4C6038E3349ACCF /* AnalyzesRouterInput.swift in Sources */,
+				B77C895A2BF21E27F4BE889D /* AnalyzesRouter.swift in Sources */,
+				5B7CBBBB512B9C24C038F9B9 /* AnalyzesConfigurator.swift in Sources */,
+				C9A1EC5BC7625EFE632BB8F7 /* AnalyzesInitializer.swift in Sources */,
+				7953B359F036AA64491A9A15 /* QuestionnaireViewInput.swift in Sources */,
+				7FC9FE094EEF580527EF500F /* QuestionnaireViewOutput.swift in Sources */,
+				38740782EBE6388D44AF97EE /* QuestionnaireViewController.swift in Sources */,
+				04C40493C1EA2506D65DDF37 /* QuestionnaireModuleInput.swift in Sources */,
+				4A8184A24778A660609609FA /* QuestionnairePresenter.swift in Sources */,
+				64766E3C2154764D527CBE51 /* QuestionnaireInteractorInput.swift in Sources */,
+				F16E672C22521719FF7644E1 /* QuestionnaireInteractorOutput.swift in Sources */,
+				3AD60DE43347D2958064B2BA /* QuestionnaireInteractor.swift in Sources */,
+				8268DC7AB93EB2BF661643EA /* QuestionnaireRouterInput.swift in Sources */,
+				D63403C9225721503BE9133E /* QuestionnaireRouter.swift in Sources */,
+				FB6B8F0425068691B2DD3BDC /* QuestionnaireConfigurator.swift in Sources */,
+				C0B0F219934EEA33783F69ED /* QuestionnaireInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
