@@ -61,7 +61,7 @@ class SegmentBar: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(nibModels: [SegmentViewModel.self])
-        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 18, bottom: 0, right: 15)
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 18, bottom: 0, right: 18)
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -88,7 +88,7 @@ class SegmentBar: UIView {
     
     private func configureHorizontalBarPositionBy(cell: UICollectionViewCell) {
         let width = cell.convert(cell.frame, to: cell.contentView).size.width
-        let xOffset = cell.convert(cell.frame, to: cell.contentView).origin.x + 18
+        let xOffset = cell.convert(cell.frame, to: cell.contentView).origin.x + collectionView.contentInset.left
         horizontalBarWidthConstraint?.constant = width
         horizontalBarLeftConstraint?.constant = xOffset
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
