@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWw-54-8Lj">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Doctor Detail View Controller-->
+        <scene sceneID="7Av-Ij-EG3">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetailViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gWw-54-8Lj" customClass="DoctorDetailViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JuV-Jg-bX0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LrZ-Wy-hKU">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di8-SJ-epO" customClass="OkDocButton" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="56.333333333333343" y="742" width="262.33333333333326" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3rZ-df-kyO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="oppointmentDidPress:" destination="gWw-54-8Lj" eventType="valueChanged" id="sJR-DT-8vu"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7U-Yx-ut3">
+                                <rect key="frame" x="8" y="49" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="91y-Wq-LMI"/>
+                                    <constraint firstAttribute="width" constant="44" id="g34-4r-pH1"/>
+                                </constraints>
+                                <state key="normal" image="backArrow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backArrowDidPress:" destination="gWw-54-8Lj" eventType="touchUpInside" id="xGq-4m-bh0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-rC-Y4j">
+                                <rect key="frame" x="313" y="49" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1zL-oq-LTf"/>
+                                    <constraint firstAttribute="width" constant="44" id="Mlp-hS-Q9I"/>
+                                </constraints>
+                                <state key="normal" image="burger">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burgerMenuDidPress:" destination="gWw-54-8Lj" eventType="touchUpInside" id="zU0-oM-AA3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="di8-SJ-epO" firstAttribute="centerX" secondItem="JuV-Jg-bX0" secondAttribute="centerX" id="2Ed-Pa-xVI"/>
+                            <constraint firstItem="Y08-bW-wRU" firstAttribute="trailing" secondItem="LrZ-Wy-hKU" secondAttribute="trailing" id="39a-Jw-RIz"/>
+                            <constraint firstItem="P7U-Yx-ut3" firstAttribute="top" secondItem="Y08-bW-wRU" secondAttribute="top" constant="5" id="AIj-6D-d9O"/>
+                            <constraint firstItem="LrZ-Wy-hKU" firstAttribute="leading" secondItem="JuV-Jg-bX0" secondAttribute="leading" id="GS0-Oc-zAH"/>
+                            <constraint firstAttribute="bottom" secondItem="LrZ-Wy-hKU" secondAttribute="bottom" id="Ho0-bw-Jul"/>
+                            <constraint firstItem="Qhy-rC-Y4j" firstAttribute="top" secondItem="Y08-bW-wRU" secondAttribute="top" constant="5" id="IzQ-rU-JvF"/>
+                            <constraint firstItem="P7U-Yx-ut3" firstAttribute="leading" secondItem="Y08-bW-wRU" secondAttribute="leading" constant="8" id="Jbc-Fw-aqh"/>
+                            <constraint firstItem="LrZ-Wy-hKU" firstAttribute="top" secondItem="Y08-bW-wRU" secondAttribute="top" id="eGJ-f5-75a"/>
+                            <constraint firstItem="Y08-bW-wRU" firstAttribute="trailing" secondItem="Qhy-rC-Y4j" secondAttribute="trailing" constant="18" id="lCX-gn-tgE"/>
+                            <constraint firstItem="di8-SJ-epO" firstAttribute="width" secondItem="JuV-Jg-bX0" secondAttribute="width" multiplier="0.7" id="oF8-Wh-4h2"/>
+                            <constraint firstAttribute="bottom" secondItem="di8-SJ-epO" secondAttribute="bottom" constant="20" id="tI1-lB-mfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y08-bW-wRU"/>
+                    </view>
+                    <connections>
+                        <outlet property="backArrow" destination="P7U-Yx-ut3" id="ysP-c2-c2w"/>
+                        <outlet property="burgerMenu" destination="Qhy-rC-Y4j" id="uad-XZ-Kv7"/>
+                        <outlet property="makeAnOppointment" destination="di8-SJ-epO" id="Qpv-Xg-9vx"/>
+                        <outlet property="tableView" destination="LrZ-Wy-hKU" id="AVn-pQ-Bt1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIC-Uy-axD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lZq-Wy-ZS8" customClass="DoctorDetailModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="doctorDetailViewController" destination="gWw-54-8Lj" id="StH-96-IP4"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="-6.746626686656672"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backArrow" width="12" height="22"/>
+        <image name="burger" width="44" height="44"/>
+    </resources>
+</document>

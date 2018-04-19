@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vQB-cy-DDd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vQB-cy-DDd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,7 +44,7 @@
                     <connections>
                         <outlet property="segmentBar" destination="eh4-g6-cq9" id="AWu-cl-DIG"/>
                         <outlet property="tableView" destination="Y31-pL-wBx" id="p15-23-qvJ"/>
-                        <segue destination="Zsf-Vh-xTu" kind="show" identifier="ProfileViewController" id="FKu-Nm-mol"/>
+                        <segue destination="Zsf-Vh-xTu" kind="show" identifier="DoctorDetailViewController" id="FKu-Nm-mol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90o-Fa-lVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="-13.043478260869566"/>
         </scene>
-        <!--ProfileViewController-->
+        <!--DoctorDetailViewController-->
         <scene sceneID="8t7-aQ-edv">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ProfileViewController" storyboardName="ProfileViewController" id="Zsf-Vh-xTu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="DoctorDetailViewController" storyboardName="DoctorDetailViewController" id="Zsf-Vh-xTu" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IL3-Cl-EPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="758" y="-14"/>

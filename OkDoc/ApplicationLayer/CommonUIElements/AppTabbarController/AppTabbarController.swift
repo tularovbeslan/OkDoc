@@ -19,7 +19,7 @@ class AppTabbarController: UITabBarController {
     var controllers: [UIViewController] {
         let categorySelection = CategorySelectionViewController.fromStoryboard().withTabbar(item: TabBarItems.home.item).embedInNavigation()
         let dosctorsList = DoctorsListViewController.fromStoryboard().withTabbar(item: TabBarItems.message.item).embedInNavigation()
-        let profile = ProfileViewController.fromStoryboard().withTabbar(item: TabBarItems.profile.item).embedInNavigation()
+        let profile = DoctorDetailViewController.fromStoryboard().withTabbar(item: TabBarItems.profile.item).embedInNavigation()
         return [categorySelection, dosctorsList, profile]
     }
 

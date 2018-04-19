@@ -10,6 +10,6 @@ class DoctorsListRouter: DoctorsListRouterInput {
     var transitionHandler: TransitionHandler!
     
     func openModule() {
-        transitionHandler.openModule(segueIdentifier: String.init(describing: ProfileViewController.self))
+        transitionHandler.openModule(segueIdentifier: String.init(describing: DoctorDetailViewController.self))
     }
 }
