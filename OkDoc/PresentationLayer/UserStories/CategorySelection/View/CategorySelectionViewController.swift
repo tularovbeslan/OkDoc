@@ -11,7 +11,9 @@ import UIKit
 final class CategorySelectionViewController: UIViewController, CategorySelectionViewInput, StoryboardInitializable {
 
     var output: CategorySelectionViewOutput!
-    let segmentBar: SegmentBar = {
+    
+    
+    lazy var segmentBar: SegmentBar = {
         let bar = SegmentBar(frame: .zero)
         bar.titles = ["Взрослые", "Дети"]
         bar.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +29,12 @@ final class CategorySelectionViewController: UIViewController, CategorySelection
         configureSegmentBar()
         configureCategoryController()
     }
-
+    
+    // MARK: - IBActions
+    @IBAction func menuDidPress(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
 
     // MARK: CategorySelectionViewInput
     func setupInitialState() {

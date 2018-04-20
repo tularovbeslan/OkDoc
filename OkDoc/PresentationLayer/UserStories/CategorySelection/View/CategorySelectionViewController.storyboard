@@ -44,6 +44,9 @@
                                 <rect key="frame" x="313" y="0.0" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="menuDidPress:" destination="7fK-Qo-KBE" eventType="touchUpInside" id="lb2-nl-04c"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

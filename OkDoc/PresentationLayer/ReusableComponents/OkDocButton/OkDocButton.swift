@@ -19,6 +19,7 @@ class OkDocButton: UIControl {
         label.font = font
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = false
         return label
     }()
 
@@ -29,6 +30,7 @@ class OkDocButton: UIControl {
         label.font = font
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = false
         return label
     }()
     
@@ -38,17 +40,19 @@ class OkDocButton: UIControl {
         stack.alignment = .center
         stack.distribution = .fillEqually
         stack.axis = .horizontal
+        stack.isUserInteractionEnabled = false
         return stack
     }()
     
     override var isHighlighted: Bool {
         didSet {
-            self.backgroundColor = .black
+            alpha = isHighlighted ? 0.8 : 1
         }
     }
     
     // MARK: - Life cycle
     override func awakeFromNib() {
+        self.addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
         configureStackViewConstraints()
     }
     
@@ -62,10 +66,20 @@ class OkDocButton: UIControl {
     
     func configureStackViewConstraints() {
         addSubview(stackView)
-        stackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        stackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        constraints(for: stackView)
+    }
+    
+    func constraints(for view: UIView) {
+        view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    @objc func touchedUpInside() {
+        self.sendActions(for: .valueChanged)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 }
 

@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="50" id="3rZ-df-kyO"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="oppointmentDidPress:" destination="gWw-54-8Lj" eventType="valueChanged" id="sJR-DT-8vu"/>
+                                    <action selector="oppointmentDidPress:" destination="gWw-54-8Lj" eventType="touchUpInside" id="aFn-lF-avf"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7U-Yx-ut3">

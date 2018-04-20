@@ -72,6 +72,8 @@ extension DoctorsListViewController: UITableViewDataSource {
 extension DoctorsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.didSelect()
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

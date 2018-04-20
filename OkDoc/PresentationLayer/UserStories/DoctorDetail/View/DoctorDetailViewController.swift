@@ -44,12 +44,14 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     }
     
     @IBAction func burgerMenuDidPress(_ sender: UIButton) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     
     @IBAction func oppointmentDidPress(_ sender: OkDocButton) {
         print("oppointmentDidPress")
     }
+    
     
     
     // MARK: ProfileViewInput

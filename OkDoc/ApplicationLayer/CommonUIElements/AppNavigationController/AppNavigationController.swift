@@ -16,4 +16,10 @@ class AppNavigationController: UINavigationController {
         navigationBar.shadowImage = UIImage()
     }
 
+    override func popViewController(animated: Bool) -> UIViewController? {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        let popViewController = super.popViewController(animated: animated)
+        return popViewController
+    }
 }

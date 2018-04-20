@@ -9,20 +9,23 @@
 import UIKit
 
 class AppTabbarController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewControllers = controllers
-        self.tabBar.isTranslucent   = false
+        self.tabBar.isTranslucent = false
     }
     
     var controllers: [UIViewController] {
-        let categorySelection = CategorySelectionViewController.fromStoryboard().withTabbar(item: TabBarItems.home.item).embedInNavigation()
-        let dosctorsList = DoctorsListViewController.fromStoryboard().withTabbar(item: TabBarItems.message.item).embedInNavigation()
-        let profile = DoctorDetailViewController.fromStoryboard().withTabbar(item: TabBarItems.profile.item).embedInNavigation()
+        let categorySelection = CategorySelectionViewController.fromStoryboard().embedInNavigation(item: TabBarItems.home.item)
+        let dosctorsList = CategorySelectionViewController.fromStoryboard().embedInNavigation(item: TabBarItems.message.item)
+        let profile = CategorySelectionViewController.fromStoryboard().embedInNavigation(item: TabBarItems.profile.item)
         return [categorySelection, dosctorsList, profile]
     }
-
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
 }
 
 enum TabBarItems {
@@ -42,7 +45,7 @@ extension TabBarItems {
             return UITabBarItem(title: title, image: #imageLiteral(resourceName: "profileNormal"), selectedImage: #imageLiteral(resourceName: "profileActive"))
         }
     }
-    
+
     var title: String {
         switch self {
         case .home:
