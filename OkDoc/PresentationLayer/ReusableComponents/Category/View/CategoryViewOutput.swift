@@ -13,6 +13,7 @@ protocol CategoryViewOutput {
         Notify presenter that view is ready
     */
 
+    func viewDidLoad()
     func viewIsReady()
     func didSelect()
 }

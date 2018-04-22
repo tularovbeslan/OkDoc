@@ -8,15 +8,26 @@
 
 class CategoryPresenter: CategoryModuleInput, CategoryViewOutput, CategoryInteractorOutput {
 
+    // MARK: - Properties
     weak var view: CategoryViewInput!
     var interactor: CategoryInteractorInput!
     var router: CategoryRouterInput!
+    
+    //MARK: - CategoryViewOutput
+    func viewDidLoad() {
+        view.setupInitialState()
+    }
 
     func viewIsReady() {
-        view.setupInitialState()
+        interactor.prepareCategories()
     }
     
     func didSelect() {
         router.openModule()
+    }
+    
+    //MARK: - CategoryInteractorOutput
+    func categoriesDidPrepare(by viewModels: [CategoryViewModel]) {
+        view.updateView(with: viewModels)
     }
 }

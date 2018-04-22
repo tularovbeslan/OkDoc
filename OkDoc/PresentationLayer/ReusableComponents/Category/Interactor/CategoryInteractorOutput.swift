@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CategoryInteractorOutput: class {
-
+    func categoriesDidPrepare(by viewModels: [CategoryViewModel])
 }

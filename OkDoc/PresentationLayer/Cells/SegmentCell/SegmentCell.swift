@@ -21,6 +21,8 @@ class SegmentCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
+            let feedbackEngine = FeedbackEngine()
+            feedbackEngine.feedback(type: .selection)
             title.textColor = isSelected ? .black : UIColor(red:159/255.0, green:171/255.0, blue:185/255.0, alpha: 1)
         }
     }

@@ -10,9 +10,8 @@ import UIKit
 
 final class CategorySelectionViewController: UIViewController, CategorySelectionViewInput, StoryboardInitializable {
 
+    // MARK: - Properties
     var output: CategorySelectionViewOutput!
-    
-    
     lazy var segmentBar: SegmentBar = {
         let bar = SegmentBar(frame: .zero)
         bar.titles = ["Взрослые", "Дети"]
@@ -20,9 +19,10 @@ final class CategorySelectionViewController: UIViewController, CategorySelection
         return bar
     }()
     
+    // MARK: - IBOutlets
     @IBOutlet weak var titlelb: UILabel!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
@@ -32,16 +32,19 @@ final class CategorySelectionViewController: UIViewController, CategorySelection
     
     // MARK: - IBActions
     @IBAction func menuDidPress(_ sender: UIButton) {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+        output.menuButtonDidPress()
     }
 
-    // MARK: CategorySelectionViewInput
+    // MARK: - CategorySelectionViewInput
     func setupInitialState() {
         
     }
     
-    func navigationBarBackButton(title: String) {
+    func setTitleLabel(text: String) {
+        titlelb.text = text
+    }
+    
+    func setNavigationBarBackButton(title: String) {
         navigationItem.leftBarButtonItem?.title = title
     }
     

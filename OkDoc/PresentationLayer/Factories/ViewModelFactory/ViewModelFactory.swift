@@ -10,7 +10,7 @@ protocol Delegatable: class {}
 
 ///// Factory for ViewModels
 //class ViewModelFactory {
-//    
+//
 //    enum ViewModelTypes {
 //        case doctors
 //        case catigories

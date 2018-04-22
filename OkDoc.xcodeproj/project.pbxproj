@@ -112,6 +112,18 @@
 		56EF4B3F2073F1A500E48942 /* CategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */; };
 		56EF4B412073F3E300E48942 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B402073F3E300E48942 /* CategoryViewModel.swift */; };
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
+		57E92436208BE2800009120D /* FeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92435208BE2800009120D /* FeedbackEngine.swift */; };
+		57E92438208BE8620009120D /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92437208BE8620009120D /* FeedbackService.swift */; };
+		57E9243A208BE94F0009120D /* FeedbackServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */; };
+		57E9243C208BEC4D0009120D /* ConsultationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E9243B208BEC4D0009120D /* ConsultationViewController.storyboard */; };
+		57E9243F208BF31B0009120D /* DialogsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9243E208BF31B0009120D /* DialogsCell.swift */; };
+		57E92441208BF3230009120D /* DialogsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E92440208BF3230009120D /* DialogsCell.xib */; };
+		57E92443208BFA7C0009120D /* DialogsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E92442208BFA7C0009120D /* DialogsViewController.storyboard */; };
+		57E92446208BFD510009120D /* DialogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92445208BFD510009120D /* DialogsViewModel.swift */; };
+		57E9244A208C1A870009120D /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92449208C1A870009120D /* CategoriesService.swift */; };
+		57E9244C208C1B020009120D /* CategoriesServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9244B208C1B020009120D /* CategoriesServiceImplementation.swift */; };
+		57E92450208C1B6D0009120D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9244F208C1B6D0009120D /* Network.swift */; };
+		57E92452208C1B8E0009120D /* NetworkImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92451208C1B8E0009120D /* NetworkImplementation.swift */; };
 		5B7CBBBB512B9C24C038F9B9 /* AnalyzesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C661DF38C3AA361BBA92443 /* AnalyzesConfigurator.swift */; };
 		5D8310F0A4C6038E3349ACCF /* AnalyzesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C6D1B9BB0D46A8998A67E /* AnalyzesRouterInput.swift */; };
 		64766E3C2154764D527CBE51 /* QuestionnaireInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0EFC8A5C58C7E2F18002F /* QuestionnaireInteractorInput.swift */; };
@@ -326,6 +338,18 @@
 		56EF4B3C2073F02200E48942 /* AppTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbar.swift; sourceTree = "<group>"; };
 		56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryViewController.storyboard; sourceTree = "<group>"; };
 		56EF4B402073F3E300E48942 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		57E92435208BE2800009120D /* FeedbackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEngine.swift; sourceTree = "<group>"; };
+		57E92437208BE8620009120D /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
+		57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackServiceImplementation.swift; sourceTree = "<group>"; };
+		57E9243B208BEC4D0009120D /* ConsultationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConsultationViewController.storyboard; sourceTree = "<group>"; };
+		57E9243E208BF31B0009120D /* DialogsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsCell.swift; sourceTree = "<group>"; };
+		57E92440208BF3230009120D /* DialogsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogsCell.xib; sourceTree = "<group>"; };
+		57E92442208BFA7C0009120D /* DialogsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogsViewController.storyboard; sourceTree = "<group>"; };
+		57E92445208BFD510009120D /* DialogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewModel.swift; sourceTree = "<group>"; };
+		57E92449208C1A870009120D /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		57E9244B208C1B020009120D /* CategoriesServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesServiceImplementation.swift; sourceTree = "<group>"; };
+		57E9244F208C1B6D0009120D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		57E92451208C1B8E0009120D /* NetworkImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImplementation.swift; sourceTree = "<group>"; };
 		5988166CF992589245B22AD5 /* AnalyzesViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyzesViewInput.swift; sourceTree = "<group>"; };
 		5A4429218083D5179B79EC51 /* ConsultationAppointmentViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentViewOutput.swift; sourceTree = "<group>"; };
 		5D90DBB40787B1B3F7258D16 /* AppointmentInfoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewInput.swift; sourceTree = "<group>"; };
@@ -601,6 +625,7 @@
 				C741ACCF0113C0277238BAA2 /* DialogsViewInput.swift */,
 				3B8B2A40EB29F99C37F54732 /* DialogsViewOutput.swift */,
 				D3AE5F4F7E40CC4BFC2DB88B /* DialogsViewController.swift */,
+				57E92442208BFA7C0009120D /* DialogsViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +696,7 @@
 				EBB925065523F5D8816AD0CB /* ConsultationViewInput.swift */,
 				1E3063D2A663D4A1E7263E85 /* ConsultationViewOutput.swift */,
 				1124DE33B5A52859080708AB /* ConsultationViewController.swift */,
+				57E9243B208BEC4D0009120D /* ConsultationViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -844,6 +870,8 @@
 		56EF4AA4206FE99A00E48942 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				57E9244D208C1B400009120D /* Network */,
+				57E9244E208C1B4B0009120D /* FeedbackEngine */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -852,10 +880,7 @@
 			isa = PBXGroup;
 			children = (
 				56EF4ABD206FE99A00E48942 /* AppDelegate.swift */,
-				56EF4B392073E7BB00E48942 /* StoryboardInitializable */,
 				56EF4AA6206FE99A00E48942 /* Extensions */,
-				56EF4AAB206FE99A00E48942 /* Factories */,
-				56EF4ABB206FE99A00E48942 /* CommonUIElements */,
 				56EF4ABE206FE99A00E48942 /* Protocols */,
 			);
 			path = ApplicationLayer;
@@ -892,6 +917,7 @@
 		56EF4AAD206FE99A00E48942 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				57E92444208BFCE80009120D /* DialogsViewModel */,
 				56D37EC020809F8200C8F65B /* DoctorDetailInfoViewModel */,
 				56D37EBF20809F6E00C8F65B /* DoctorDetailCommonInfoViewModel */,
 				562465EA207EDDEA0007751D /* SegmentViewModel */,
@@ -931,6 +957,7 @@
 		56EF4ABE206FE99A00E48942 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				56EF4B3A2073E7C800E48942 /* StoryboardInitializable.swift */,
 				56EF4ABF206FE99A00E48942 /* SetupableViewModel.swift */,
 				56EF4AC0206FE99A00E48942 /* CellViewModel.swift */,
 				56EF4AC1206FE99A00E48942 /* TransitionHandler.swift */,
@@ -951,6 +978,8 @@
 		56EF4AC8206FE99A00E48942 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				57E92448208C1A690009120D /* CategoriesService */,
+				57E92447208C1A550009120D /* FeedbackService */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -958,6 +987,8 @@
 		56EF4AC9206FE99A00E48942 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				56EF4ABB206FE99A00E48942 /* CommonUIElements */,
+				56EF4AAB206FE99A00E48942 /* Factories */,
 				2F5151DC1C037DCE9E883710 /* UserStories */,
 				F1DB0009E71A767C19B8A4FC /* ReusableComponents */,
 				56EF4B262073D3C900E48942 /* Cells */,
@@ -991,6 +1022,7 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				57E9243D208BF2E90009120D /* DialogCell */,
 				56D37EB52080880300C8F65B /* DoctorDetailCommonInfoCell */,
 				56D37EBC2080886800C8F65B /* DoctorDetailInfoCell */,
 				562465E5207EDD340007751D /* SegmentCell */,
@@ -1017,14 +1049,6 @@
 			path = AppNavigationController;
 			sourceTree = "<group>";
 		};
-		56EF4B392073E7BB00E48942 /* StoryboardInitializable */ = {
-			isa = PBXGroup;
-			children = (
-				56EF4B3A2073E7C800E48942 /* StoryboardInitializable.swift */,
-			);
-			path = StoryboardInitializable;
-			sourceTree = "<group>";
-		};
 		5782E14AAD478AF12C5150FF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,6 +1056,58 @@
 				BC667CD9A483EB4655E936CB /* ConsultationAppointmentPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57E9243D208BF2E90009120D /* DialogCell */ = {
+			isa = PBXGroup;
+			children = (
+				57E9243E208BF31B0009120D /* DialogsCell.swift */,
+				57E92440208BF3230009120D /* DialogsCell.xib */,
+			);
+			path = DialogCell;
+			sourceTree = "<group>";
+		};
+		57E92444208BFCE80009120D /* DialogsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57E92445208BFD510009120D /* DialogsViewModel.swift */,
+			);
+			path = DialogsViewModel;
+			sourceTree = "<group>";
+		};
+		57E92447208C1A550009120D /* FeedbackService */ = {
+			isa = PBXGroup;
+			children = (
+				57E92437208BE8620009120D /* FeedbackService.swift */,
+				57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */,
+			);
+			path = FeedbackService;
+			sourceTree = "<group>";
+		};
+		57E92448208C1A690009120D /* CategoriesService */ = {
+			isa = PBXGroup;
+			children = (
+				57E92449208C1A870009120D /* CategoriesService.swift */,
+				57E9244B208C1B020009120D /* CategoriesServiceImplementation.swift */,
+			);
+			path = CategoriesService;
+			sourceTree = "<group>";
+		};
+		57E9244D208C1B400009120D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				57E9244F208C1B6D0009120D /* Network.swift */,
+				57E92451208C1B8E0009120D /* NetworkImplementation.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		57E9244E208C1B4B0009120D /* FeedbackEngine */ = {
+			isa = PBXGroup;
+			children = (
+				57E92435208BE2800009120D /* FeedbackEngine.swift */,
+			);
+			path = FeedbackEngine;
 			sourceTree = "<group>";
 		};
 		5943A6BEA34ACD7E03DDA25A /* Router */ = {
@@ -1563,9 +1639,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EF4B322073DC6C00E48942 /* CategorySelectionViewController.storyboard in Resources */,
+				57E9243C208BEC4D0009120D /* ConsultationViewController.storyboard in Resources */,
 				56EF4B222073499D00E48942 /* Averta Cyrillic Black Italic.otf in Resources */,
 				56EF4B192073499D00E48942 /* Averta Cyrillic Regular Italic.otf in Resources */,
 				56EF4B202073499D00E48942 /* Averta Cyrillic Black.otf in Resources */,
+				57E92441208BF3230009120D /* DialogsCell.xib in Resources */,
+				57E92443208BFA7C0009120D /* DialogsViewController.storyboard in Resources */,
 				56EF4ADB206FE99A00E48942 /* LaunchScreen.storyboard in Resources */,
 				56EF4B212073499D00E48942 /* Averta Cyrillic SemiBold.otf in Resources */,
 				562465DF207E58A70007751D /* DoctorInfoCell.xib in Resources */,
@@ -1628,6 +1707,7 @@
 				56EF4ACF206FE99A00E48942 /* UICollectionViewExtension.swift in Sources */,
 				56EF4B302073D45700E48942 /* AppTabbarController.swift in Sources */,
 				56EF4AD0206FE99A00E48942 /* UIImageExtension.swift in Sources */,
+				57E9243A208BE94F0009120D /* FeedbackServiceImplementation.swift in Sources */,
 				6CEA321DF6CEDFD5F4D6A697 /* DoctorsListViewInput.swift in Sources */,
 				56EF4B412073F3E300E48942 /* CategoryViewModel.swift in Sources */,
 				562465E7207EDD540007751D /* SegmentCell.swift in Sources */,
@@ -1649,6 +1729,7 @@
 				163F31CE52E899A15C3456CF /* DoctorDetailViewController.swift in Sources */,
 				CE93BAB0390FD57561224541 /* DoctorDetailModuleInput.swift in Sources */,
 				C3403AFA0B2A558B25D7C7B3 /* DoctorDetailPresenter.swift in Sources */,
+				57E9243F208BF31B0009120D /* DialogsCell.swift in Sources */,
 				4BAC90547DE8F991464464BE /* DoctorDetailInteractorInput.swift in Sources */,
 				FDC0234C5BEB5A18A6C0E6E3 /* DoctorDetailInteractorOutput.swift in Sources */,
 				2D7DD4C0B22208340B10BCC8 /* DoctorDetailInteractor.swift in Sources */,
@@ -1658,6 +1739,7 @@
 				1BDF1DF81C61AA2FF5C6E5B6 /* DoctorDetailConfigurator.swift in Sources */,
 				562465E2207E8CA10007751D /* DoctorsViewModel.swift in Sources */,
 				7F5DD57C812328252C80F8D9 /* DoctorDetailInitializer.swift in Sources */,
+				57E92452208C1B8E0009120D /* NetworkImplementation.swift in Sources */,
 				56EF4B292073D3EA00E48942 /* CategoryCell.swift in Sources */,
 				407626AB7C82CFDC9CCC0456 /* CategorySelectionViewInput.swift in Sources */,
 				046183BAF81BED14F1AEA162 /* CategorySelectionViewOutput.swift in Sources */,
@@ -1665,6 +1747,7 @@
 				D822DBC335643F85B233896C /* CategorySelectionModuleInput.swift in Sources */,
 				20D3A7EED47EEE63BF6EFCAF /* CategorySelectionPresenter.swift in Sources */,
 				11293840D3DED723C4071DF7 /* CategorySelectionInteractorInput.swift in Sources */,
+				57E92450208C1B6D0009120D /* Network.swift in Sources */,
 				8E81877A67A91E44218AEB8A /* CategorySelectionInteractorOutput.swift in Sources */,
 				BB2F726E2B649A45B7DF3249 /* CategorySelectionInteractor.swift in Sources */,
 				6AA5029573FA1434D85B656A /* CategorySelectionRouterInput.swift in Sources */,
@@ -1684,6 +1767,7 @@
 				A10FE6C22BFE54421E876A28 /* CategoryInteractor.swift in Sources */,
 				5695F1878FF084FA001D138A /* CategoryRouterInput.swift in Sources */,
 				D46FB9618881E61AED112628 /* CategoryRouter.swift in Sources */,
+				57E92446208BFD510009120D /* DialogsViewModel.swift in Sources */,
 				567DE8BB2085122B003A91C4 /* OkDocButton.swift in Sources */,
 				026211C4AB1BA5EAB175FE73 /* CategoryConfigurator.swift in Sources */,
 				8114686663256D47B93E6BF4 /* CategoryInitializer.swift in Sources */,
@@ -1737,6 +1821,7 @@
 				AB623B563D0C9AC8AD786773 /* AppointmentInfoRouter.swift in Sources */,
 				046789CFF7923E1E62FAA908 /* AppointmentInfoConfigurator.swift in Sources */,
 				F22E8B4CB70F594C3C1398AD /* AppointmentInfoInitializer.swift in Sources */,
+				57E92438208BE8620009120D /* FeedbackService.swift in Sources */,
 				C02218D2EB81467180ECA224 /* AnalyzesViewInput.swift in Sources */,
 				8EC200C023B380438AE3A2D9 /* AnalyzesViewOutput.swift in Sources */,
 				270FC5465F9E0C1DD3D5DD4C /* AnalyzesViewController.swift in Sources */,
@@ -1750,6 +1835,7 @@
 				5B7CBBBB512B9C24C038F9B9 /* AnalyzesConfigurator.swift in Sources */,
 				C9A1EC5BC7625EFE632BB8F7 /* AnalyzesInitializer.swift in Sources */,
 				7953B359F036AA64491A9A15 /* QuestionnaireViewInput.swift in Sources */,
+				57E9244A208C1A870009120D /* CategoriesService.swift in Sources */,
 				7FC9FE094EEF580527EF500F /* QuestionnaireViewOutput.swift in Sources */,
 				38740782EBE6388D44AF97EE /* QuestionnaireViewController.swift in Sources */,
 				04C40493C1EA2506D65DDF37 /* QuestionnaireModuleInput.swift in Sources */,
@@ -1766,10 +1852,12 @@
 				0AD5F03DB40379A4D3FAC3FB /* ConsultationViewController.swift in Sources */,
 				7E3570E93570F4589C2A939A /* ConsultationModuleInput.swift in Sources */,
 				0270720E3D7BE779F6F034E7 /* ConsultationPresenter.swift in Sources */,
+				57E9244C208C1B020009120D /* CategoriesServiceImplementation.swift in Sources */,
 				EE3A728BFA1AC2945070FC49 /* ConsultationInteractorInput.swift in Sources */,
 				12BF5C362E04C1D493C925F7 /* ConsultationInteractorOutput.swift in Sources */,
 				8A1B869CBA232D50B6C48A00 /* ConsultationInteractor.swift in Sources */,
 				BED3AE3B4C170398BD348C22 /* ConsultationRouterInput.swift in Sources */,
+				57E92436208BE2800009120D /* FeedbackEngine.swift in Sources */,
 				4915361807C646757C4EE3E4 /* ConsultationRouter.swift in Sources */,
 				878D61B61FA63E4E3324DCE4 /* ConsultationConfigurator.swift in Sources */,
 				2A400EE778854CE8CEB8D18E /* ConsultationInitializer.swift in Sources */,

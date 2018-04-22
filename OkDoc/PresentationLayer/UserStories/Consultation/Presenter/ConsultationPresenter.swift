@@ -13,6 +13,8 @@ class ConsultationPresenter: ConsultationModuleInput, ConsultationViewOutput, Co
     var router: ConsultationRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+        view.setNavigationBarBackButton(title: "")
+        view.setTitleLabel(text: "Наши врачи")
     }
 }

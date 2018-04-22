@@ -113,8 +113,6 @@ extension SegmentBar: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! SegmentCell
         configureHorizontalBarPositionBy(cell: cell)
-        let generator = UISelectionFeedbackGenerator()
-        generator.selectionChanged()
     }
 }
 

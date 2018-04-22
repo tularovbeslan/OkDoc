@@ -17,16 +17,21 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        output.viewDidLoad()
     }
 
-    // MARK: CategoryViewInput
+    // MARK: - CategoryViewInput
     func setupInitialState() {
         configureTableView()
-        testModels()
+        output.viewIsReady()
+    }
+    
+    func updateView(with viewModels: [CategoryViewModel]) {
+        self.viewModels = viewModels
+        reloadView()
     }
     
     // MARK: - Helpers
@@ -39,14 +44,7 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
         tableView.contentInset = UIEdgeInsets.init(top: 20, left: 0, bottom: 15, right: 0)
     }
     
-    func testModels() {
-        var titles = ["Логопед", "Физиотерапевт", "Гастроэнтеролог"]
-        var subTitles = ["Нарушения структурно–семантического оформления высказывания", "Применение физических факторов с лечебной и профилактической целью", "Лечение болезней желудочно–кишечного тракта"]
-        var photo = ["image1", "image2", "image3"]
-        for i in 0..<titles.count {
-            let model = CategoryViewModel(title: titles[i], subTitle: subTitles[i], photo: photo[i])
-            viewModels.append(model)
-        }
+    func reloadView() {
         tableView.reloadData()
     }
 }
@@ -67,8 +65,6 @@ extension CategoryViewController: UITableViewDataSource {
 extension CategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.didSelect()
-        let generator = UISelectionFeedbackGenerator()
-        generator.selectionChanged()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

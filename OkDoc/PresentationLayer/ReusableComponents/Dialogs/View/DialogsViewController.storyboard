@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wl9-02-PZL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dialogs View Controller-->
+        <scene sceneID="d7J-oL-Dc3">
+            <objects>
+                <viewController storyboardIdentifier="DialogsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wl9-02-PZL" customClass="DialogsViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J95-1R-yF2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNp-5m-Zg9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="18" minY="20" maxX="18" maxY="18"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ej9-fx-Gp3" firstAttribute="trailing" secondItem="VNp-5m-Zg9" secondAttribute="trailing" id="COj-gB-qyW"/>
+                            <constraint firstItem="VNp-5m-Zg9" firstAttribute="top" secondItem="Ej9-fx-Gp3" secondAttribute="top" id="Ecc-lh-fbH"/>
+                            <constraint firstItem="VNp-5m-Zg9" firstAttribute="leading" secondItem="Ej9-fx-Gp3" secondAttribute="leading" id="bVk-B0-KcI"/>
+                            <constraint firstItem="Ej9-fx-Gp3" firstAttribute="bottom" secondItem="VNp-5m-Zg9" secondAttribute="bottom" id="dCq-IW-1Be"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ej9-fx-Gp3"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VNp-5m-Zg9" id="vXj-tg-JRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iki-Ow-3ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="2zt-gP-sLt" customClass="DialogsModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dialogsViewController" destination="Wl9-02-PZL" id="DWK-hL-iC6"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="146" y="54"/>
+        </scene>
+    </scenes>
+</document>

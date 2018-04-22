@@ -13,6 +13,6 @@ class DialogsPresenter: DialogsModuleInput, DialogsViewOutput, DialogsInteractor
     var router: DialogsRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
 }

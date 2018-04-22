@@ -14,4 +14,5 @@ protocol CategoryViewInput: class {
     */
 
     func setupInitialState()
+    func updateView(with viewModels: [CategoryViewModel])
 }

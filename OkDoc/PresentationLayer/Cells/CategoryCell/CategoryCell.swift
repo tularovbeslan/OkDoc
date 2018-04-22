@@ -9,10 +9,18 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
+    
     // MARK: - IBOutlets
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var photoView: UIImageView!
+    
+    // MARK: - Life cycle
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        let feedbackEnagine = FeedbackEngine()
+        feedbackEnagine.feedback(type: .selection)
+    }
 }
 
 extension CategoryCell {

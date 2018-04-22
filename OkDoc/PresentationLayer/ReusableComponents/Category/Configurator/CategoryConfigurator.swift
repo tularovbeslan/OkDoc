@@ -19,15 +19,21 @@ class CategoryModuleConfigurator {
 
     private func configure(viewController: CategoryViewController) {
 
-        let router = CategoryRouter()
+        let router = CategoryRouter.init()
         router.transitionHandler = viewController
         
-        let presenter = CategoryPresenter()
+        let network = NetworkImplementation.init()
+        
+        let service = CategoriesServiceImplementation.init()
+        service.network = network
+        
+        let presenter = CategoryPresenter.init()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = CategoryInteractor()
+        let interactor = CategoryInteractor.init()
         interactor.output = presenter
+        interactor.service = service
 
         presenter.interactor = interactor
         viewController.output = presenter

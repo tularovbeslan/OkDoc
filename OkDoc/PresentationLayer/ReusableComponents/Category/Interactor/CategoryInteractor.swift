@@ -9,5 +9,11 @@
 class CategoryInteractor: CategoryInteractorInput {
 
     weak var output: CategoryInteractorOutput!
+    var service: CategoriesService!
 
+    func prepareCategories() {
+        service.obtainCategories { [weak self] (viewModels) in
+            self?.output.categoriesDidPrepare(by: viewModels)
+        }
+    }
 }

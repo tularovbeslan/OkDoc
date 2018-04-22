@@ -14,4 +14,6 @@ protocol ConsultationViewInput: class {
     */
 
     func setupInitialState()
+    func setTitleLabel(text: String)
+    func setNavigationBarBackButton(title: String)
 }
