@@ -949,15 +949,6 @@
 			path = CategoryViewModel;
 			sourceTree = "<group>";
 		};
-		56EF4ABB206FE99A00E48942 /* CommonUIElements */ = {
-			isa = PBXGroup;
-			children = (
-				56EF4B2C2073D41400E48942 /* AppNavigationController */,
-				56EF4ABC206FE99A00E48942 /* AppTabbarController */,
-			);
-			path = CommonUIElements;
-			sourceTree = "<group>";
-		};
 		56EF4ABC206FE99A00E48942 /* AppTabbarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,7 +993,6 @@
 			isa = PBXGroup;
 			children = (
 				57273EC2208E7D9900408375 /* Utilities */,
-				56EF4ABB206FE99A00E48942 /* CommonUIElements */,
 				56EF4AAB206FE99A00E48942 /* Factories */,
 				2F5151DC1C037DCE9E883710 /* UserStories */,
 				F1DB0009E71A767C19B8A4FC /* ReusableComponents */,
@@ -1067,6 +1057,8 @@
 		5712D9F2209138BE0017FD96 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				56EF4B2C2073D41400E48942 /* AppNavigationController */,
+				56EF4ABC206FE99A00E48942 /* AppTabbarController */,
 				FE505724CC493343EFE6375A /* Segment */,
 				57E92456208CEA410009120D /* TimeView */,
 				57E92453208CEA200009120D /* DateView */,
