@@ -15,4 +15,8 @@ class DoctorDetailPresenter: DoctorDetailModuleInput, DoctorDetailViewOutput, Do
     func viewIsReady() {
         view.setupInitialState()
     }
+    
+    func oppointmentDidPress() {
+        router.openModule()
+    }
 }

@@ -7,5 +7,9 @@
 //
 
 class ConsultationAppointmentRouter: ConsultationAppointmentRouterInput {
-
+    weak var transitionHandler: TransitionHandler!
+    
+    func openModule() {
+        
+    }
 }

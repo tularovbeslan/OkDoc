@@ -111,6 +111,7 @@
 		56EF4B3D2073F02200E48942 /* AppTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B3C2073F02200E48942 /* AppTabbar.swift */; };
 		56EF4B3F2073F1A500E48942 /* CategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */; };
 		56EF4B412073F3E300E48942 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B402073F3E300E48942 /* CategoryViewModel.swift */; };
+		5712D9F12091355D0017FD96 /* ConsultationAppointmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5712D9F02091355D0017FD96 /* ConsultationAppointmentViewController.storyboard */; };
 		57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC0208E7CDD00408375 /* TimeViewModel.swift */; };
 		57273EC5208E7DEB00408375 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC4208E7DEB00408375 /* AppAppearance.swift */; };
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
@@ -344,6 +345,7 @@
 		56EF4B3C2073F02200E48942 /* AppTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbar.swift; sourceTree = "<group>"; };
 		56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryViewController.storyboard; sourceTree = "<group>"; };
 		56EF4B402073F3E300E48942 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		5712D9F02091355D0017FD96 /* ConsultationAppointmentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConsultationAppointmentViewController.storyboard; sourceTree = "<group>"; };
 		57273EC0208E7CDD00408375 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		57273EC4208E7DEB00408375 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		576F055D208E773B00D3AC07 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
@@ -892,7 +894,6 @@
 			isa = PBXGroup;
 			children = (
 				56EF4ABD206FE99A00E48942 /* AppDelegate.swift */,
-				56EF4AA6206FE99A00E48942 /* Extensions */,
 				56EF4ABE206FE99A00E48942 /* Protocols */,
 			);
 			path = ApplicationLayer;
@@ -1005,7 +1006,6 @@
 				56EF4AAB206FE99A00E48942 /* Factories */,
 				2F5151DC1C037DCE9E883710 /* UserStories */,
 				F1DB0009E71A767C19B8A4FC /* ReusableComponents */,
-				56EF4B262073D3C900E48942 /* Cells */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -1064,6 +1064,31 @@
 			path = AppNavigationController;
 			sourceTree = "<group>";
 		};
+		5712D9F2209138BE0017FD96 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FE505724CC493343EFE6375A /* Segment */,
+				57E92456208CEA410009120D /* TimeView */,
+				57E92453208CEA200009120D /* DateView */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		5712D9F3209138EB0017FD96 /* VIPERModules */ = {
+			isa = PBXGroup;
+			children = (
+				567C018D9969D94CDACC0D58 /* Dialogs */,
+				567DE8B9208511D8003A91C4 /* OkDocButton */,
+				E8AB39A9811FCDE23DF2C84D /* DoctorsList */,
+				EDF701DDCCE0B23082200C69 /* Category */,
+				2ABC85F3659D434D36C7AC2A /* Dialog */,
+				E93E562FAB740550B7D4CD6C /* AppointmentInfo */,
+				91DFA47D73DFE09B9EAC1D6D /* Analyzes */,
+				7D7E2AC22968D856F8E6F1D5 /* Questionnaire */,
+			);
+			path = VIPERModules;
+			sourceTree = "<group>";
+		};
 		57273EBF208E7CC000408375 /* TimeViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1075,6 +1100,7 @@
 		57273EC2208E7D9900408375 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				56EF4AA6206FE99A00E48942 /* Extensions */,
 				57273EC3208E7DC900408375 /* AppAppearance */,
 			);
 			path = Utilities;
@@ -1505,6 +1531,7 @@
 				9BBE63149CCB38BB8FC7B9CF /* ConsultationAppointmentViewInput.swift */,
 				5A4429218083D5179B79EC51 /* ConsultationAppointmentViewOutput.swift */,
 				805915A887E3CF5B0B54661F /* ConsultationAppointmentViewController.swift */,
+				5712D9F02091355D0017FD96 /* ConsultationAppointmentViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1546,17 +1573,9 @@
 		F1DB0009E71A767C19B8A4FC /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
-				57E92456208CEA410009120D /* TimeView */,
-				57E92453208CEA200009120D /* DateView */,
-				FE505724CC493343EFE6375A /* Segment */,
-				567C018D9969D94CDACC0D58 /* Dialogs */,
-				567DE8B9208511D8003A91C4 /* OkDocButton */,
-				E8AB39A9811FCDE23DF2C84D /* DoctorsList */,
-				EDF701DDCCE0B23082200C69 /* Category */,
-				2ABC85F3659D434D36C7AC2A /* Dialog */,
-				E93E562FAB740550B7D4CD6C /* AppointmentInfo */,
-				91DFA47D73DFE09B9EAC1D6D /* Analyzes */,
-				7D7E2AC22968D856F8E6F1D5 /* Questionnaire */,
+				56EF4B262073D3C900E48942 /* Cells */,
+				5712D9F2209138BE0017FD96 /* UIComponents */,
+				5712D9F3209138EB0017FD96 /* VIPERModules */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -1708,6 +1727,7 @@
 				57E9243C208BEC4D0009120D /* ConsultationViewController.storyboard in Resources */,
 				56EF4B222073499D00E48942 /* Averta Cyrillic Black Italic.otf in Resources */,
 				56EF4B192073499D00E48942 /* Averta Cyrillic Regular Italic.otf in Resources */,
+				5712D9F12091355D0017FD96 /* ConsultationAppointmentViewController.storyboard in Resources */,
 				56EF4B202073499D00E48942 /* Averta Cyrillic Black.otf in Resources */,
 				57E92441208BF3230009120D /* DialogsCell.xib in Resources */,
 				57E92443208BFA7C0009120D /* DialogsViewController.storyboard in Resources */,

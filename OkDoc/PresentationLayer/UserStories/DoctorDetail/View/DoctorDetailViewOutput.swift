@@ -14,4 +14,5 @@ protocol DoctorDetailViewOutput {
     */
 
     func viewIsReady()
+    func oppointmentDidPress()
 }

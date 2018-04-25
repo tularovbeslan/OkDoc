@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConsultationAppointmentRouterInput {
-
+    func openModule()
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PSZ-O7-Ry4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Consultationappointment View Controller-->
+        <scene sceneID="RfR-ph-zFy">
+            <objects>
+                <viewController storyboardIdentifier="ConsultationAppointmentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PSZ-O7-Ry4" customClass="ConsultationAppointmentViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOR-Jk-Tmg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-er-t93" customClass="TimeView" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUf-er-t93" firstAttribute="leading" secondItem="iK2-xV-AEw" secondAttribute="leading" id="KKt-uH-1iz"/>
+                            <constraint firstItem="FUf-er-t93" firstAttribute="trailing" secondItem="iK2-xV-AEw" secondAttribute="trailing" id="Omj-bn-3m7"/>
+                            <constraint firstItem="iK2-xV-AEw" firstAttribute="bottom" secondItem="FUf-er-t93" secondAttribute="bottom" id="VZV-kv-Kn0"/>
+                            <constraint firstItem="FUf-er-t93" firstAttribute="top" secondItem="iK2-xV-AEw" secondAttribute="top" id="iEI-65-46m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iK2-xV-AEw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cj6-tX-Ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="P5y-di-YMJ" customClass="ConsultationAppointmentModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="consultationappointmentViewController" destination="PSZ-O7-Ry4" id="bMg-u6-n9x"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="238" y="269"/>
+        </scene>
+    </scenes>
+</document>

@@ -20,6 +20,7 @@ class DoctorDetailModuleConfigurator {
     private func configure(viewController: DoctorDetailViewController) {
 
         let router = DoctorDetailRouter()
+        router.transitionHandler = viewController
 
         let presenter = DoctorDetailPresenter()
         presenter.view = viewController

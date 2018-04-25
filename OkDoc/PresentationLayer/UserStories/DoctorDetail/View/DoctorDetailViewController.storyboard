@@ -81,6 +81,7 @@
                         <outlet property="burgerMenu" destination="Qhy-rC-Y4j" id="uad-XZ-Kv7"/>
                         <outlet property="makeAnOppointment" destination="di8-SJ-epO" id="Qpv-Xg-9vx"/>
                         <outlet property="tableView" destination="LrZ-Wy-hKU" id="AVn-pQ-Bt1"/>
+                        <segue destination="4G3-Nd-deF" kind="show" identifier="ConsultationAppointmentViewController" id="mjc-RR-dfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIC-Uy-axD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,6 +92,14 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="-6.746626686656672"/>
+        </scene>
+        <!--ConsultationAppointmentViewController-->
+        <scene sceneID="D1w-ov-Hia">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ConsultationAppointmentViewController" storyboardName="ConsultationAppointmentViewController" id="4G3-Nd-deF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4g-96-CkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-2"/>
         </scene>
     </scenes>
     <resources>

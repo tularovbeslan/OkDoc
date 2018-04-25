@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput, StoryboardInitializable {
+final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput, StoryboardInitializable, TransitionHandler {
 
     // MARK: - Properties
     var output: DoctorDetailViewOutput!
@@ -50,6 +50,7 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     
     @IBAction func oppointmentDidPress(_ sender: OkDocButton) {
         print("oppointmentDidPress")
+        output.oppointmentDidPress()
     }
     
     

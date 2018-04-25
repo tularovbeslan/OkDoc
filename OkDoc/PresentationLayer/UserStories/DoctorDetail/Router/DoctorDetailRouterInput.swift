@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DoctorDetailRouterInput {
-
+    func openModule()
 }

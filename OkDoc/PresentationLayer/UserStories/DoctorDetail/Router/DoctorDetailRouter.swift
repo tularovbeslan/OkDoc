@@ -7,5 +7,9 @@
 //
 
 class DoctorDetailRouter: DoctorDetailRouterInput {
-
+    weak var transitionHandler: TransitionHandler!
+    
+    func openModule() {
+        transitionHandler.openModule(segueIdentifier: String.init(describing: ConsultationAppointmentViewController.self))
+    }
 }

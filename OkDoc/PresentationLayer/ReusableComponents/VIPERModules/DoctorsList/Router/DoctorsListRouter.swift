@@ -7,7 +7,7 @@
 //
 
 class DoctorsListRouter: DoctorsListRouterInput {
-    var transitionHandler: TransitionHandler!
+    weak var transitionHandler: TransitionHandler!
     
     func openModule() {
         transitionHandler.openModule(segueIdentifier: String.init(describing: DoctorDetailViewController.self))
