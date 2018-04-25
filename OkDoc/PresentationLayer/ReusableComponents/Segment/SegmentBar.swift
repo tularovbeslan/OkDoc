@@ -129,7 +129,3 @@ extension SegmentBar: UICollectionViewDelegateFlowLayout {
         return NSString(string: string).boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil).size
     }
 }
-
-
-
-

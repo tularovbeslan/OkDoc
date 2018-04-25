@@ -20,6 +20,6 @@ class CategorySelectionPresenter: CategorySelectionModuleInput, CategorySelectio
     }
     
     func menuButtonDidPress() {
-        feedbackService.feedbackForButton(by: .impact(.medium))
+        feedbackService.feedback(by: .impact(.medium))
     }
 }

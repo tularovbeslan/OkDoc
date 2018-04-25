@@ -10,9 +10,8 @@ import UIKit
 
 class SegmentCell: UICollectionViewCell {
     
-    // MARK: - IBOutlets
-    @IBOutlet weak var title: UILabel!
-    
+    // MARK: - Properties
+    var feedbackEngine: FeedbackEngine!
     override var isHighlighted: Bool {
         didSet {
             title.textColor = isHighlighted ? .black : UIColor(red:159/255.0, green:171/255.0, blue:185/255.0, alpha: 1)
@@ -21,10 +20,17 @@ class SegmentCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            let feedbackEngine = FeedbackEngine()
             feedbackEngine.feedback(type: .selection)
             title.textColor = isSelected ? .black : UIColor(red:159/255.0, green:171/255.0, blue:185/255.0, alpha: 1)
         }
+    }
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var title: UILabel!
+    
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        feedbackEngine = FeedbackEngine()
     }
 }
 

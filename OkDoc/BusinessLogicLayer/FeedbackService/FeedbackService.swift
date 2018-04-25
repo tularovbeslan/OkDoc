@@ -9,5 +9,5 @@
 import Foundation
 
 protocol FeedbackService {
-    func feedbackForButton(by type: FeedbackEngine.EngineType)
+    func feedback(by type: FeedbackEngine.EngineType)
 }
