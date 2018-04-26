@@ -89,8 +89,8 @@ class DateView: UIView {
     }
     
     private func configureHorizontalBarPositionBy(cell: DateCell) {
-        let width = cell.convert(cell.date.frame, to: cell.date).size.width
-        let xOffset = cell.convert(cell.date.frame, to: collectionView).origin.x + collectionView.contentInset.left
+        let width = cell.convert(cell.date.frame, to: self).size.width
+        let xOffset = cell.convert(cell.date.frame, to: self).origin.x + collectionView.contentInset.left + width
         horizontalBarWidthConstraint?.constant = width
         horizontalBarLeftConstraint?.constant = xOffset
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
