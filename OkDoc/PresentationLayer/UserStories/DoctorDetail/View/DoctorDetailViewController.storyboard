@@ -76,6 +76,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y08-bW-wRU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HED-18-xYm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JaT-qd-VuD"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="backArrow" destination="P7U-Yx-ut3" id="ysP-c2-c2w"/>
                         <outlet property="burgerMenu" destination="Qhy-rC-Y4j" id="uad-XZ-Kv7"/>
@@ -91,7 +94,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="96.799999999999997" y="-6.746626686656672"/>
+            <point key="canvasLocation" x="1039.2" y="-7.389162561576355"/>
         </scene>
         <!--ConsultationAppointmentViewController-->
         <scene sceneID="D1w-ov-Hia">
@@ -99,7 +102,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ConsultationAppointmentViewController" storyboardName="ConsultationAppointmentViewController" id="4G3-Nd-deF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4g-96-CkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="-2"/>
+            <point key="canvasLocation" x="1774.4000000000001" y="-7.389162561576355"/>
         </scene>
     </scenes>
     <resources>

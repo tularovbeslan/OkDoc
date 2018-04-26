@@ -14,4 +14,5 @@ protocol DoctorDetailViewInput: class {
     */
 
     func setupInitialState()
+    func setNavigationBarBackButton(title: String)
 }

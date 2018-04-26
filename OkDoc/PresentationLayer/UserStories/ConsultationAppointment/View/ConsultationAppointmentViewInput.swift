@@ -14,4 +14,7 @@ protocol ConsultationAppointmentViewInput: class {
     */
 
     func setupInitialState()
+    func setTitle(text: String)
+    func setNavigationBarBackButton(title: String)
+
 }

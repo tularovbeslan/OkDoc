@@ -14,6 +14,7 @@ class DoctorDetailPresenter: DoctorDetailModuleInput, DoctorDetailViewOutput, Do
 
     func viewIsReady() {
         view.setupInitialState()
+        view.setNavigationBarBackButton(title: "")
     }
     
     func oppointmentDidPress() {

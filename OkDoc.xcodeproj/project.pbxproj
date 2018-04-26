@@ -120,6 +120,8 @@
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
 		576F055E208E773B00D3AC07 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F055D208E773B00D3AC07 /* TimeCell.swift */; };
 		576F0560208E774400D3AC07 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576F055F208E774400D3AC07 /* TimeCell.xib */; };
+		57708A78209250020074EE94 /* AnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A77209250020074EE94 /* AnalysisCell.swift */; };
+		57708A7A2092500B0074EE94 /* AnalysisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57708A792092500B0074EE94 /* AnalysisCell.xib */; };
 		57E92436208BE2800009120D /* FeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92435208BE2800009120D /* FeedbackEngine.swift */; };
 		57E92438208BE8620009120D /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92437208BE8620009120D /* FeedbackService.swift */; };
 		57E9243A208BE94F0009120D /* FeedbackServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */; };
@@ -356,6 +358,8 @@
 		57273EC4208E7DEB00408375 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		576F055D208E773B00D3AC07 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		576F055F208E774400D3AC07 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
+		57708A77209250020074EE94 /* AnalysisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCell.swift; sourceTree = "<group>"; };
+		57708A792092500B0074EE94 /* AnalysisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalysisCell.xib; sourceTree = "<group>"; };
 		57E92435208BE2800009120D /* FeedbackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEngine.swift; sourceTree = "<group>"; };
 		57E92437208BE8620009120D /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackServiceImplementation.swift; sourceTree = "<group>"; };
@@ -1033,6 +1037,7 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				57708A7620924FD20074EE94 /* AnalysisCell */,
 				5712D9F4209153880017FD96 /* DateCell */,
 				576F055C208E770800D3AC07 /* TimeCell */,
 				57E9243D208BF2E90009120D /* DialogCell */,
@@ -1138,6 +1143,15 @@
 				576F055F208E774400D3AC07 /* TimeCell.xib */,
 			);
 			path = TimeCell;
+			sourceTree = "<group>";
+		};
+		57708A7620924FD20074EE94 /* AnalysisCell */ = {
+			isa = PBXGroup;
+			children = (
+				57708A77209250020074EE94 /* AnalysisCell.swift */,
+				57708A792092500B0074EE94 /* AnalysisCell.xib */,
+			);
+			path = AnalysisCell;
 			sourceTree = "<group>";
 		};
 		5782E14AAD478AF12C5150FF /* Presenter */ = {
@@ -1763,6 +1777,7 @@
 				56EF4ADA206FE99A00E48942 /* Assets.xcassets in Resources */,
 				56EF4B1D2073499D00E48942 /* Averta Cyrillic Extra Thin.otf in Resources */,
 				56EF4B1C2073499D00E48942 /* Averta Cyrillic Thin.otf in Resources */,
+				57708A7A2092500B0074EE94 /* AnalysisCell.xib in Resources */,
 				56EF4B382073E74900E48942 /* DoctorDetailViewController.storyboard in Resources */,
 				56EF4B1F2073499D00E48942 /* Averta Cyrillic Bold Italic.otf in Resources */,
 				56EF4B2B2073D3F300E48942 /* CategoryCell.xib in Resources */,
@@ -1895,6 +1910,7 @@
 				AE4776ED1FD0F9D13B1889C7 /* DialogsConfigurator.swift in Sources */,
 				D1420A13129A7BEF89348450 /* DialogsInitializer.swift in Sources */,
 				8B6EAC27CBEDC16C3718F7E6 /* DialogViewInput.swift in Sources */,
+				57708A78209250020074EE94 /* AnalysisCell.swift in Sources */,
 				D93D81CAF70D515CBA2EC59F /* DialogViewOutput.swift in Sources */,
 				E1EA6A98AD778739A97CD4E1 /* DialogViewController.swift in Sources */,
 				01D11307FA5FEC456503E226 /* DialogModuleInput.swift in Sources */,

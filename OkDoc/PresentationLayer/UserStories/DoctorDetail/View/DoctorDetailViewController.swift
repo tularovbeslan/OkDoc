@@ -49,7 +49,6 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     }
     
     @IBAction func oppointmentDidPress(_ sender: OkDocButton) {
-        print("oppointmentDidPress")
         output.oppointmentDidPress()
     }
     
@@ -59,6 +58,10 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     func setupInitialState() {
         configureTableView()
         configureMakeAnOppointment()
+    }
+    
+    func setNavigationBarBackButton(title: String) {
+        navigationItem.leftBarButtonItem?.title = title
     }
     
     //MARK: - Helpers

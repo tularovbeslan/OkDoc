@@ -15,7 +15,7 @@ class CategorySelectionPresenter: CategorySelectionModuleInput, CategorySelectio
 
     func viewIsReady() {
         view.setupInitialState()
-        view.setNavigationBarBackButton(title: "")
+        view.setNavigationBarBackButton(title:"")
         view.setTitleLabel(text: "Наши врачи")
     }
     

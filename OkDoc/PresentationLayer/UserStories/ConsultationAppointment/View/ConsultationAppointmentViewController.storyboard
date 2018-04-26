@@ -44,6 +44,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iK2-xV-AEw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Mi-39-kVm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vbE-9o-K4F"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateView" destination="1hX-KY-1B3" id="m40-G8-X55"/>
                         <outlet property="timeView" destination="FUf-er-t93" id="Tf0-3k-8ie"/>
@@ -56,7 +59,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="237.59999999999999" y="268.51574212893553"/>
+            <point key="canvasLocation" x="1176.8" y="268.51574212893553"/>
         </scene>
     </scenes>
 </document>

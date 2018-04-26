@@ -14,5 +14,7 @@ class ConsultationAppointmentPresenter: ConsultationAppointmentModuleInput, Cons
 
     func viewIsReady() {
         view.setupInitialState()
+        view.setTitle(text: "Регистрация")
+        view.setNavigationBarBackButton(title: "")
     }
 }

@@ -25,7 +25,15 @@ class ConsultationAppointmentViewController: UIViewController, ConsultationAppoi
 
     // MARK: ConsultationAppointmentViewInput
     func setupInitialState() {
-        timeView.times = ["12:20", "12:20", "12:20", "12:20", "12:20", "12:20", "12:20", "12:20", "12:20"]
+        timeView.times = ["9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"]
         dateView.date = [["Пн":"12"], ["Вт":"13"], ["Ср":"14"], ["Чт":"15"], ["Пт":"16"], ["Сб":"17"]]
+    }
+    
+    func setTitle(text: String) {
+        title = text
+    }
+    
+    func setNavigationBarBackButton(title: String) {
+        navigationItem.leftBarButtonItem?.title = title
     }
 }
