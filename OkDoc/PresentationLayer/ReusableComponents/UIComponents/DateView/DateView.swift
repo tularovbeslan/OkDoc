@@ -91,8 +91,8 @@ class DateView: UIView {
     private func configureHorizontalBarPositionBy(cell: DateCell) {
         let width = cell.convert(cell.date.frame, to: self).size.width
         let xOffset = cell.convert(cell.date.frame, to: self).origin.x + collectionView.contentInset.left + width
-        horizontalBarWidthConstraint?.constant = width
-        horizontalBarLeftConstraint?.constant = xOffset
+        horizontalBarWidthConstraint?.constant = width + 4
+        horizontalBarLeftConstraint?.constant = xOffset - 2
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: nil)
@@ -129,7 +129,7 @@ extension DateView: UICollectionViewDelegateFlowLayout {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let interitemSpacing = layout.minimumInteritemSpacing
         let width = (collectionView.frame.width - (collectionView.contentInset.left * 2) - interitemSpacing) / CGFloat(date.count) - 7
-        let height = collectionView.frame.height
+        let height = collectionView.frame.height - (collectionView.contentInset.top * 2)
         return CGSize(width: width, height: height)
     }
 }

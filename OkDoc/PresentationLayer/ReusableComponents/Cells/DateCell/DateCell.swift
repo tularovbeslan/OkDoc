@@ -11,14 +11,10 @@ import UIKit
 class DateCell: UICollectionViewCell {
     
     // MARK: - Properties
-    override var isHighlighted: Bool {
-        didSet {
-            isSelected = isHighlighted
-        }
-    }
-    
     override var isSelected: Bool {
         didSet {
+            let feedbackEnagine = FeedbackEngine()
+            feedbackEnagine.feedback(type: .impact(.light))
             weekDay.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
             date.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
         }
@@ -35,8 +31,8 @@ class DateCell: UICollectionViewCell {
     
     // MARK: - Helpers
     func setTitlesColor() {
-        weekDay.textColor = UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)
-        date.textColor = UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)
+        weekDay.textColor = UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
+        date.textColor = UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
     }
 }
 

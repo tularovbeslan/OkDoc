@@ -11,15 +11,11 @@ import UIKit
 class TimeCell: UICollectionViewCell {
     
     // MARK: - Properties
-    override var isHighlighted: Bool {
-        didSet {
-            isSelected = isHighlighted
-        }
-    }
-
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = isSelected ? .blue : UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)
+            let feedbackEnagine = FeedbackEngine()
+            feedbackEnagine.feedback(type: .selection)
+            contentView.backgroundColor = isSelected ? UIColor(red:2/255.0, green:123/255.0, blue:255/255.0, alpha: 1) : UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)
             time.textColor = isSelected ? .white : .black
         }
     }
