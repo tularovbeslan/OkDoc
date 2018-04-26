@@ -112,6 +112,9 @@
 		56EF4B3F2073F1A500E48942 /* CategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */; };
 		56EF4B412073F3E300E48942 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4B402073F3E300E48942 /* CategoryViewModel.swift */; };
 		5712D9F12091355D0017FD96 /* ConsultationAppointmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5712D9F02091355D0017FD96 /* ConsultationAppointmentViewController.storyboard */; };
+		5712D9F62091539F0017FD96 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9F52091539F0017FD96 /* DateCell.swift */; };
+		5712D9F8209153A70017FD96 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5712D9F7209153A70017FD96 /* DateCell.xib */; };
+		5712D9FB209155160017FD96 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9FA209155160017FD96 /* DateViewModel.swift */; };
 		57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC0208E7CDD00408375 /* TimeViewModel.swift */; };
 		57273EC5208E7DEB00408375 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC4208E7DEB00408375 /* AppAppearance.swift */; };
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
@@ -346,6 +349,9 @@
 		56EF4B3E2073F1A500E48942 /* CategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryViewController.storyboard; sourceTree = "<group>"; };
 		56EF4B402073F3E300E48942 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		5712D9F02091355D0017FD96 /* ConsultationAppointmentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConsultationAppointmentViewController.storyboard; sourceTree = "<group>"; };
+		5712D9F52091539F0017FD96 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		5712D9F7209153A70017FD96 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		5712D9FA209155160017FD96 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		57273EC0208E7CDD00408375 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		57273EC4208E7DEB00408375 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		576F055D208E773B00D3AC07 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
@@ -930,6 +936,7 @@
 		56EF4AAD206FE99A00E48942 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5712D9F92091550B0017FD96 /* DateViewModel */,
 				57273EBF208E7CC000408375 /* TimeViewModel */,
 				57E92444208BFCE80009120D /* DialogsViewModel */,
 				56D37EC020809F8200C8F65B /* DoctorDetailInfoViewModel */,
@@ -1026,6 +1033,7 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5712D9F4209153880017FD96 /* DateCell */,
 				576F055C208E770800D3AC07 /* TimeCell */,
 				57E9243D208BF2E90009120D /* DialogCell */,
 				56D37EB52080880300C8F65B /* DoctorDetailCommonInfoCell */,
@@ -1079,6 +1087,23 @@
 				7D7E2AC22968D856F8E6F1D5 /* Questionnaire */,
 			);
 			path = VIPERModules;
+			sourceTree = "<group>";
+		};
+		5712D9F4209153880017FD96 /* DateCell */ = {
+			isa = PBXGroup;
+			children = (
+				5712D9F52091539F0017FD96 /* DateCell.swift */,
+				5712D9F7209153A70017FD96 /* DateCell.xib */,
+			);
+			path = DateCell;
+			sourceTree = "<group>";
+		};
+		5712D9F92091550B0017FD96 /* DateViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5712D9FA209155160017FD96 /* DateViewModel.swift */,
+			);
+			path = DateViewModel;
 			sourceTree = "<group>";
 		};
 		57273EBF208E7CC000408375 /* TimeViewModel */ = {
@@ -1722,6 +1747,7 @@
 				5712D9F12091355D0017FD96 /* ConsultationAppointmentViewController.storyboard in Resources */,
 				56EF4B202073499D00E48942 /* Averta Cyrillic Black.otf in Resources */,
 				57E92441208BF3230009120D /* DialogsCell.xib in Resources */,
+				5712D9F8209153A70017FD96 /* DateCell.xib in Resources */,
 				57E92443208BFA7C0009120D /* DialogsViewController.storyboard in Resources */,
 				56EF4ADB206FE99A00E48942 /* LaunchScreen.storyboard in Resources */,
 				56EF4B212073499D00E48942 /* Averta Cyrillic SemiBold.otf in Resources */,
@@ -1881,6 +1907,7 @@
 				E01494B1D6736329840E9FED /* DialogRouter.swift in Sources */,
 				572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */,
 				BF0BD7047B37CECFEC40E0D1 /* DialogInitializer.swift in Sources */,
+				5712D9F62091539F0017FD96 /* DateCell.swift in Sources */,
 				A63635CF126CBB4B186B4695 /* ConsultationAppointmentViewInput.swift in Sources */,
 				85D50E8B6D77EF6B6180D77D /* ConsultationAppointmentViewOutput.swift in Sources */,
 				3F1B5F9D93511DE96F75BA09 /* ConsultationAppointmentViewController.swift in Sources */,
@@ -1943,6 +1970,7 @@
 				BED3AE3B4C170398BD348C22 /* ConsultationRouterInput.swift in Sources */,
 				57E92436208BE2800009120D /* FeedbackEngine.swift in Sources */,
 				4915361807C646757C4EE3E4 /* ConsultationRouter.swift in Sources */,
+				5712D9FB209155160017FD96 /* DateViewModel.swift in Sources */,
 				878D61B61FA63E4E3324DCE4 /* ConsultationConfigurator.swift in Sources */,
 				2A400EE778854CE8CEB8D18E /* ConsultationInitializer.swift in Sources */,
 			);

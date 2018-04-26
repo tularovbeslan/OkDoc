@@ -17,14 +17,15 @@ class TimeView: UIView {
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
         }
     }
-    private var viewModels: [SegmentViewModel] = []
+    private var viewModels: [TimeViewModel] = []
     private var selectedIndex: Int = 0
     private var currentWidth: CGFloat = 0
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = CGSize(width: 100, height: 40)
-        layout.minimumInteritemSpacing = 20
+        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = 8
+        layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: self.frame, collectionViewLayout: layout)
         cv.backgroundColor = .white
         cv.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +35,7 @@ class TimeView: UIView {
     // MARK: - Life cycle
     override func awakeFromNib() {
         addSubview(collectionView)
+        configureCollectionView()
     }
     
     override init(frame: CGRect) {
@@ -49,8 +51,8 @@ class TimeView: UIView {
     private func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(nibModels: [SegmentViewModel.self])
-//        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 18, bottom: 0, right: 18)
+        collectionView.register(nibModels: [TimeViewModel.self])
+        collectionView.contentInset = UIEdgeInsets.init(top: 23, left: 18, bottom: 23, right: 18)
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -59,7 +61,7 @@ class TimeView: UIView {
     
     private func createTestViewModel() {
         for element in times {
-            let model = SegmentViewModel(title: element)
+            let model = TimeViewModel(time: element)
             viewModels.append(model)
         }
         collectionView.reloadData()
@@ -87,7 +89,11 @@ extension TimeView: UICollectionViewDelegate {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension TimeView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width / 3
-        return CGSize(width: width, height: self.frame.height)
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let interitemSpacing = layout.minimumInteritemSpacing
+        let lineSpacing = layout.minimumLineSpacing
+        let width = (collectionView.frame.width - (collectionView.contentInset.left * 2) - interitemSpacing) / 3 - 3
+        let height = (collectionView.frame.height - (collectionView.contentInset.top * 2) - lineSpacing) / 3 - 3
+        return CGSize(width: width, height: height)
     }
 }

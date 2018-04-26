@@ -13,6 +13,6 @@ class ConsultationAppointmentPresenter: ConsultationAppointmentModuleInput, Cons
     var router: ConsultationAppointmentRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
 }

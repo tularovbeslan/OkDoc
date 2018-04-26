@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkImplementation: Network {
     func loadCategories(completion: @escaping ([CategoryViewModel]) -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             var viewModels: [CategoryViewModel] = []
             var titles = ["Логопед", "Физиотерапевт", "Гастроэнтеролог"]
             var subTitles = ["Нарушения структурно–семантического оформления высказывания", "Применение физических факторов с лечебной и профилактической целью", "Лечение болезней желудочно–кишечного тракта"]
