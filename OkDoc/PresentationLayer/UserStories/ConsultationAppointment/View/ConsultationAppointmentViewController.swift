@@ -69,7 +69,6 @@ extension ConsultationAppointmentViewController: UITableViewDataSource {
         let type = sections[indexPath.section]
         switch type {
         case .analysis:
-            let analysisCell = AnalysisCell.ini
             let model = viewModel.analysisViewModels
             return tableView.dequeueReusableCell(withModel: model, for: indexPath)
         case .dateSelection:
