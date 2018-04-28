@@ -12,8 +12,8 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
 
     // MARK: - Properties
     var output: DoctorDetailViewOutput!
-    var viewModels: [DoctorsViewModel] = []
-    var sections: [SectionType] = [.common, .info]
+    private var viewModels: [DoctorsViewModel] = []
+    private let sections: [SectionType] = [.common, .info]
     // MARK: - IBOutlets
     @IBOutlet weak var backArrow: UIButton!
     @IBOutlet weak var burgerMenu: UIButton!
@@ -65,7 +65,7 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     }
     
     //MARK: - Helpers
-    func configureTableView() {
+    private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         tableView.delegate = self
@@ -73,14 +73,14 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
         tableView.register(nibModels: [DoctorDetailCommonInfoViewModel.self, DoctorDetailInfoViewModel.self])
     }
     
-    func configureMakeAnOppointment() {
+    private func configureMakeAnOppointment() {
         makeAnOppointment.setTitle(text: "Записаться на консультацию")
         makeAnOppointment.setPrice(text: "990 руб.")
         makeAnOppointment.layer.cornerRadius = 14
         makeAnOppointment.backgroundColor = UIColor(red:125/255.0, green:76/255.0, blue:245/255.0, alpha: 1)
     }
     
-    func makeAnOppointment(animation: CGAffineTransform) {
+    private func makeAnOppointment(animation: CGAffineTransform) {
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.makeAnOppointment.transform = animation
         }, completion: nil)
@@ -139,7 +139,7 @@ extension DoctorDetailViewController: UIGestureRecognizerDelegate {
 }
 
 extension DoctorDetailViewController {
-    enum SectionType {
+    private enum SectionType {
         case common
         case info
     }

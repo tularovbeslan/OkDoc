@@ -14,7 +14,7 @@ class DateCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             let feedbackEnagine = FeedbackEngine()
-            feedbackEnagine.feedback(type: .impact(.light))
+            feedbackEnagine.feedback(type: .selection)
             weekDay.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
             date.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
         }

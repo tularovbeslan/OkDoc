@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConsultationAppointmentInteractorOutput: class {
-
+    func AppointmentInformationDidPrepare(viewModel: ConsultationAppointmentViewModel)
 }

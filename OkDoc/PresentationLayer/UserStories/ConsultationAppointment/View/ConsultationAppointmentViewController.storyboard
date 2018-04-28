@@ -18,29 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-er-t93" customClass="TimeView" customModule="OkDoc" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="375" height="214"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-qb-dQv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="csO-Ke-vix"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hX-KY-1B3" customClass="DateView" customModule="OkDoc" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="BOT-sN-Osf"/>
-                                </constraints>
-                            </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FUf-er-t93" firstAttribute="top" secondItem="1hX-KY-1B3" secondAttribute="bottom" id="7By-qO-GpU"/>
-                            <constraint firstItem="1hX-KY-1B3" firstAttribute="trailing" secondItem="iK2-xV-AEw" secondAttribute="trailing" id="9U5-NV-rS0"/>
-                            <constraint firstItem="FUf-er-t93" firstAttribute="leading" secondItem="iK2-xV-AEw" secondAttribute="leading" id="JGv-l3-q4l"/>
-                            <constraint firstItem="1hX-KY-1B3" firstAttribute="top" secondItem="iK2-xV-AEw" secondAttribute="top" id="WQo-fI-5Vz"/>
-                            <constraint firstItem="1hX-KY-1B3" firstAttribute="leading" secondItem="iK2-xV-AEw" secondAttribute="leading" id="q7M-yP-mth"/>
-                            <constraint firstItem="FUf-er-t93" firstAttribute="trailing" secondItem="iK2-xV-AEw" secondAttribute="trailing" id="yFn-k4-VgI"/>
+                            <constraint firstItem="iK2-xV-AEw" firstAttribute="trailing" secondItem="Epq-qb-dQv" secondAttribute="trailing" id="bH0-pC-g3n"/>
+                            <constraint firstItem="Epq-qb-dQv" firstAttribute="top" secondItem="iK2-xV-AEw" secondAttribute="top" id="eEb-Ju-Gup"/>
+                            <constraint firstAttribute="bottom" secondItem="Epq-qb-dQv" secondAttribute="bottom" id="fkv-Tj-y5Z"/>
+                            <constraint firstItem="Epq-qb-dQv" firstAttribute="leading" secondItem="iK2-xV-AEw" secondAttribute="leading" id="kkJ-Vj-mdQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iK2-xV-AEw"/>
                     </view>
@@ -48,8 +36,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="vbE-9o-K4F"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateView" destination="1hX-KY-1B3" id="m40-G8-X55"/>
-                        <outlet property="timeView" destination="FUf-er-t93" id="Tf0-3k-8ie"/>
+                        <outlet property="tableView" destination="Epq-qb-dQv" id="LJc-9A-5EG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj6-tX-Ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -118,10 +118,20 @@
 		57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC0208E7CDD00408375 /* TimeViewModel.swift */; };
 		57273EC5208E7DEB00408375 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC4208E7DEB00408375 /* AppAppearance.swift */; };
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
+		5730A73220935AE1009D7256 /* DateSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73120935AE1009D7256 /* DateSelectionCell.swift */; };
+		5730A73420935AE9009D7256 /* DateSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5730A73320935AE9009D7256 /* DateSelectionCell.xib */; };
+		5730A73720937668009D7256 /* ConsultationAppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73620937668009D7256 /* ConsultationAppointmentViewModel.swift */; };
+		5730A73A209378D3009D7256 /* DataSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A739209378D3009D7256 /* DataSelectionViewModel.swift */; };
+		5730A73D20939A82009D7256 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73C20939A82009D7256 /* AppointmentService.swift */; };
+		5730A73F20939AA6009D7256 /* AppointmentServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */; };
 		576F055E208E773B00D3AC07 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F055D208E773B00D3AC07 /* TimeCell.swift */; };
 		576F0560208E774400D3AC07 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576F055F208E774400D3AC07 /* TimeCell.xib */; };
 		57708A78209250020074EE94 /* AnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A77209250020074EE94 /* AnalysisCell.swift */; };
 		57708A7A2092500B0074EE94 /* AnalysisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57708A792092500B0074EE94 /* AnalysisCell.xib */; };
+		57708A7D2092766A0074EE94 /* AnalysisDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A7C2092766A0074EE94 /* AnalysisDataCell.swift */; };
+		57708A7F209276730074EE94 /* AnalysisDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57708A7E209276730074EE94 /* AnalysisDataCell.xib */; };
+		57708A82209347440074EE94 /* AnalysisDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A81209347440074EE94 /* AnalysisDataViewModel.swift */; };
+		57708A852093476C0074EE94 /* AnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A842093476C0074EE94 /* AnalysisViewModel.swift */; };
 		57E92436208BE2800009120D /* FeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92435208BE2800009120D /* FeedbackEngine.swift */; };
 		57E92438208BE8620009120D /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92437208BE8620009120D /* FeedbackService.swift */; };
 		57E9243A208BE94F0009120D /* FeedbackServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */; };
@@ -356,10 +366,20 @@
 		5712D9FA209155160017FD96 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		57273EC0208E7CDD00408375 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		57273EC4208E7DEB00408375 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		5730A73120935AE1009D7256 /* DateSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionCell.swift; sourceTree = "<group>"; };
+		5730A73320935AE9009D7256 /* DateSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionCell.xib; sourceTree = "<group>"; };
+		5730A73620937668009D7256 /* ConsultationAppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationAppointmentViewModel.swift; sourceTree = "<group>"; };
+		5730A739209378D3009D7256 /* DataSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSelectionViewModel.swift; sourceTree = "<group>"; };
+		5730A73C20939A82009D7256 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
+		5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceImplementation.swift; sourceTree = "<group>"; };
 		576F055D208E773B00D3AC07 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		576F055F208E774400D3AC07 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
 		57708A77209250020074EE94 /* AnalysisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCell.swift; sourceTree = "<group>"; };
 		57708A792092500B0074EE94 /* AnalysisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalysisCell.xib; sourceTree = "<group>"; };
+		57708A7C2092766A0074EE94 /* AnalysisDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDataCell.swift; sourceTree = "<group>"; };
+		57708A7E209276730074EE94 /* AnalysisDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalysisDataCell.xib; sourceTree = "<group>"; };
+		57708A81209347440074EE94 /* AnalysisDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDataViewModel.swift; sourceTree = "<group>"; };
+		57708A842093476C0074EE94 /* AnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModel.swift; sourceTree = "<group>"; };
 		57E92435208BE2800009120D /* FeedbackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEngine.swift; sourceTree = "<group>"; };
 		57E92437208BE8620009120D /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		57E92439208BE94F0009120D /* FeedbackServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackServiceImplementation.swift; sourceTree = "<group>"; };
@@ -940,6 +960,10 @@
 		56EF4AAD206FE99A00E48942 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5730A738209378BF009D7256 /* DataSelectionViewModel */,
+				5730A73520937657009D7256 /* ConsultationAppointmentViewModel */,
+				57708A83209347520074EE94 /* AnalysisViewModel */,
+				57708A802093472A0074EE94 /* AnalysisDataViewModel */,
 				5712D9F92091550B0017FD96 /* DateViewModel */,
 				57273EBF208E7CC000408375 /* TimeViewModel */,
 				57E92444208BFCE80009120D /* DialogsViewModel */,
@@ -994,6 +1018,7 @@
 		56EF4AC8206FE99A00E48942 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5730A73B20939A77009D7256 /* AppointmentService */,
 				57E92448208C1A690009120D /* CategoriesService */,
 				57E92447208C1A550009120D /* FeedbackService */,
 			);
@@ -1037,6 +1062,8 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5730A72E20935AB4009D7256 /* DateSelectionCell */,
+				57708A7B2092763B0074EE94 /* AnalysisDataCell */,
 				57708A7620924FD20074EE94 /* AnalysisCell */,
 				5712D9F4209153880017FD96 /* DateCell */,
 				576F055C208E770800D3AC07 /* TimeCell */,
@@ -1136,6 +1163,40 @@
 			path = AppAppearance;
 			sourceTree = "<group>";
 		};
+		5730A72E20935AB4009D7256 /* DateSelectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				5730A73120935AE1009D7256 /* DateSelectionCell.swift */,
+				5730A73320935AE9009D7256 /* DateSelectionCell.xib */,
+			);
+			path = DateSelectionCell;
+			sourceTree = "<group>";
+		};
+		5730A73520937657009D7256 /* ConsultationAppointmentViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5730A73620937668009D7256 /* ConsultationAppointmentViewModel.swift */,
+			);
+			path = ConsultationAppointmentViewModel;
+			sourceTree = "<group>";
+		};
+		5730A738209378BF009D7256 /* DataSelectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5730A739209378D3009D7256 /* DataSelectionViewModel.swift */,
+			);
+			path = DataSelectionViewModel;
+			sourceTree = "<group>";
+		};
+		5730A73B20939A77009D7256 /* AppointmentService */ = {
+			isa = PBXGroup;
+			children = (
+				5730A73C20939A82009D7256 /* AppointmentService.swift */,
+				5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */,
+			);
+			path = AppointmentService;
+			sourceTree = "<group>";
+		};
 		576F055C208E770800D3AC07 /* TimeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1152,6 +1213,31 @@
 				57708A792092500B0074EE94 /* AnalysisCell.xib */,
 			);
 			path = AnalysisCell;
+			sourceTree = "<group>";
+		};
+		57708A7B2092763B0074EE94 /* AnalysisDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				57708A7C2092766A0074EE94 /* AnalysisDataCell.swift */,
+				57708A7E209276730074EE94 /* AnalysisDataCell.xib */,
+			);
+			path = AnalysisDataCell;
+			sourceTree = "<group>";
+		};
+		57708A802093472A0074EE94 /* AnalysisDataViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57708A81209347440074EE94 /* AnalysisDataViewModel.swift */,
+			);
+			path = AnalysisDataViewModel;
+			sourceTree = "<group>";
+		};
+		57708A83209347520074EE94 /* AnalysisViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57708A842093476C0074EE94 /* AnalysisViewModel.swift */,
+			);
+			path = AnalysisViewModel;
 			sourceTree = "<group>";
 		};
 		5782E14AAD478AF12C5150FF /* Presenter */ = {
@@ -1758,6 +1844,7 @@
 				57E9243C208BEC4D0009120D /* ConsultationViewController.storyboard in Resources */,
 				56EF4B222073499D00E48942 /* Averta Cyrillic Black Italic.otf in Resources */,
 				56EF4B192073499D00E48942 /* Averta Cyrillic Regular Italic.otf in Resources */,
+				5730A73420935AE9009D7256 /* DateSelectionCell.xib in Resources */,
 				5712D9F12091355D0017FD96 /* ConsultationAppointmentViewController.storyboard in Resources */,
 				56EF4B202073499D00E48942 /* Averta Cyrillic Black.otf in Resources */,
 				57E92441208BF3230009120D /* DialogsCell.xib in Resources */,
@@ -1785,6 +1872,7 @@
 				56EF4B182073499D00E48942 /* Averta Cyrillic Light.otf in Resources */,
 				56EF4B172073499D00E48942 /* Averta Cyrillic Light Italic.otf in Resources */,
 				562465E9207EDD5B0007751D /* SegmentCell.xib in Resources */,
+				57708A7F209276730074EE94 /* AnalysisDataCell.xib in Resources */,
 				56EF4B362073E71300E48942 /* DoctorsListViewController.storyboard in Resources */,
 				56EF4B1B2073499D00E48942 /* Averta Cyrillic ExtraBold Italic.otf in Resources */,
 				56EF4B342073E5FE00E48942 /* AppTabbarController.storyboard in Resources */,
@@ -1822,6 +1910,7 @@
 				56EF4B2E2073D43500E48942 /* AppNavigationController.swift in Sources */,
 				56EF4ACD206FE99A00E48942 /* UIColorExtension.swift in Sources */,
 				56EF4AD9206FE99A00E48942 /* TransitionHandler.swift in Sources */,
+				5730A73F20939AA6009D7256 /* AppointmentServiceImplementation.swift in Sources */,
 				56EF4AD5206FE99A00E48942 /* ViewModelFactory.swift in Sources */,
 				56EF4AD8206FE99A00E48942 /* CellViewModel.swift in Sources */,
 				56EF4ACE206FE99A00E48942 /* UITableViewExtension.swift in Sources */,
@@ -1837,6 +1926,7 @@
 				C9A953288A668E764473D4F9 /* DoctorsListViewOutput.swift in Sources */,
 				B9E6CEE61A9D01D2846C3DDD /* DoctorsListViewController.swift in Sources */,
 				93AFABE414BE34713F0A8302 /* DoctorsListModuleInput.swift in Sources */,
+				57708A852093476C0074EE94 /* AnalysisViewModel.swift in Sources */,
 				386D6B5AE9C1204CB3DC7433 /* DoctorsListPresenter.swift in Sources */,
 				283C6D063CC33459142EFACA /* DoctorsListInteractorInput.swift in Sources */,
 				56D37EC220809F9900C8F65B /* DoctorDetailInfoViewModel.swift in Sources */,
@@ -1870,6 +1960,7 @@
 				71D5D24B29E893D9F67BC450 /* CategorySelectionViewController.swift in Sources */,
 				D822DBC335643F85B233896C /* CategorySelectionModuleInput.swift in Sources */,
 				20D3A7EED47EEE63BF6EFCAF /* CategorySelectionPresenter.swift in Sources */,
+				5730A73220935AE1009D7256 /* DateSelectionCell.swift in Sources */,
 				11293840D3DED723C4071DF7 /* CategorySelectionInteractorInput.swift in Sources */,
 				57E92450208C1B6D0009120D /* Network.swift in Sources */,
 				8E81877A67A91E44218AEB8A /* CategorySelectionInteractorOutput.swift in Sources */,
@@ -1877,10 +1968,12 @@
 				6AA5029573FA1434D85B656A /* CategorySelectionRouterInput.swift in Sources */,
 				8BA2B96726F17EE36A3FAF6E /* CategorySelectionRouter.swift in Sources */,
 				C56777144A81F3918423E1D6 /* CategorySelectionConfigurator.swift in Sources */,
+				57708A82209347440074EE94 /* AnalysisDataViewModel.swift in Sources */,
 				56EF4B3B2073E7C800E48942 /* StoryboardInitializable.swift in Sources */,
 				8984492C966112C11D07D5E4 /* CategorySelectionInitializer.swift in Sources */,
 				81D8DD5CEE23D1A336B5A140 /* CategoryViewInput.swift in Sources */,
 				335ECFAF8D7487197B2CC1A1 /* CategoryViewOutput.swift in Sources */,
+				57708A7D2092766A0074EE94 /* AnalysisDataCell.swift in Sources */,
 				289B2D51BAE8A6BF0FE0B436 /* CategoryViewController.swift in Sources */,
 				6F208BF6F3F5A7E83C7710EA /* CategoryModuleInput.swift in Sources */,
 				56D37EBB2080886300C8F65B /* DoctorDetailInfoCell.swift in Sources */,
@@ -1903,6 +1996,7 @@
 				34F1F52CBCE1564E83FCBA44 /* DialogsModuleInput.swift in Sources */,
 				5253BAD09E74304335024D10 /* DialogsPresenter.swift in Sources */,
 				C9F90C5B3D0210237CFF087B /* DialogsInteractorInput.swift in Sources */,
+				5730A73720937668009D7256 /* ConsultationAppointmentViewModel.swift in Sources */,
 				FC0A653AD5324DA30BC1341F /* DialogsInteractorOutput.swift in Sources */,
 				1A5D63345F9B3267D10569C8 /* DialogsInteractor.swift in Sources */,
 				4FCD2FACD09CC2C420B6FEDB /* DialogsRouterInput.swift in Sources */,
@@ -1922,6 +2016,7 @@
 				1A3190CC636892E9DBE56A17 /* DialogRouterInput.swift in Sources */,
 				E01494B1D6736329840E9FED /* DialogRouter.swift in Sources */,
 				572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */,
+				5730A73D20939A82009D7256 /* AppointmentService.swift in Sources */,
 				BF0BD7047B37CECFEC40E0D1 /* DialogInitializer.swift in Sources */,
 				5712D9F62091539F0017FD96 /* DateCell.swift in Sources */,
 				A63635CF126CBB4B186B4695 /* ConsultationAppointmentViewInput.swift in Sources */,
@@ -1953,6 +2048,7 @@
 				8EC200C023B380438AE3A2D9 /* AnalyzesViewOutput.swift in Sources */,
 				270FC5465F9E0C1DD3D5DD4C /* AnalyzesViewController.swift in Sources */,
 				392D48E639D5B30256AFD71A /* AnalyzesModuleInput.swift in Sources */,
+				5730A73A209378D3009D7256 /* DataSelectionViewModel.swift in Sources */,
 				6BEE14BE8D4A475F3E7127C6 /* AnalyzesPresenter.swift in Sources */,
 				C6F1EC2FDCF1E1A88465A53C /* AnalyzesInteractorInput.swift in Sources */,
 				0B75A6430369D29EA3E03631 /* AnalyzesInteractorOutput.swift in Sources */,

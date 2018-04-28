@@ -16,5 +16,5 @@ protocol ConsultationAppointmentViewInput: class {
     func setupInitialState()
     func setTitle(text: String)
     func setNavigationBarBackButton(title: String)
-
+    func updateView(with viewModel: ConsultationAppointmentViewModel)
 }

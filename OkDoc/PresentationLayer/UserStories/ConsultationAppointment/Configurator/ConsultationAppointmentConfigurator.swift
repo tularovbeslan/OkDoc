@@ -20,6 +20,11 @@ class ConsultationAppointmentModuleConfigurator {
     private func configure(viewController: ConsultationAppointmentViewController) {
 
         let router = ConsultationAppointmentRouter()
+        
+        let network = NetworkImplementation()
+        
+        let service = AppointmentServiceImplementation()
+        service.network = network
 
         let presenter = ConsultationAppointmentPresenter()
         presenter.view = viewController
@@ -27,6 +32,7 @@ class ConsultationAppointmentModuleConfigurator {
 
         let interactor = ConsultationAppointmentInteractor()
         interactor.output = presenter
+        interactor.service = service
 
         presenter.interactor = interactor
         viewController.output = presenter

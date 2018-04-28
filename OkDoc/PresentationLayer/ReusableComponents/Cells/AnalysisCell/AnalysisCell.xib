@@ -62,6 +62,11 @@
                     <constraint firstAttribute="trailing" secondItem="LAV-Ew-nnq" secondAttribute="trailing" id="awe-oi-Tc5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="LAV-Ew-nnq" id="ZeH-UM-pOL"/>
+                <outlet property="subTitle" destination="ffi-RW-S5F" id="SKw-oK-dK9"/>
+                <outlet property="title" destination="Jau-Ow-WrB" id="9UR-wH-Jds"/>
+            </connections>
             <point key="canvasLocation" x="114" y="184"/>
         </tableViewCell>
     </objects>

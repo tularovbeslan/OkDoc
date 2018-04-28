@@ -22,4 +22,9 @@ class NetworkImplementation: Network {
             completion(viewModels)
         }
     }
+    
+    func loadAppointmentInformation(completion: @escaping (ConsultationAppointmentViewModel) -> ()) {
+        
+        
+    }
 }
