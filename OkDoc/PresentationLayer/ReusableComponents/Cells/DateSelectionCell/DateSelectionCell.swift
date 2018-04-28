@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DateSelectionCell: UITableViewCell {
+final class DateSelectionCell: UITableViewCell, XibInitializable {
     
     // MARK: - IBOutlets
     @IBOutlet weak var timeView: TimeView!

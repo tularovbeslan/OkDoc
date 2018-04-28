@@ -22,7 +22,7 @@ class ConsultationAppointmentPresenter: ConsultationAppointmentModuleInput, Cons
     }
 
     func viewIsReady() {
-        interactor.prepareAppointmentInformation(by: view as! Delegatable)
+        interactor.prepareAppointmentInformation()
     }
     
     // MARK: - ConsultationAppointmentInteractorOutput

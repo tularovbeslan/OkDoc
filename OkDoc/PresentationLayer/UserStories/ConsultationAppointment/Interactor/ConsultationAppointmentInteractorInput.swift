@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConsultationAppointmentInteractorInput {
-    func prepareAppointmentInformation(by delegate: Delegatable)
+    func prepareAppointmentInformation()
 }

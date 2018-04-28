@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol AnalysisCellDelegate: Delegatable {
+protocol AnalysisCellDelegate: class {
     func appendNewAnalysis()
 }
 
-class AnalysisCell: UITableViewCell {
+final class AnalysisCell: UITableViewCell, XibInitializable {
     
     // MARK: - Properties
-    var delegate: AnalysisCellDelegate?
+    weak var delegate: AnalysisCellDelegate?
     private var viewModels: [AnalysisDataViewModel] = []
     private var itemWidth: CGFloat!
     private var itemHeight: CGFloat!
@@ -101,7 +101,7 @@ extension AnalysisCell: UICollectionViewDelegateFlowLayout {
 }
 
 extension AnalysisCell {
-    func setup(viewModel: AnalysisViewModel, delegate: Delegatable) {
+    func setup(viewModel: AnalysisViewModel) {
         self.viewModels = viewModel.viewModels
     }
 }

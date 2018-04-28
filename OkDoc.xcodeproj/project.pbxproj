@@ -207,6 +207,7 @@
 		D63403C9225721503BE9133E /* QuestionnaireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CB03250CBB34DA708EB5 /* QuestionnaireRouter.swift */; };
 		D822DBC335643F85B233896C /* CategorySelectionModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB560EEE5084BB42F8D9883 /* CategorySelectionModuleInput.swift */; };
 		D93D81CAF70D515CBA2EC59F /* DialogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC18745A618872EB2A50F0 /* DialogViewOutput.swift */; };
+		DD6CB36A2095054400B48F79 /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CB3692095054400B48F79 /* XibInitializable.swift */; };
 		DFFB2E512C1730DCEE029785 /* DialogInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5CA5205E4C1269B6F8F5F /* DialogInteractorInput.swift */; };
 		E01494B1D6736329840E9FED /* DialogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E29AF4A7B6302E90E7BFB /* DialogRouter.swift */; };
 		E1EA6A98AD778739A97CD4E1 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B467BDD03FBE48860498BD0 /* DialogViewController.swift */; };
@@ -443,6 +444,7 @@
 		D331D6F4BB1537858974F91D /* CategorySelectionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewOutput.swift; sourceTree = "<group>"; };
 		D3AE5F4F7E40CC4BFC2DB88B /* DialogsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
 		D8F749ED0C130A51287C3577 /* QuestionnaireModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireModuleInput.swift; sourceTree = "<group>"; };
+		DD6CB3692095054400B48F79 /* XibInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
 		DFE096AD94A99E06415FABDD /* CategorySelectionConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySelectionConfigurator.swift; sourceTree = "<group>"; };
 		E2B372DBDFE1843EC926877A /* DoctorDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoctorDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		E45C46466AA9EEF75E148E2E /* DialogsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DialogsRouterInput.swift; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 				56EF4ABF206FE99A00E48942 /* SetupableViewModel.swift */,
 				56EF4AC0206FE99A00E48942 /* CellViewModel.swift */,
 				56EF4AC1206FE99A00E48942 /* TransitionHandler.swift */,
+				DD6CB3692095054400B48F79 /* XibInitializable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1820,6 +1823,7 @@
 				56EF4AD6206FE99A00E48942 /* AppDelegate.swift in Sources */,
 				56EF4AD7206FE99A00E48942 /* SetupableViewModel.swift in Sources */,
 				56EF4ACB206FE99A00E48942 /* OkDoc.xcdatamodeld in Sources */,
+				DD6CB36A2095054400B48F79 /* XibInitializable.swift in Sources */,
 				576F055E208E773B00D3AC07 /* TimeCell.swift in Sources */,
 				56EF4ACA206FE99A00E48942 /* OneAccount.xcdatamodeld in Sources */,
 				57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */,

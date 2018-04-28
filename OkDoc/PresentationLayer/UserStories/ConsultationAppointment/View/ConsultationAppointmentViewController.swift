@@ -14,6 +14,9 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     var output: ConsultationAppointmentViewOutput!
     private let sections: [SectionType] = [.dateSelection, .analysis]
     private var viewModel: ConsultationAppointmentViewModel!
+    private var dateSelectionCell: DateSelectionCell!
+    private var analysisCell: AnalysisCell!
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,6 +28,7 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
 
     // MARK: ConsultationAppointmentViewInput
     func setupInitialState() {
+        createStaticCells()
         configureTableView()
         output.viewIsReady()
     }
@@ -39,6 +43,7 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     
     func updateView(with viewModel: ConsultationAppointmentViewModel) {
         self.viewModel = viewModel
+        setModels()
         reloadTableView()
     }
     
@@ -47,12 +52,22 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     }
     
     // MARK: - Helpers
+    func createStaticCells() {
+        dateSelectionCell = DateSelectionCell.fromXib()
+        analysisCell = AnalysisCell.fromXib()
+        analysisCell.delegate = self
+    }
+    
+    func setModels() {
+        dateSelectionCell.setup(viewModel: viewModel.dataSelectionViewModel)
+        analysisCell.setup(viewModel: viewModel.analysisViewModels)
+    }
+    
     private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(nibModels: [DataSelectionViewModel.self, AnalysisViewModel.self])
     }
 }
 
@@ -69,11 +84,9 @@ extension ConsultationAppointmentViewController: UITableViewDataSource {
         let type = sections[indexPath.section]
         switch type {
         case .analysis:
-            let model = viewModel.analysisViewModels
-            return tableView.dequeueReusableCell(withModel: model, for: indexPath)
+            return analysisCell
         case .dateSelection:
-            let model = viewModel.dataSelectionViewModel
-            return tableView.dequeueReusableCell(withModel: model, for: indexPath)
+            return dateSelectionCell
         case .questionnaire:
             return tableView.dequeueReusableCell(withModel: viewModel as! AnyCellViewModel, for: indexPath)
         }
