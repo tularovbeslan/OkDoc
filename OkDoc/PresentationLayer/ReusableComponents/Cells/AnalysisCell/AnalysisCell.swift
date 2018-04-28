@@ -78,7 +78,7 @@ extension AnalysisCell: UICollectionViewDelegate {
         let indexPaths: [IndexPath] = [indexPath]
 
         collectionView.performBatchUpdates({
-            collectionView.insertItems(at: indexPaths)
+        collectionView.insertItems(at: indexPaths)
         }) { [weak self] (finish) in
             self?.delegate?.appendNewAnalysis()
         }
