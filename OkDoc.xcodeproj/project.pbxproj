@@ -119,6 +119,8 @@
 		5730A73A209378D3009D7256 /* DataSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A739209378D3009D7256 /* DataSelectionViewModel.swift */; };
 		5730A73D20939A82009D7256 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73C20939A82009D7256 /* AppointmentService.swift */; };
 		5730A73F20939AA6009D7256 /* AppointmentServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */; };
+		5759113E20966175007036D7 /* QuestionnaireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5759113D20966175007036D7 /* QuestionnaireCell.swift */; };
+		575911402096617E007036D7 /* QuestionnaireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5759113F2096617E007036D7 /* QuestionnaireCell.xib */; };
 		576F055E208E773B00D3AC07 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F055D208E773B00D3AC07 /* TimeCell.swift */; };
 		576F0560208E774400D3AC07 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576F055F208E774400D3AC07 /* TimeCell.xib */; };
 		57708A78209250020074EE94 /* AnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57708A77209250020074EE94 /* AnalysisCell.swift */; };
@@ -358,6 +360,8 @@
 		5730A739209378D3009D7256 /* DataSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSelectionViewModel.swift; sourceTree = "<group>"; };
 		5730A73C20939A82009D7256 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 		5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceImplementation.swift; sourceTree = "<group>"; };
+		5759113D20966175007036D7 /* QuestionnaireCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireCell.swift; sourceTree = "<group>"; };
+		5759113F2096617E007036D7 /* QuestionnaireCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionnaireCell.xib; sourceTree = "<group>"; };
 		576F055D208E773B00D3AC07 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		576F055F208E774400D3AC07 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
 		57708A77209250020074EE94 /* AnalysisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCell.swift; sourceTree = "<group>"; };
@@ -1032,6 +1036,7 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5759113C20966158007036D7 /* QuestionnaireCell */,
 				5730A72E20935AB4009D7256 /* DateSelectionCell */,
 				57708A7B2092763B0074EE94 /* AnalysisDataCell */,
 				57708A7620924FD20074EE94 /* AnalysisCell */,
@@ -1164,6 +1169,15 @@
 				5730A73E20939AA6009D7256 /* AppointmentServiceImplementation.swift */,
 			);
 			path = AppointmentService;
+			sourceTree = "<group>";
+		};
+		5759113C20966158007036D7 /* QuestionnaireCell */ = {
+			isa = PBXGroup;
+			children = (
+				5759113D20966175007036D7 /* QuestionnaireCell.swift */,
+				5759113F2096617E007036D7 /* QuestionnaireCell.xib */,
+			);
+			path = QuestionnaireCell;
 			sourceTree = "<group>";
 		};
 		576F055C208E770800D3AC07 /* TimeCell */ = {
@@ -1786,6 +1800,7 @@
 				57708A7A2092500B0074EE94 /* AnalysisCell.xib in Resources */,
 				56EF4B382073E74900E48942 /* DoctorDetailViewController.storyboard in Resources */,
 				56EF4B1F2073499D00E48942 /* Averta Cyrillic Bold Italic.otf in Resources */,
+				575911402096617E007036D7 /* QuestionnaireCell.xib in Resources */,
 				56EF4B2B2073D3F300E48942 /* CategoryCell.xib in Resources */,
 				56EF4B3F2073F1A500E48942 /* CategoryViewController.storyboard in Resources */,
 				56EF4B182073499D00E48942 /* Averta Cyrillic Light.otf in Resources */,
@@ -1867,6 +1882,7 @@
 				FDC0234C5BEB5A18A6C0E6E3 /* DoctorDetailInteractorOutput.swift in Sources */,
 				2D7DD4C0B22208340B10BCC8 /* DoctorDetailInteractor.swift in Sources */,
 				CBD24127B347344BE020AD37 /* DoctorDetailRouterInput.swift in Sources */,
+				5759113E20966175007036D7 /* QuestionnaireCell.swift in Sources */,
 				665F01456A6AF48E70C299E7 /* DoctorDetailRouter.swift in Sources */,
 				56EF4B3D2073F02200E48942 /* AppTabbar.swift in Sources */,
 				1BDF1DF81C61AA2FF5C6E5B6 /* DoctorDetailConfigurator.swift in Sources */,

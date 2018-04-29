@@ -12,10 +12,11 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
 
     // MARK: - Properties
     var output: ConsultationAppointmentViewOutput!
-    private let sections: [SectionType] = [.dateSelection, .analysis]
+    private let sections: [SectionType] = [.dateSelection, .analysis, .questionnaire]
     private var viewModel: ConsultationAppointmentViewModel!
     private var dateSelectionCell: DateSelectionCell!
     private var analysisCell: AnalysisCell!
+    private var questionnaireCell: QuestionnaireCell!
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -55,6 +56,7 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     func createStaticCells() {
         dateSelectionCell = DateSelectionCell.fromXib()
         analysisCell = AnalysisCell.fromXib()
+        questionnaireCell = QuestionnaireCell.fromXib()
         analysisCell.delegate = self
     }
     
@@ -88,7 +90,7 @@ extension ConsultationAppointmentViewController: UITableViewDataSource {
         case .dateSelection:
             return dateSelectionCell
         case .questionnaire:
-            return tableView.dequeueReusableCell(withModel: viewModel as! AnyCellViewModel, for: indexPath)
+            return questionnaireCell
         }
     }
 }
@@ -102,7 +104,7 @@ extension ConsultationAppointmentViewController: UITableViewDelegate {
         case .dateSelection:
             return 264
         case .questionnaire:
-            return 250
+            return UITableViewAutomaticDimension
         }
     }
 }

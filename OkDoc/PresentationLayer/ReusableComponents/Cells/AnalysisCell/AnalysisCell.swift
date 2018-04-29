@@ -72,6 +72,8 @@ extension AnalysisCell: UICollectionViewDataSource {
 extension AnalysisCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == viewModels.count - 1 {
+            let feedbackEnagine = FeedbackEngine()
+            feedbackEnagine.feedback(type: .selection)
             let newComment = AnalysisDataViewModel.init(image: "image2", title: "Новый анализ")
             viewModels.insert(newComment, at: viewModels.count - 1)
             

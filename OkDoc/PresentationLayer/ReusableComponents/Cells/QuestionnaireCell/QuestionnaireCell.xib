@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionnaireCell" rowHeight="327" id="jQM-uD-eKq" customClass="QuestionnaireCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="324"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jQM-uD-eKq" id="y4y-aK-VCb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опросник" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-aY-VC4">
+                        <rect key="frame" x="18" y="5" width="339" height="33"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="26"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответив на эти просты вопросы врач будет уже в курсе вашей проблемы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-QD-tdR">
+                        <rect key="frame" x="18" y="46" width="339" height="32.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
+                        <color key="textColor" red="0.62352941176470589" green="0.6705882352941176" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что у вас болит?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoD-Bc-Ozy">
+                        <rect key="frame" x="18" y="98.5" width="339" height="21.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="17"/>
+                        <color key="textColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какими хроническими заболеваниями страдаете?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-yT-frO">
+                        <rect key="frame" x="18" y="194" width="339" height="42.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="17"/>
+                        <color key="textColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Сердечко" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2z3-Ve-e3M">
+                        <rect key="frame" x="18" y="132" width="339" height="42"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="xRI-9v-AeZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M3H-qF-jMp">
+                        <rect key="frame" x="18" y="248.5" width="339" height="42"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="scg-Uw-ZDT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZRB-yT-frO" secondAttribute="trailing" constant="18" id="1US-rb-gQf"/>
+                    <constraint firstItem="M3H-qF-jMp" firstAttribute="top" secondItem="ZRB-yT-frO" secondAttribute="bottom" constant="12" id="5sK-G6-sj7"/>
+                    <constraint firstItem="Ps3-aY-VC4" firstAttribute="leading" secondItem="y4y-aK-VCb" secondAttribute="leading" constant="18" id="7l2-KC-Ycz"/>
+                    <constraint firstItem="2z3-Ve-e3M" firstAttribute="top" secondItem="NoD-Bc-Ozy" secondAttribute="bottom" constant="12" id="96Y-xZ-bYr"/>
+                    <constraint firstAttribute="trailing" secondItem="Kei-QD-tdR" secondAttribute="trailing" constant="18" id="D82-Q5-YrN"/>
+                    <constraint firstAttribute="bottom" secondItem="M3H-qF-jMp" secondAttribute="bottom" constant="33" id="MkC-oG-o1G"/>
+                    <constraint firstItem="M3H-qF-jMp" firstAttribute="leading" secondItem="y4y-aK-VCb" secondAttribute="leading" constant="18" id="U4c-bW-Nee"/>
+                    <constraint firstItem="NoD-Bc-Ozy" firstAttribute="leading" secondItem="y4y-aK-VCb" secondAttribute="leading" constant="18" id="V4e-2B-h6K"/>
+                    <constraint firstItem="Kei-QD-tdR" firstAttribute="leading" secondItem="Ps3-aY-VC4" secondAttribute="leading" id="WU3-Xz-zAe"/>
+                    <constraint firstItem="Kei-QD-tdR" firstAttribute="top" secondItem="Ps3-aY-VC4" secondAttribute="bottom" constant="8" id="XWL-R3-THs"/>
+                    <constraint firstAttribute="trailing" secondItem="M3H-qF-jMp" secondAttribute="trailing" constant="18" id="YLS-xd-aO8"/>
+                    <constraint firstAttribute="trailing" secondItem="NoD-Bc-Ozy" secondAttribute="trailing" constant="18" id="avk-iO-Zbr"/>
+                    <constraint firstAttribute="trailing" secondItem="2z3-Ve-e3M" secondAttribute="trailing" constant="18" id="dLT-VX-W3l"/>
+                    <constraint firstItem="Ps3-aY-VC4" firstAttribute="top" secondItem="y4y-aK-VCb" secondAttribute="top" constant="5" id="ebl-v2-eap"/>
+                    <constraint firstItem="2z3-Ve-e3M" firstAttribute="leading" secondItem="y4y-aK-VCb" secondAttribute="leading" constant="18" id="gCY-pS-7xd"/>
+                    <constraint firstItem="NoD-Bc-Ozy" firstAttribute="top" secondItem="Kei-QD-tdR" secondAttribute="bottom" constant="20" id="nHy-vt-tGd"/>
+                    <constraint firstItem="ZRB-yT-frO" firstAttribute="top" secondItem="2z3-Ve-e3M" secondAttribute="bottom" constant="20" id="oZF-uL-0cE"/>
+                    <constraint firstAttribute="trailing" secondItem="Ps3-aY-VC4" secondAttribute="trailing" constant="18" id="sD8-Ue-MqA"/>
+                    <constraint firstItem="ZRB-yT-frO" firstAttribute="leading" secondItem="y4y-aK-VCb" secondAttribute="leading" constant="18" id="wBF-ag-NQU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="questionFirst" destination="2z3-Ve-e3M" id="wHT-Mg-re3"/>
+                <outlet property="questionSecond" destination="M3H-qF-jMp" id="CSE-u9-QrS"/>
+            </connections>
+            <point key="canvasLocation" x="67.5" y="309.5"/>
+        </tableViewCell>
+    </objects>
+</document>
