@@ -109,7 +109,9 @@
             <connections>
                 <outlet property="enroll" destination="hPF-8w-H5i" id="k50-Kc-4Ax"/>
                 <outlet property="questionFirst" destination="2z3-Ve-e3M" id="wHT-Mg-re3"/>
+                <outlet property="questionFirstHeightConstraint" destination="xRI-9v-AeZ" id="d9u-yq-40c"/>
                 <outlet property="questionSecond" destination="M3H-qF-jMp" id="CSE-u9-QrS"/>
+                <outlet property="questionSecondHeightConstraint" destination="scg-Uw-ZDT" id="1yn-Wu-mK0"/>
             </connections>
             <point key="canvasLocation" x="67.5" y="335.5"/>
         </tableViewCell>

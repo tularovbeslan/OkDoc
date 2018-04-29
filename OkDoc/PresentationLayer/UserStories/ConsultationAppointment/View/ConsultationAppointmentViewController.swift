@@ -64,6 +64,7 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
         analysisCell = AnalysisCell.fromXib()
         analysisCell.delegate = self
         questionnaireCell = QuestionnaireCell.fromXib()
+        questionnaireCell.delegate = self
     }
     
     private func setModels() {
@@ -138,6 +139,15 @@ extension ConsultationAppointmentViewController: UITableViewDelegate {
 
 extension ConsultationAppointmentViewController: AnalysisCellDelegate {
     func appendNewAnalysis() {
+        UIView.setAnimationsEnabled(false)
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+        UIView.setAnimationsEnabled(true)
+    }
+}
+
+extension ConsultationAppointmentViewController: QuestionnaireCellDelegate {
+    func textViewDidChange() {
         UIView.setAnimationsEnabled(false)
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
