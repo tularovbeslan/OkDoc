@@ -20,11 +20,17 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewDidLoad()
+        setKeyboardNotifications()
+    }
+    
+    deinit {
+        destroyKeyboardNotifications()
     }
 
     // MARK: ConsultationAppointmentViewInput
@@ -57,10 +63,7 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
         dateSelectionCell = DateSelectionCell.fromXib()
         analysisCell = AnalysisCell.fromXib()
         analysisCell.delegate = self
-        
         questionnaireCell = QuestionnaireCell.fromXib()
-        questionnaireCell.questionFirst.delegate = self
-        questionnaireCell.questionSecond.delegate = self
     }
     
     private func setModels() {
@@ -70,9 +73,30 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     
     private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
+        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 15, right: 0)
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    private func destroyKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc private func handleKeyboard(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else {return}
+        let isKeyboardShowing = notification.name == .UIKeyboardWillShow
+        tableViewBottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height : 0
+        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
 }
 
@@ -118,25 +142,6 @@ extension ConsultationAppointmentViewController: AnalysisCellDelegate {
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
         UIView.setAnimationsEnabled(true)
-    }
-}
-
-extension ConsultationAppointmentViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-    
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        let pointInTable:CGPoint = textView.superview!.convert(textView.frame.origin, to: tableView)
-        if let accessoryView = textView.inputAccessoryView {
-            let visibleRect = CGRect.init(x: pointInTable.x, y: pointInTable.y, width: UIScreen.main.bounds.width, height: accessoryView.frame.size.height)
-            tableView.scrollRectToVisible(visibleRect, animated: true)
-        }
-        return true
     }
 }
 

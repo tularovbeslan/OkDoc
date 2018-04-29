@@ -37,6 +37,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Epq-qb-dQv" id="LJc-9A-5EG"/>
+                        <outlet property="tableViewBottomConstraint" destination="fkv-Tj-y5Z" id="Hoo-ZV-OfJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj6-tX-Ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>

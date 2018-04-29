@@ -38,7 +38,7 @@ class OkDocButton: UIControl {
         let stack = UIStackView(elements: [priceLabel, titleLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.alignment = .center
-        stack.distribution = .fillEqually
+        stack.distribution = .fill
         stack.axis = .horizontal
         stack.isUserInteractionEnabled = false
         return stack

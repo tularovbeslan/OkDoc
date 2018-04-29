@@ -1072,6 +1072,7 @@
 		5712D9F2209138BE0017FD96 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				567DE8B9208511D8003A91C4 /* OkDocButton */,
 				56EF4B2C2073D41400E48942 /* AppNavigationController */,
 				56EF4ABC206FE99A00E48942 /* AppTabbarController */,
 				FE505724CC493343EFE6375A /* Segment */,
@@ -1085,7 +1086,6 @@
 			isa = PBXGroup;
 			children = (
 				567C018D9969D94CDACC0D58 /* Dialogs */,
-				567DE8B9208511D8003A91C4 /* OkDocButton */,
 				E8AB39A9811FCDE23DF2C84D /* DoctorsList */,
 				EDF701DDCCE0B23082200C69 /* Category */,
 				2ABC85F3659D434D36C7AC2A /* Dialog */,
