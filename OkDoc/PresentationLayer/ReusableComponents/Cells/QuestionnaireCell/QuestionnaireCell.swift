@@ -29,5 +29,4 @@ final class QuestionnaireCell: UITableViewCell, XibInitializable {
             textView.layer.borderColor = UIColor.init(red: 197/255, green: 211/255, blue: 228/255, alpha: 1).cgColor
         }
     }
-
 }

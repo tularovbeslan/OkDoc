@@ -53,14 +53,17 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     }
     
     // MARK: - Helpers
-    func createStaticCells() {
+    private func createStaticCells() {
         dateSelectionCell = DateSelectionCell.fromXib()
         analysisCell = AnalysisCell.fromXib()
-        questionnaireCell = QuestionnaireCell.fromXib()
         analysisCell.delegate = self
+        
+        questionnaireCell = QuestionnaireCell.fromXib()
+        questionnaireCell.questionFirst.delegate = self
+        questionnaireCell.questionSecond.delegate = self
     }
     
-    func setModels() {
+    private func setModels() {
         dateSelectionCell.setup(viewModel: viewModel.dataSelectionViewModel)
         analysisCell.setup(viewModel: viewModel.analysisViewModels)
     }
@@ -118,6 +121,25 @@ extension ConsultationAppointmentViewController: AnalysisCellDelegate {
     }
 }
 
+extension ConsultationAppointmentViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        let pointInTable:CGPoint = textView.superview!.convert(textView.frame.origin, to: tableView)
+        if let accessoryView = textView.inputAccessoryView {
+            let visibleRect = CGRect.init(x: pointInTable.x, y: pointInTable.y, width: UIScreen.main.bounds.width, height: accessoryView.frame.size.height)
+            tableView.scrollRectToVisible(visibleRect, animated: true)
+        }
+        return true
+    }
+}
+
 extension ConsultationAppointmentViewController {
     private enum SectionType {
         case dateSelection
@@ -126,14 +148,3 @@ extension ConsultationAppointmentViewController {
     }
 }
 
-extension UITableView {
-    func setOffsetToBottom(animated: Bool) {
-        self.setContentOffset(CGPoint.init(x: 0, y: self.contentSize.height - self.frame.size.height), animated: true)
-    }
-    
-    func scrollToLastRow(animated: Bool) {
-        if self.numberOfRows(inSection: 0) > 0 {
-            self.scrollToRow(at: IndexPath(row: self.numberOfRows(inSection: 0) - 1, section: 0) as IndexPath, at: .bottom, animated: animated)
-        }
-    }
-}
