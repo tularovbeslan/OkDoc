@@ -71,16 +71,18 @@ extension AnalysisCell: UICollectionViewDataSource {
 
 extension AnalysisCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let newComment = AnalysisDataViewModel.init(image: "image2", title: "Новый анализ")
-        viewModels.insert(newComment, at: viewModels.count - 1)
-        
-        let indexPath = IndexPath(item: viewModels.count - 2, section: 0)
-        let indexPaths: [IndexPath] = [indexPath]
-
-        collectionView.performBatchUpdates({
-        collectionView.insertItems(at: indexPaths)
-        }) { [weak self] (finish) in
-            self?.delegate?.appendNewAnalysis()
+        if indexPath.row == viewModels.count - 1 {
+            let newComment = AnalysisDataViewModel.init(image: "image2", title: "Новый анализ")
+            viewModels.insert(newComment, at: viewModels.count - 1)
+            
+            let indexPath = IndexPath(item: viewModels.count - 2, section: 0)
+            let indexPaths: [IndexPath] = [indexPath]
+            
+            collectionView.performBatchUpdates({
+                collectionView.insertItems(at: indexPaths)
+            }) { [weak self] (finish) in
+                self?.delegate?.appendNewAnalysis()
+            }
         }
     }
 }
