@@ -1132,6 +1132,7 @@
 				EDF701DDCCE0B23082200C69 /* Category */,
 				2ABC85F3659D434D36C7AC2A /* Dialog */,
 				91DFA47D73DFE09B9EAC1D6D /* Analyzes */,
+				72129887A3C32A6B07334695 /* AnalysisSelection */,
 				7D7E2AC22968D856F8E6F1D5 /* Questionnaire */,
 			);
 			path = VIPERModules;
@@ -1709,7 +1710,6 @@
 				56EF4B262073D3C900E48942 /* Cells */,
 				5712D9F2209138BE0017FD96 /* UIComponents */,
 				5712D9F3209138EB0017FD96 /* VIPERModules */,
-				72129887A3C32A6B07334695 /* AnalysisSelection */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
