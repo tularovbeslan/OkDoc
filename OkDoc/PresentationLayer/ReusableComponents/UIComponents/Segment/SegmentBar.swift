@@ -78,10 +78,10 @@ class SegmentBar: UIView {
     
     private func setupHorizontalBarView() {
         addSubview(horizontalBarView)
-        horizontalBarLeftConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 18)
+        horizontalBarLeftConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: collectionView.contentInset.left)
         horizontalBarLeftConstraint?.isActive = true
-        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         horizontalBarView.heightAnchor.constraint(equalToConstant: 2).isActive = true
+        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         horizontalBarWidthConstraint = horizontalBarView.widthAnchor.constraint(equalToConstant: sizeOfString(string: viewModels[selectedIndex].title, constrainedToHeight: 2).width)
         horizontalBarWidthConstraint?.isActive = true
     }
@@ -91,7 +91,7 @@ class SegmentBar: UIView {
         let xOffset = cell.convert(cell.frame, to: cell.contentView).origin.x + collectionView.contentInset.left
         horizontalBarWidthConstraint?.constant = width
         horizontalBarLeftConstraint?.constant = xOffset
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: nil)
     }

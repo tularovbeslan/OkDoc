@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol QuestionnaireCellDelegate: class {
+    func textViewDidChange()
+}
+
 final class QuestionnaireCell: UITableViewCell, XibInitializable {
+    // MARK: - Properties
+    weak var delegate: QuestionnaireCellDelegate!
     
-    // MARK: -
+    // MARK: - IBOutlets
     @IBOutlet weak var questionFirst: UITextView!
     @IBOutlet weak var questionSecond: UITextView!
     @IBOutlet weak var enroll: UIButton!
+    @IBOutlet weak var questionFirstHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var questionSecondHeightConstraint: NSLayoutConstraint!
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -47,5 +55,20 @@ extension QuestionnaireCell: UITextViewDelegate {
             return false
         }
         return true
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let fixedWidth = textView.frame.size.width
+        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        let newHeight = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)).height
+        if textView.frame.height < newHeight {
+            if textView == questionFirst {
+                questionFirstHeightConstraint.constant = newHeight
+            } else if textView == questionSecond {
+                questionSecondHeightConstraint.constant = newHeight
+            }
+            layoutIfNeeded()
+            delegate.textViewDidChange()
+        }
     }
 }
