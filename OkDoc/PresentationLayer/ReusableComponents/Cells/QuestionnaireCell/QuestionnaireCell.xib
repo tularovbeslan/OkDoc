@@ -51,7 +51,7 @@
                         <color key="textColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Сердечко" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2z3-Ve-e3M">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2z3-Ve-e3M">
                         <rect key="frame" x="18" y="132" width="339" height="42"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
