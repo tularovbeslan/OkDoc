@@ -27,4 +27,8 @@ class NetworkImplementation: Network {
         
         
     }
+    
+    func loadAnalysis(completion: @escaping (AnalysisSelectionViewModel) -> ()) {
+        
+    }
 }

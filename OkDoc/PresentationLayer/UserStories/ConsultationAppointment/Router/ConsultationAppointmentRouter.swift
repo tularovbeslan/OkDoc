@@ -9,7 +9,7 @@
 class ConsultationAppointmentRouter: ConsultationAppointmentRouterInput {
     weak var transitionHandler: TransitionHandler!
     
-    func openModule() {
-        
+    func openModule(block: ((AnalysisSelectionViewController) -> Void)!) {
+        transitionHandler.openModule(segueIdentifier: String.init(describing: AnalysisSelectionViewController.self), block: block)
     }
 }

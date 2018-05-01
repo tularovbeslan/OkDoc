@@ -9,7 +9,7 @@
 import Foundation
 
 struct AnalysisViewModel {
-    let viewModels: [AnalysisDataViewModel]
+    var viewModels: [AnalysisDataViewModel]
 }
 
 extension AnalysisViewModel: CellViewModel {

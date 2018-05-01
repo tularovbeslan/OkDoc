@@ -14,4 +14,6 @@ protocol AnalysisSelectionViewInput: class {
     */
 
     func setupInitialState()
+    func setNavigationBar(title: String)
+    func updateView(with viewModels: [AnalysisSelectionViewModel])
 }

@@ -7,12 +7,6 @@
 //
 
 protocol CategoryViewOutput {
-
-    /**
-        @author Беслан Тулров
-        Notify presenter that view is ready
-    */
-
     func viewDidLoad()
     func viewIsReady()
     func didSelect()

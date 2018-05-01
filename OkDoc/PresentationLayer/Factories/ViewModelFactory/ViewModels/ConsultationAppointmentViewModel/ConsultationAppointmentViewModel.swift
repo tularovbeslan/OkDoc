@@ -9,6 +9,6 @@
 import Foundation
 
 struct ConsultationAppointmentViewModel {
-    let dataSelectionViewModel: DataSelectionViewModel
-    let analysisViewModels: AnalysisViewModel
+    var dataSelectionViewModel: DataSelectionViewModel
+    var analysisViewModels: AnalysisViewModel
 }

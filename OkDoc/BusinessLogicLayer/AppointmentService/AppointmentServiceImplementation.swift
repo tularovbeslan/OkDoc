@@ -9,8 +9,10 @@
 import Foundation
 
 class AppointmentServiceImplementation: AppointmentService {
+    // MARK: - Properties
     var network: Network!
     
+    // MARK: - AppointmentService
     func obtainAppointmentInformation(completion: @escaping (ConsultationAppointmentViewModel) -> ()) {
         network.loadAppointmentInformation { (consultationAppointmentViewModel) in
             completion(consultationAppointmentViewModel)

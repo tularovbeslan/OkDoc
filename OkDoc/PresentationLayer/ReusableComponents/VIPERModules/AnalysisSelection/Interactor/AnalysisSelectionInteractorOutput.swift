@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AnalysisSelectionInteractorOutput: class {
-
+    func analysisDidPrepare(by viewModels: [AnalysisSelectionViewModel])
 }

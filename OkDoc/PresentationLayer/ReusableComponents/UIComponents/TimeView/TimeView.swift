@@ -17,7 +17,7 @@ class TimeView: UIView {
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
         }
     }
-    private var viewModels: [TimeViewModel] = []
+    var viewModels: [TimeViewModel] = []
     private var selectedIndex: Int = 0
     private var currentWidth: CGFloat = 0
     

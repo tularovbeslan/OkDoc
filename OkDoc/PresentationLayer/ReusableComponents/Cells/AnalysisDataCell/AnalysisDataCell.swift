@@ -43,7 +43,7 @@ class AnalysisDataCell: UICollectionViewCell {
 
 extension AnalysisDataCell {
     func setup(viewModel: AnalysisDataViewModel) {
-        self.imageView.image = UIImage.init(named: viewModel.image)
+        self.imageView.image = viewModel.image
         self.title.text = viewModel.title
         emptyIcon(isHidden: self.imageView.image != nil)
     }

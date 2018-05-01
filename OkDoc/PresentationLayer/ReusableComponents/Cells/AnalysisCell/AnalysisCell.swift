@@ -16,7 +16,7 @@ final class AnalysisCell: UITableViewCell, XibInitializable {
     
     // MARK: - Properties
     weak var delegate: AnalysisCellDelegate?
-    private var viewModels: [AnalysisDataViewModel] = []
+    var viewModels: [AnalysisDataViewModel] = []
     private var itemWidth: CGFloat!
     private var itemHeight: CGFloat!
     
@@ -36,7 +36,7 @@ final class AnalysisCell: UITableViewCell, XibInitializable {
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         var size = super.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)
         collectionView.layoutIfNeeded()
-        size.height = collectionView.contentSize.height + title.frame.height + subTitle.frame.height + 10
+        size.height = collectionView.contentSize.height + title.frame.height + subTitle.frame.height + 15
         return size
     }
     
@@ -51,7 +51,7 @@ final class AnalysisCell: UITableViewCell, XibInitializable {
         collectionView.dataSource = self
         collectionView.register(nibModels: [AnalysisDataViewModel.self])
         collectionView.contentInset = UIEdgeInsets.init(top: 10, left: 18, bottom: 10, right: 18)
-        itemWidth = collectionView.frame.width * 0.37
+        itemWidth = (UIScreen.main.bounds.width + (collectionView.contentInset.left * 2)) * 0.37
         itemHeight = (itemWidth * 1.60)
     }
 
@@ -74,17 +74,7 @@ extension AnalysisCell: UICollectionViewDelegate {
         if indexPath.row == viewModels.count - 1 {
             let feedbackEnagine = FeedbackEngine()
             feedbackEnagine.feedback(type: .selection)
-            let newComment = AnalysisDataViewModel.init(image: "image2", title: "Новый анализ")
-            viewModels.insert(newComment, at: viewModels.count - 1)
-            
-            let indexPath = IndexPath(item: viewModels.count - 2, section: 0)
-            let indexPaths: [IndexPath] = [indexPath]
-            
-            collectionView.performBatchUpdates({
-                collectionView.insertItems(at: indexPaths)
-            }) { [weak self] (finish) in
-                self?.delegate?.appendNewAnalysis()
-            }
+            delegate?.appendNewAnalysis()
         }
     }
 }

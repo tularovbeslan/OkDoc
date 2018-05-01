@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AnalysisSelectionRouterInput {
-
+    func showActionSheet(text: String)
 }

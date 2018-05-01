@@ -20,6 +20,7 @@ class ConsultationAppointmentModuleConfigurator {
     private func configure(viewController: ConsultationAppointmentViewController) {
 
         let router = ConsultationAppointmentRouter()
+        router.transitionHandler = viewController
         
         let network = NetworkImplementation()
         

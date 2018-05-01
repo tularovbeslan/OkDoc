@@ -15,11 +15,9 @@ class ConsultationAppointmentInteractor: ConsultationAppointmentInteractorInput 
         let date = [["Пн":"12"], ["Вт":"13"], ["Ср":"14"], ["Чт":"15"], ["Пт":"16"], ["Сб":"17"]]
         let dataSelectionModel = DataSelectionViewModel.init(timeModels: times, dateModels: date)
         
-        let analysisDataModel1 = AnalysisDataViewModel.init(image: "image1", title: "Общий анализ крови")
-        let analysisDataModel2 = AnalysisDataViewModel.init(image: "image2", title: "Анализ на простейшие")
-        let analysisDataModel3 = AnalysisDataViewModel.init(image: "", title: "")
+        let analysisEmptyModel = AnalysisDataViewModel.init(image: nil, title: "")
         
-        let analysisModel = AnalysisViewModel.init(viewModels: [analysisDataModel1, analysisDataModel2, analysisDataModel3])
+        let analysisModel = AnalysisViewModel.init(viewModels: [analysisEmptyModel])
         
         let consultationAppointmentViewModel = ConsultationAppointmentViewModel.init(dataSelectionViewModel: dataSelectionModel, analysisViewModels: analysisModel)
         

@@ -15,4 +15,6 @@ protocol ConsultationAppointmentViewOutput {
 
     func viewDidLoad()
     func viewIsReady()
+    func addAnalysis()
+
 }

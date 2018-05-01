@@ -6,9 +6,10 @@
 //  Copyright © 2018 Beslan Tularov. All rights reserved.
 //
 
-import Foundation
+import UIKit.UIImage
+
 struct AnalysisDataViewModel {
-    let image: String
+    let image: UIImage?
     let title: String
 }
 

@@ -11,4 +11,5 @@ import Foundation
 protocol Network {
     func loadCategories(completion: @escaping ([CategoryViewModel])->())
     func loadAppointmentInformation(completion: @escaping (ConsultationAppointmentViewModel)->())
+    func loadAnalysis(completion: @escaping (AnalysisSelectionViewModel)->())
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 struct DataSelectionViewModel {
-    let timeModels: [String]
-    let dateModels: [[String: String]]
+    var timeModels: [String]
+    var dateModels: [[String: String]]
 }
 
 extension DataSelectionViewModel: CellViewModel {

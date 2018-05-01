@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConsultationAppointmentViewController: UIViewController, Delegatable, ConsultationAppointmentViewInput {
+class ConsultationAppointmentViewController: UIViewController, Delegatable, ConsultationAppointmentViewInput, TransitionHandler {
 
     // MARK: - Properties
     var output: ConsultationAppointmentViewOutput!
@@ -31,6 +31,26 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     
     deinit {
         destroyKeyboardNotifications()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String.init(describing: AnalysisSelectionViewController.self) {
+            let destination = segue.destination as! AnalysisSelectionViewController
+            destination.completionHandler = { [weak self] model in
+                self?.analysisCell.viewModels.insert(model, at: (self?.analysisCell.viewModels.count)! - 1)
+                let indexPath = IndexPath(item: (self?.analysisCell.viewModels.count)! - 2, section: 0)
+                let indexPaths: [IndexPath] = [indexPath]
+                
+                self?.analysisCell.collectionView.performBatchUpdates({
+                    self?.analysisCell.collectionView.insertItems(at: indexPaths)
+                }) { [weak self] (finish) in
+                    UIView.setAnimationsEnabled(false)
+                    self?.tableView.beginUpdates()
+                    self?.tableView.endUpdates()
+                    UIView.setAnimationsEnabled(true)
+                }
+            }
+        }
     }
 
     // MARK: ConsultationAppointmentViewInput
@@ -139,10 +159,7 @@ extension ConsultationAppointmentViewController: UITableViewDelegate {
 
 extension ConsultationAppointmentViewController: AnalysisCellDelegate {
     func appendNewAnalysis() {
-        UIView.setAnimationsEnabled(false)
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
-        UIView.setAnimationsEnabled(true)
+        output.addAnalysis()
     }
 }
 

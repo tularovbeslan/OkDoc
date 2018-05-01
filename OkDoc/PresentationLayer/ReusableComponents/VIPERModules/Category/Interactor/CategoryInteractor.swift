@@ -8,9 +8,11 @@
 
 class CategoryInteractor: CategoryInteractorInput {
 
+    // MARK: - Properties
     weak var output: CategoryInteractorOutput!
     var service: CategoriesService!
 
+    // MARK: - CategoryInteractorInput
     func prepareCategories() {
         service.obtainCategories { [weak self] (viewModels) in
             self?.output.categoriesDidPrepare(by: viewModels)

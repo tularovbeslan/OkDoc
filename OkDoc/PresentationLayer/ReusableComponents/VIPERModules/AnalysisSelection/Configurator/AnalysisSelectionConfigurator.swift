@@ -20,6 +20,12 @@ class AnalysisSelectionModuleConfigurator {
     private func configure(viewController: AnalysisSelectionViewController) {
 
         let router = AnalysisSelectionRouter()
+        router.transitionHandler = viewController
+        
+        let network = NetworkImplementation()
+        
+        let service = AnalysisServiceImplementation()
+        service.network = network
 
         let presenter = AnalysisSelectionPresenter()
         presenter.view = viewController
@@ -27,6 +33,7 @@ class AnalysisSelectionModuleConfigurator {
 
         let interactor = AnalysisSelectionInteractor()
         interactor.output = presenter
+        interactor.service = service
 
         presenter.interactor = interactor
         viewController.output = presenter

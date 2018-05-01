@@ -7,12 +7,6 @@
 //
 
 protocol CategoryViewInput: class {
-
-    /**
-        @author Беслан Тулров
-        Setup initial state of the view
-    */
-
     func setupInitialState()
     func updateView(with viewModels: [CategoryViewModel])
 }

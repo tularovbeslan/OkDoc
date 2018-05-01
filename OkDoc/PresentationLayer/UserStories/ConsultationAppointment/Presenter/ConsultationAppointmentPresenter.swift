@@ -25,6 +25,12 @@ class ConsultationAppointmentPresenter: ConsultationAppointmentModuleInput, Cons
         interactor.prepareAppointmentInformation()
     }
     
+    func addAnalysis() {
+        router.openModule { (viewController) in
+            
+        }
+    }
+    
     // MARK: - ConsultationAppointmentInteractorOutput
     func AppointmentInformationDidPrepare(viewModel: ConsultationAppointmentViewModel) {
         view.updateView(with: viewModel)

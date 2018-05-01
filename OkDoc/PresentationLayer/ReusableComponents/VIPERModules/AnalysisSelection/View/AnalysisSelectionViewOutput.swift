@@ -13,5 +13,7 @@ protocol AnalysisSelectionViewOutput {
         Notify presenter that view is ready
     */
 
+    func viewDidLoad()
     func viewIsReady()
+    func selectAnalysis(text: String)
 }
