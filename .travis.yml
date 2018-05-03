@@ -7,4 +7,5 @@ branches:
 before_install:
   - gem install xcpretty -N
 script:
+  - fastlane beta
   - fastlane tests
