@@ -26,9 +26,7 @@ class ConsultationAppointmentPresenter: ConsultationAppointmentModuleInput, Cons
     }
     
     func addAnalysis() {
-        router.openModule { (viewController) in
-            
-        }
+        router.openModule()
     }
     
     // MARK: - ConsultationAppointmentInteractorOutput

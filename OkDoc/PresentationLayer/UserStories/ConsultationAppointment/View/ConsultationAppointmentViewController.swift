@@ -74,10 +74,6 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
         reloadTableView()
     }
     
-    private func reloadTableView() {
-        tableView.reloadData()
-    }
-    
     // MARK: - Helpers
     private func createStaticCells() {
         dateSelectionCell = DateSelectionCell.fromXib()
@@ -98,6 +94,10 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func reloadTableView() {
+        tableView.reloadData()
     }
     
     private func setKeyboardNotifications() {

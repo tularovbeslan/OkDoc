@@ -7,12 +7,7 @@
 //
 
 protocol DoctorsListViewInput: class {
-
-    /**
-        @author Беслан Тулров
-        Setup initial state of the view
-    */
-
     func setupInitialState()
     func setNavigationBar(title: String)
+    func updateView(with viewModels: [DoctorsViewModel])
 }

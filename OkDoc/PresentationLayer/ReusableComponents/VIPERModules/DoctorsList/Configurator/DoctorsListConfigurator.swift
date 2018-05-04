@@ -21,6 +21,11 @@ class DoctorsListModuleConfigurator {
 
         let router = DoctorsListRouter()
         router.transitionHandler = viewController
+        
+        let network = NetworkImplementation()
+        
+        let service = DoctorsServiceImplementation()
+        service.network = network
 
         let presenter = DoctorsListPresenter()
         presenter.view = viewController
@@ -28,7 +33,8 @@ class DoctorsListModuleConfigurator {
 
         let interactor = DoctorsListInteractor()
         interactor.output = presenter
-
+        interactor.service = service
+        
         presenter.interactor = interactor
         viewController.output = presenter
     }

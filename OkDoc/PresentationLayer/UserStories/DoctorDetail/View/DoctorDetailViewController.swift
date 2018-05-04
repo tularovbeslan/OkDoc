@@ -14,6 +14,7 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     var output: DoctorDetailViewOutput!
     private var viewModels: [DoctorsViewModel] = []
     private let sections: [SectionType] = [.common, .info]
+    
     // MARK: - IBOutlets
     @IBOutlet weak var backArrow: UIButton!
     @IBOutlet weak var burgerMenu: UIButton!
@@ -51,8 +52,6 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     @IBAction func oppointmentDidPress(_ sender: OkDocButton) {
         output.oppointmentDidPress()
     }
-    
-    
     
     // MARK: ProfileViewInput
     func setupInitialState() {

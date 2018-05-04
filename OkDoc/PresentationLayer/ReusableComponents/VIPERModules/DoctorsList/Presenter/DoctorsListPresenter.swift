@@ -11,13 +11,23 @@ class DoctorsListPresenter: DoctorsListModuleInput, DoctorsListViewOutput, Docto
     weak var view: DoctorsListViewInput!
     var interactor: DoctorsListInteractorInput!
     var router: DoctorsListRouterInput!
-
-    func viewIsReady() {
+    
+    // MARK: - DoctorsListViewOutput
+    func viewDidLoad() {
         view.setupInitialState()
         view.setNavigationBar(title: "Физиотерапевт")
+    }
+
+    func viewIsReady() {
+        interactor.prepareDoctors()
     }
     
     func didSelect() {
         router.openModule()
+    }
+    
+    // MARK: - DoctorsListInteractorOutput
+    func doctorsDidPrepare(by viewModels: [DoctorsViewModel]) {
+        view.updateView(with: viewModels)
     }
 }

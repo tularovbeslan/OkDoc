@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DoctorsListInteractorOutput: class {
-
+    func doctorsDidPrepare(by viewModels: [DoctorsViewModel])
 }

@@ -12,7 +12,7 @@ final class DoctorsListViewController: UIViewController, DoctorsListViewInput, S
 
     // MARK: - Properties
     var output: DoctorsListViewOutput!
-    var viewModels: [DoctorsViewModel] = []
+    private var viewModels: [DoctorsViewModel] = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -21,37 +21,34 @@ final class DoctorsListViewController: UIViewController, DoctorsListViewInput, S
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        output.viewDidLoad()
     }
     
     // MARK: CategoryViewInput
     func setupInitialState() {
         configureTableView()
-        testModels()
         segmentBar.titles = ["Онлайн", "По записи"]
+        output.viewIsReady()
     }
     
     func setNavigationBar(title: String) {
         self.title = title
     }
     
+    func updateView(with viewModels: [DoctorsViewModel]) {
+        self.viewModels = viewModels
+        reloadTableView()
+    }
+    
     // MARK: - Helpers
-    func configureTableView() {
+    private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(nibModels: [DoctorsViewModel.self])
     }
     
-    func testModels() {
-        var titles = ["Урюмцева Елена Николаевна", "Кадышев Марат Абдуллович", "Фролова Светлана Юрьевна", "Урюмцева Елена Николаевна"]
-        var experience = [10, 32, 12, 6]
-        var price = [990, 1800, 1000, 850]
-        var photo = ["doc1", "doc2", "doc3", "doc4"]
-        for i in 0..<titles.count {
-            let model = DoctorsViewModel(title: titles[i], experience: experience[i], price: price[i], language: "pусский, английский, немецкий", photo: photo[i])
-            viewModels.append(model)
-        }
+    private func reloadTableView() {
         tableView.reloadData()
     }
 }

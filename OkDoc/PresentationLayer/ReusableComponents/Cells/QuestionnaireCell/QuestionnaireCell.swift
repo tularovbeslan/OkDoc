@@ -31,7 +31,7 @@ final class QuestionnaireCell: UITableViewCell, XibInitializable {
     }
     
     // MARK: - Helpers
-    func setTexViewsConfigure(textViews: [UITextView]) {
+    private func setTexViewsConfigure(textViews: [UITextView]) {
         textViews.forEach { [weak self] (textView) in
             textView.delegate = self
             textView.clipsToBounds = true

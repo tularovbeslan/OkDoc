@@ -12,7 +12,7 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
 
     // MARK: - Properties
     var output: CategoryViewOutput!
-    var viewModels: [CategoryViewModel] = []
+    private var viewModels: [CategoryViewModel] = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -35,16 +35,16 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
     }
     
     // MARK: - Helpers
-    func configureTableView() {
+    private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.register(nibModels: [CategoryViewModel.self])
-        tableView.contentInset = UIEdgeInsets.init(top: 20, left: 0, bottom: 15, right: 0)
+        tableView.contentInset = UIEdgeInsets.init(top: 15, left: 0, bottom: 15, right: 0)
     }
     
-    func reloadView() {
+    private func reloadView() {
         tableView.reloadData()
     }
 }

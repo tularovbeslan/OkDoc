@@ -30,7 +30,7 @@ class DateCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
-    func setTitlesColor() {
+    private func setTitlesColor() {
         weekDay.textColor = UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
         date.textColor = UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
     }

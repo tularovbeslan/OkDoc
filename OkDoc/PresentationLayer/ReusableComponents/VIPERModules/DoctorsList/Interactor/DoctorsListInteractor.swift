@@ -9,5 +9,11 @@
 class DoctorsListInteractor: DoctorsListInteractorInput {
 
     weak var output: DoctorsListInteractorOutput!
+    var service: DoctorsService!
 
+    func prepareDoctors() {
+        service.obtainDoctors { [weak self] (viewModel) in
+            self?.output.doctorsDidPrepare(by: viewModel)
+        }
+    }
 }

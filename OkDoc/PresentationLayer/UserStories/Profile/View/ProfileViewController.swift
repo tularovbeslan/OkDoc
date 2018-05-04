@@ -12,8 +12,8 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
     // MARK: - Properties
     typealias model = FormViewModel
     var output: ProfileViewOutput!
-    var viewModels: [model] = []
-    var cells: [FormCell] = []
+    private var viewModels: [model] = []
+    private var cells: [FormCell] = []
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -35,7 +35,7 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
     }
     
     // MARK: - Helpers
-    func configureTableView() {
+    private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.separatorStyle = .none
         tableView.delegate = self
@@ -45,7 +45,7 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
         tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 15, right: 0)
     }
     
-    func testModels() {
+    private func testModels() {
         let titles = ["Как к Вам обращаться?", "Пол", "Возраст", "Вес, кг", "Рост, см"]
         let text = ["Анонимно", "Женский", "47", "98", "198"]
         

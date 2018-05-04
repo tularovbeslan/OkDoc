@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConsultationAppointmentRouterInput {
-    func openModule(block: ConfigurationBlock<AnalysisSelectionViewController>!)
+    func openModule()
 }

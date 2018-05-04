@@ -12,7 +12,7 @@ final class DialogsViewController: UIViewController, DialogsViewInput, Storyboar
 
     // MARK: - Properties
     var output: DialogsViewOutput!
-    var viewModels: [DialogsViewModel] = []
+    private var viewModels: [DialogsViewModel] = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -35,7 +35,7 @@ final class DialogsViewController: UIViewController, DialogsViewInput, Storyboar
     }
     
     // MARK: - Helpers
-    func configureTableView() {
+    private func configureTableView() {
         tableView.tableFooterView = UIView.init(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,7 +44,7 @@ final class DialogsViewController: UIViewController, DialogsViewInput, Storyboar
         tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 15, right: 0)
     }
     
-    func testModels() {
+    private func testModels() {
         let professional = ["Логопед", "Физиотерапевт", "Гастроэнтеролог"]
         let name = ["Урюмцева Елена Николаевна", "Кадышев Марат Абдуллович", "Фролова Светлана Юрьевна"]
         let photo = ["doc1", "doc2", "doc3"]

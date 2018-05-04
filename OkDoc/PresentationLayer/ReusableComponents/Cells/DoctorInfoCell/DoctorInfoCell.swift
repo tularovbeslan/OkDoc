@@ -9,6 +9,7 @@
 import UIKit
 
 class DoctorInfoCell: UITableViewCell {
+    
     // MARK: - IBOutlets
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var experience: UILabel!
@@ -23,20 +24,19 @@ class DoctorInfoCell: UITableViewCell {
     }
     
     // MARK: - Helpers
-    func configureRadius(layer: CALayer, radius: CGFloat) {
+    private func configureRadius(layer: CALayer, radius: CGFloat) {
         layer.cornerRadius = radius
         layer.masksToBounds = true
     }
     
-    // MARK: - Helpers
-    func setRaiting(location: Int) -> NSAttributedString {
+    private func setRaiting(location: Int) -> NSAttributedString {
         let string = NSMutableAttributedString(string: "★★★★★")
         let range = NSRange(location: location, length: 5 - location )
         string.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:226/255.0, green:230/255.0, blue:234/255.0, alpha: 1), range: range)
         return string
     }
     
-    func setAttributed(string: String) -> NSAttributedString {
+    private func setAttributed(string: String) -> NSAttributedString {
         let components = string.components(separatedBy: ":")
         let atributedString = NSMutableAttributedString(string: string)
         if components.count > 1 {

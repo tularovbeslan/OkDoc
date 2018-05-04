@@ -10,12 +10,14 @@ import UIKit
 
 class DialogsCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var profession: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var dateBackgroundView: UIView!
 
+    // MARK: - Life cycle
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         let feedbackEnagine = FeedbackEngine()
@@ -26,19 +28,20 @@ class DialogsCell: UITableViewCell {
         setDateText(color: UIColor.init(red: 160/255, green: 171/255, blue: 184/255, alpha: 1))
     }
     
-    func configureDateBackground() {
+    // MARK: - Helpers
+    private func configureDateBackground() {
         dateBackgroundView.backgroundColor = UIColor.init(red: 2/255, green: 123/255, blue: 255/255, alpha: 1)
         dateBackgroundView.layer.cornerRadius = 8
         dateBackgroundView.clipsToBounds = true
     }
     
-    func configurePhotoView() {
+    private func configurePhotoView() {
         photoView.layer.cornerRadius = photoView.frame.width / 2
         photoView.clipsToBounds = true
         photoView.contentMode = .scaleAspectFit
     }
     
-    func setDateText(color: UIColor) {
+    private func setDateText(color: UIColor) {
         profession.textColor = color
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class OkDocButton: UIControl {
     
     // MARK: - Properties
-    var titleLabel: UILabel? = {
+    private var titleLabel: UILabel? = {
         let label = UILabel()
         let font = UIFont(name: "AvertaCY-Semibold", size: 12) ?? UIFont.systemFont(ofSize: 20)
         label.numberOfLines = 2
@@ -23,7 +23,7 @@ class OkDocButton: UIControl {
         return label
     }()
 
-    var priceLabel: UILabel? = {
+    private var priceLabel: UILabel? = {
         let label = UILabel()
         let font = UIFont(name: "AvertaCY-Bold", size: 23) ?? UIFont.systemFont(ofSize: 20)
         label.textColor = .white
@@ -34,7 +34,7 @@ class OkDocButton: UIControl {
         return label
     }()
     
-    lazy var stackView: UIStackView = {
+    private lazy var stackView: UIStackView = {
         let stack = UIStackView(elements: [priceLabel, titleLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.alignment = .center
@@ -64,19 +64,19 @@ class OkDocButton: UIControl {
         priceLabel?.text = text
     }
     
-    func configureStackViewConstraints() {
+    private func configureStackViewConstraints() {
         addSubview(stackView)
         constraints(for: stackView)
     }
     
-    func constraints(for view: UIView) {
+    private func constraints(for view: UIView) {
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    @objc func touchedUpInside() {
+    @objc private func touchedUpInside() {
         self.sendActions(for: .valueChanged)
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()

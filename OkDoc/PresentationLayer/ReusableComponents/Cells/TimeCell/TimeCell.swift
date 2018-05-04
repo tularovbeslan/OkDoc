@@ -30,12 +30,12 @@ class TimeCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
-    func setCornerRadius() {
+    private func setCornerRadius() {
         contentView.layer.cornerRadius = 8
         contentView.clipsToBounds = true
     }
     
-    func setBackgroundColor() {
+    private func setBackgroundColor() {
         contentView.backgroundColor = UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)
     }
 }
