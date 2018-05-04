@@ -21,7 +21,7 @@ final class ConsultationViewController: UIViewController, ConsultationViewInput,
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        segmentBar.titles = ["Записи", "Завершенные"]
+        segmentBar.createViewModel(titles: ["Записи", "Завершенные"])
     }
 
     // MARK: - IBActions

@@ -11,15 +11,6 @@ import UIKit
 class SegmentBar: UIView {
 
     // MARK: - Properties
-    var titles: [String] = [] {
-        didSet {
-            createTestViewModel()
-            configureCollectionView()
-            setupHorizontalBarView()
-            let indexPath = IndexPath.init(item: 0, section: 0)
-            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
-        }
-    }
     private var viewModels: [SegmentViewModel] = []
     private var selectedIndex: Int = 0
     private var currentWidth: CGFloat = 0
@@ -68,12 +59,16 @@ class SegmentBar: UIView {
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    private func createTestViewModel() {
+    func createViewModel(titles: [String]) {
         for element in titles {
             let model = SegmentViewModel(title: element)
             viewModels.append(model)
         }
         collectionView.reloadData()
+        configureCollectionView()
+        setupHorizontalBarView()
+        let indexPath = IndexPath.init(item: 0, section: 0)
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
     }
     
     private func setupHorizontalBarView() {

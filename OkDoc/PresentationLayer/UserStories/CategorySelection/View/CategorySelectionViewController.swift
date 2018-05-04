@@ -30,7 +30,7 @@ final class CategorySelectionViewController: UIViewController, CategorySelection
 
     // MARK: - CategorySelectionViewInput
     func setupInitialState() {
-        segmentBar.titles = ["Взрослые", "Дети"]
+        segmentBar.createViewModel(titles: ["Взрослые", "Дети"])
     }
     
     func setTitleLabel(text: String) {

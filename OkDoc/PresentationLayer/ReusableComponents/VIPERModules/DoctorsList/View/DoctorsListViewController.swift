@@ -27,7 +27,7 @@ final class DoctorsListViewController: UIViewController, DoctorsListViewInput, S
     // MARK: CategoryViewInput
     func setupInitialState() {
         configureTableView()
-        segmentBar.titles = ["Онлайн", "По записи"]
+        segmentBar.createViewModel(titles: ["Онлайн", "По записи"])
         output.viewIsReady()
     }
     
