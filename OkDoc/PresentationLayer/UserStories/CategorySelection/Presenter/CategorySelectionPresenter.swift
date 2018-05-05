@@ -11,9 +11,15 @@ class CategorySelectionPresenter: CategorySelectionModuleInput, CategorySelectio
     weak var view: CategorySelectionViewInput!
     var interactor: CategorySelectionInteractorInput!
     var router: CategorySelectionRouterInput!
+    var feedbackService: FeedbackService!
 
     func viewIsReady() {
         view.setupInitialState()
-        view.navigationBarBackButton(title: "")
+        view.setNavigationBarBackButton(title:"")
+        view.setTitleLabel(text: "Наши врачи")
+    }
+    
+    func menuButtonDidPress() {
+        feedbackService.feedback(by: .impact(.medium))
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnalysisCell" rowHeight="324" id="k7r-zQ-VDg" customClass="AnalysisCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="324"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k7r-zQ-VDg" id="MC1-rs-AEb">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="323.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Анализы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-Ow-WrB">
+                        <rect key="frame" x="20" y="10" width="111.5" height="33"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="26"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LAV-Ew-nnq">
+                        <rect key="frame" x="0.0" y="95.5" width="428" height="228.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6YM-PD-29h">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас есть результаты анализов? Можете добавить их сюда, тогда врач их изучит и будет в курсе дел" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffi-RW-S5F">
+                        <rect key="frame" x="20" y="48" width="384" height="32.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
+                        <color key="textColor" red="0.62352941176470589" green="0.6705882352941176" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffi-RW-S5F" secondAttribute="trailing" constant="10" id="8SJ-oI-jCJ"/>
+                    <constraint firstItem="ffi-RW-S5F" firstAttribute="leading" secondItem="Jau-Ow-WrB" secondAttribute="leading" id="E81-Mx-wav"/>
+                    <constraint firstAttribute="bottom" secondItem="LAV-Ew-nnq" secondAttribute="bottom" id="GaR-Pa-7y4"/>
+                    <constraint firstItem="LAV-Ew-nnq" firstAttribute="top" secondItem="ffi-RW-S5F" secondAttribute="bottom" constant="15" id="Jne-q9-jpP"/>
+                    <constraint firstItem="ffi-RW-S5F" firstAttribute="top" secondItem="Jau-Ow-WrB" secondAttribute="bottom" constant="5" id="MUK-uC-kaT"/>
+                    <constraint firstItem="Jau-Ow-WrB" firstAttribute="leading" secondItem="MC1-rs-AEb" secondAttribute="leading" constant="20" id="UwK-Aa-TnS"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jau-Ow-WrB" secondAttribute="trailing" constant="20" id="YGf-eI-Fuo"/>
+                    <constraint firstItem="LAV-Ew-nnq" firstAttribute="leading" secondItem="MC1-rs-AEb" secondAttribute="leading" id="Ybb-u4-Qw1"/>
+                    <constraint firstItem="Jau-Ow-WrB" firstAttribute="top" secondItem="MC1-rs-AEb" secondAttribute="top" constant="10" id="Z7t-D9-Abd"/>
+                    <constraint firstAttribute="trailing" secondItem="LAV-Ew-nnq" secondAttribute="trailing" id="awe-oi-Tc5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="LAV-Ew-nnq" id="ZeH-UM-pOL"/>
+                <outlet property="subTitle" destination="ffi-RW-S5F" id="SKw-oK-dK9"/>
+                <outlet property="title" destination="Jau-Ow-WrB" id="9UR-wH-Jds"/>
+            </connections>
+            <point key="canvasLocation" x="114" y="184"/>
+        </tableViewCell>
+    </objects>
+</document>

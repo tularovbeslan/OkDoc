@@ -19,6 +19,7 @@ protocol TransitionHandler: class {
     func openModule<T>(segueIdentifier: String,
                        block: ConfigurationBlock<T>!)
     func closeModule(animated: Bool)
+    func present(_ viewController: UIViewController, animated flag: Bool)
 }
 
 extension TransitionHandler where Self: UIViewController {
@@ -29,6 +30,10 @@ extension TransitionHandler where Self: UIViewController {
     func openModule<T>(segueIdentifier: String, block: ConfigurationBlock<T>!) {
         let segueInfo = SegueInfo(configurationBlock: block)
         performSegue(withIdentifier: segueIdentifier, sender: segueInfo)
+    }
+    
+    func present(_ viewController: UIViewController, animated flag: Bool) {
+        present(viewController, animated: flag, completion: nil)
     }
     
     func closeModule(animated: Bool) {

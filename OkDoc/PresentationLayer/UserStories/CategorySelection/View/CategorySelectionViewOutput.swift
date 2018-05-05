@@ -14,4 +14,5 @@ protocol CategorySelectionViewOutput {
     */
 
     func viewIsReady()
+    func menuButtonDidPress()
 }

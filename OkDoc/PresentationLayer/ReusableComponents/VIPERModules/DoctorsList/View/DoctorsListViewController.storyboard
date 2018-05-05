@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vQB-cy-DDd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Doctorslist View Controller-->
+        <scene sceneID="NeJ-ed-xhK">
+            <objects>
+                <viewController storyboardIdentifier="DoctorsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vQB-cy-DDd" customClass="DoctorsListViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4T-Ie-gtT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y31-pL-wBx">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eh4-g6-cq9" customClass="SegmentBar" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dEC-8q-I5A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eh4-g6-cq9" firstAttribute="leading" secondItem="pTg-BC-FCb" secondAttribute="leading" id="8Zh-C1-lFi"/>
+                            <constraint firstItem="Y31-pL-wBx" firstAttribute="leading" secondItem="eh4-g6-cq9" secondAttribute="leading" id="En9-b3-kER"/>
+                            <constraint firstItem="Y31-pL-wBx" firstAttribute="bottom" secondItem="pTg-BC-FCb" secondAttribute="bottom" id="WPx-bw-5HH"/>
+                            <constraint firstItem="Y31-pL-wBx" firstAttribute="top" secondItem="eh4-g6-cq9" secondAttribute="bottom" id="WvH-6k-PwN"/>
+                            <constraint firstItem="eh4-g6-cq9" firstAttribute="top" secondItem="r4T-Ie-gtT" secondAttribute="top" constant="20" id="Yx7-v0-7UQ"/>
+                            <constraint firstItem="pTg-BC-FCb" firstAttribute="trailing" secondItem="eh4-g6-cq9" secondAttribute="trailing" id="br8-rD-nsk"/>
+                            <constraint firstItem="Y31-pL-wBx" firstAttribute="trailing" secondItem="eh4-g6-cq9" secondAttribute="trailing" id="eSU-XU-eci"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pTg-BC-FCb"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentBar" destination="eh4-g6-cq9" id="AWu-cl-DIG"/>
+                        <outlet property="tableView" destination="Y31-pL-wBx" id="p15-23-qvJ"/>
+                        <segue destination="Zsf-Vh-xTu" kind="show" identifier="DoctorDetailViewController" id="FKu-Nm-mol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90o-Fa-lVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3vo-EM-HMu" customClass="DoctorsListModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="doctorslistViewController" destination="vQB-cy-DDd" id="p9L-it-GLd"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="-13.043478260869566"/>
+        </scene>
+        <!--DoctorDetailViewController-->
+        <scene sceneID="8t7-aQ-edv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DoctorDetailViewController" storyboardName="DoctorDetailViewController" id="Zsf-Vh-xTu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IL3-Cl-EPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-14"/>
+        </scene>
+    </scenes>
+</document>

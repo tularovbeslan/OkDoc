@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Eb-kb-lLV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Consultation View Controller-->
+        <scene sceneID="fp8-Zk-8JW">
+            <objects>
+                <viewController storyboardIdentifier="ConsultationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Eb-kb-lLV" customClass="ConsultationViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQn-3b-tA2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Консультации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxX-BQ-Ixr">
+                                <rect key="frame" x="18" y="22" width="228" height="43"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r92-Ie-uOA" customClass="SegmentBar" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="73" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7JQ-oP-jpu"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-0T-x1f">
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="wmU-bz-zNT" kind="embed" identifier="DialogsViewController" id="XwB-ad-bX3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dh0-Qi-Jb6" firstAttribute="trailing" secondItem="r92-Ie-uOA" secondAttribute="trailing" id="3h3-8H-Pfd"/>
+                            <constraint firstItem="dh0-Qi-Jb6" firstAttribute="bottom" secondItem="XWt-0T-x1f" secondAttribute="bottom" id="84x-Ji-TJh"/>
+                            <constraint firstItem="wxX-BQ-Ixr" firstAttribute="leading" secondItem="dh0-Qi-Jb6" secondAttribute="leading" constant="18" id="IjK-Fk-UNE"/>
+                            <constraint firstItem="dh0-Qi-Jb6" firstAttribute="trailing" secondItem="XWt-0T-x1f" secondAttribute="trailing" id="JqE-bG-AWp"/>
+                            <constraint firstItem="r92-Ie-uOA" firstAttribute="leading" secondItem="dh0-Qi-Jb6" secondAttribute="leading" id="PzY-pb-0l9"/>
+                            <constraint firstItem="r92-Ie-uOA" firstAttribute="top" secondItem="wxX-BQ-Ixr" secondAttribute="bottom" constant="8" id="SL4-9Y-qjI"/>
+                            <constraint firstItem="wxX-BQ-Ixr" firstAttribute="top" secondItem="dh0-Qi-Jb6" secondAttribute="top" constant="2" id="VMV-aK-udy"/>
+                            <constraint firstItem="XWt-0T-x1f" firstAttribute="top" secondItem="r92-Ie-uOA" secondAttribute="bottom" id="xLU-Nd-PiP"/>
+                            <constraint firstItem="XWt-0T-x1f" firstAttribute="leading" secondItem="dh0-Qi-Jb6" secondAttribute="leading" id="zaW-YK-EP9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dh0-Qi-Jb6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Oz-ho-QVf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Nu0-N5-4SM"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="7tW-jM-Qyd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yrd-Gh-hkv">
+                                <rect key="frame" x="313" y="0.0" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="menuDidPress:" destination="9Eb-kb-lLV" eventType="touchUpInside" id="dVS-AT-uwE"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentBar" destination="r92-Ie-uOA" id="tkL-xH-wfx"/>
+                        <outlet property="titlelb" destination="wxX-BQ-Ixr" id="vRD-pN-CPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-WB-6Ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="8T1-em-Ccc" customClass="ConsultationModuleInitializer" customModule="OkDoc" customModuleProvider="target">
+                    <connections>
+                        <outlet property="consultationViewController" destination="9Eb-kb-lLV" id="q1a-3T-pQH"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="527.20000000000005" y="106.59670164917542"/>
+        </scene>
+        <!--DialogsViewController-->
+        <scene sceneID="LNZ-lQ-1hA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DialogsViewController" id="wmU-bz-zNT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGq-rM-36e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="burger" width="44" height="44"/>
+    </resources>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Regular.otf">
+            <string>AvertaCY-Regular</string>
+        </array>
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DialogsCell" rowHeight="125" id="6vH-7j-Xg2" customClass="DialogsCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6vH-7j-Xg2" id="ThR-Pg-gQc">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V31-Cd-8Tx">
+                        <rect key="frame" x="20" y="30" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="8nl-9w-0xc"/>
+                            <constraint firstAttribute="height" constant="50" id="LQc-30-Vo3"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwE-pq-E4N">
+                        <rect key="frame" x="90" y="85.5" width="117" height="22"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 апреля в 10:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y4-22-Dec">
+                                <rect key="frame" x="14" y="4" width="89" height="14"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0078431372549019607" green="0.4823529411764706" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="6w2-SF-1Jw"/>
+                            <constraint firstAttribute="width" secondItem="7y4-22-Dec" secondAttribute="width" constant="28" id="7qU-7F-Tyn"/>
+                            <constraint firstItem="7y4-22-Dec" firstAttribute="centerY" secondItem="fwE-pq-E4N" secondAttribute="centerY" id="8xB-Ci-RWs"/>
+                            <constraint firstAttribute="trailing" secondItem="7y4-22-Dec" secondAttribute="trailing" constant="14" id="LOX-Av-aiv"/>
+                            <constraint firstItem="7y4-22-Dec" firstAttribute="leading" secondItem="fwE-pq-E4N" secondAttribute="leading" constant="14" id="T8j-U2-zjm"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-Hi-nib">
+                        <rect key="frame" x="90" y="35" width="275" height="40.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гаджиев Аслан Мурадович" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OW2-BM-iYL">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="21.5"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Окулист" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAc-e1-sup">
+                                <rect key="frame" x="0.0" y="21.5" width="61" height="19"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="15"/>
+                                <color key="textColor" red="0.62745098039215685" green="0.6705882352941176" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V31-Cd-8Tx" firstAttribute="leading" secondItem="ThR-Pg-gQc" secondAttribute="leading" constant="20" id="36u-O8-07D"/>
+                    <constraint firstItem="XEA-Hi-nib" firstAttribute="centerY" secondItem="V31-Cd-8Tx" secondAttribute="centerY" id="8w7-UY-EeA"/>
+                    <constraint firstItem="fwE-pq-E4N" firstAttribute="top" secondItem="XEA-Hi-nib" secondAttribute="bottom" constant="10" id="A7t-ea-H9c"/>
+                    <constraint firstItem="V31-Cd-8Tx" firstAttribute="top" secondItem="ThR-Pg-gQc" secondAttribute="top" constant="30" id="D72-zA-XvA"/>
+                    <constraint firstAttribute="trailing" secondItem="XEA-Hi-nib" secondAttribute="trailing" constant="10" id="IqG-Zl-Hfo"/>
+                    <constraint firstItem="fwE-pq-E4N" firstAttribute="leading" secondItem="XEA-Hi-nib" secondAttribute="leading" id="MEc-Yw-xZu"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fwE-pq-E4N" secondAttribute="bottom" constant="10" id="RJT-bk-yqJ"/>
+                    <constraint firstItem="XEA-Hi-nib" firstAttribute="leading" secondItem="V31-Cd-8Tx" secondAttribute="trailing" constant="20" id="i0U-CR-QFJ"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fwE-pq-E4N" secondAttribute="trailing" constant="10" id="o6t-1V-NOF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="date" destination="7y4-22-Dec" id="FWX-hV-4le"/>
+                <outlet property="dateBackgroundView" destination="fwE-pq-E4N" id="Lfc-i9-NIB"/>
+                <outlet property="name" destination="OW2-BM-iYL" id="Sms-9M-hZ8"/>
+                <outlet property="photoView" destination="V31-Cd-8Tx" id="TpB-7X-mn4"/>
+                <outlet property="profession" destination="XAc-e1-sup" id="vJ1-ag-36A"/>
+            </connections>
+            <point key="canvasLocation" x="51.5" y="19.5"/>
+        </tableViewCell>
+    </objects>
+</document>

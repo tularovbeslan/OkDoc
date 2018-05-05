@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fK-Qo-KBE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fK-Qo-KBE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,25 +29,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-yz-bcg" customClass="SegmentBar" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="73" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kTA-mK-7Dw"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-4R-fXR">
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="eSg-cE-R25" kind="embed" identifier="CategoryViewController" id="AfL-tz-ZMF"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="iuJ-t1-Xj6" firstAttribute="bottom" secondItem="TX6-4R-fXR" secondAttribute="bottom" id="0c5-ha-Tg6"/>
+                            <constraint firstItem="dPv-yz-bcg" firstAttribute="leading" secondItem="iuJ-t1-Xj6" secondAttribute="leading" id="Ask-jF-xiX"/>
+                            <constraint firstItem="dPv-yz-bcg" firstAttribute="trailing" secondItem="iuJ-t1-Xj6" secondAttribute="trailing" id="Ckt-ho-bpg"/>
+                            <constraint firstItem="dPv-yz-bcg" firstAttribute="top" secondItem="TKB-rx-Qcv" secondAttribute="bottom" constant="8" id="Hek-46-6vv"/>
+                            <constraint firstItem="iuJ-t1-Xj6" firstAttribute="trailing" secondItem="TX6-4R-fXR" secondAttribute="trailing" id="MvH-Se-nTY"/>
                             <constraint firstItem="TKB-rx-Qcv" firstAttribute="leading" secondItem="iuJ-t1-Xj6" secondAttribute="leading" constant="18" id="bAk-QL-VVU"/>
+                            <constraint firstItem="TX6-4R-fXR" firstAttribute="leading" secondItem="iuJ-t1-Xj6" secondAttribute="leading" id="gnO-EW-bgI"/>
+                            <constraint firstItem="TX6-4R-fXR" firstAttribute="top" secondItem="dPv-yz-bcg" secondAttribute="bottom" id="kz1-nY-lUv"/>
                             <constraint firstItem="TKB-rx-Qcv" firstAttribute="top" secondItem="iuJ-t1-Xj6" secondAttribute="top" constant="2" id="lA4-2m-6MK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iuJ-t1-Xj6"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hz3-91-PwA">
                         <barButtonItem key="backBarButtonItem" title=" " id="ggK-HX-uYb"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="74t-V4-yRh">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="74t-V4-yRh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kcV-FU-YRq">
                                 <rect key="frame" x="313" y="0.0" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="menuDidPress:" destination="7fK-Qo-KBE" eventType="touchUpInside" id="lb2-nl-04c"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmentBar" destination="dPv-yz-bcg" id="htP-Yi-CAS"/>
                         <outlet property="titlelb" destination="TKB-rx-Qcv" id="TLX-lD-wTW"/>
                     </connections>
                 </viewController>
@@ -59,6 +83,14 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="527.20000000000005" y="106.59670164917542"/>
+        </scene>
+        <!--CategoryViewController-->
+        <scene sceneID="lcJ-uJ-XJv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CategoryViewController" id="eSg-cE-R25" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pt-9r-NiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="106"/>
         </scene>
     </scenes>
     <resources>

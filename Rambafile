@@ -33,9 +33,7 @@ templates:
 - {name: swifty_viper}
 
 ### Create a reusable module in the specified directory
-#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/ReusableComponents'
-
-#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/Components'
+#generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/ReusableComponents/VIPERModules'
 
 ### Create a specific module in the specified directory
 #generamba gen [Module Name] swifty_viper --module_path 'OkDoc/PresentationLayer/UserStories'

@@ -14,5 +14,6 @@ protocol CategorySelectionViewInput: class {
     */
 
     func setupInitialState()
-    func navigationBarBackButton(title: String)
+    func setTitleLabel(text: String)
+    func setNavigationBarBackButton(title: String)
 }

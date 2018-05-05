@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnalysisDataCell" id="rtk-Ot-BST" customClass="AnalysisDataCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NUF-xj-Rs5">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="198.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NUF-xj-Rs5" secondAttribute="height" multiplier="26:33" id="KLu-Dv-ab7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общий анализ крови" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-KU-Unf">
+                        <rect key="frame" x="15.5" y="205.5" width="125" height="15"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="5QF-FB-4Dw">
+                        <rect key="frame" x="55" y="76.5" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="8aP-H6-DZT"/>
+                            <constraint firstAttribute="height" constant="46" id="bgd-PK-B2D"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H0g-KU-Unf" secondAttribute="trailing" constant="10" id="1uc-O5-CMF"/>
+                <constraint firstItem="5QF-FB-4Dw" firstAttribute="centerX" secondItem="NUF-xj-Rs5" secondAttribute="centerX" id="Iwx-aI-hwb"/>
+                <constraint firstItem="NUF-xj-Rs5" firstAttribute="leading" secondItem="rtk-Ot-BST" secondAttribute="leading" id="MM3-oC-efc"/>
+                <constraint firstItem="H0g-KU-Unf" firstAttribute="top" secondItem="NUF-xj-Rs5" secondAttribute="bottom" constant="7" id="VV5-Oq-2HL"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H0g-KU-Unf" secondAttribute="bottom" constant="10" id="YxM-u8-wtM"/>
+                <constraint firstItem="H0g-KU-Unf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rtk-Ot-BST" secondAttribute="leading" constant="10" id="ZgJ-ix-iXi"/>
+                <constraint firstItem="H0g-KU-Unf" firstAttribute="centerX" secondItem="rtk-Ot-BST" secondAttribute="centerX" id="bal-II-h7V"/>
+                <constraint firstAttribute="trailing" secondItem="NUF-xj-Rs5" secondAttribute="trailing" id="jca-rZ-Ik6"/>
+                <constraint firstItem="NUF-xj-Rs5" firstAttribute="top" secondItem="rtk-Ot-BST" secondAttribute="top" id="kd0-32-FDN"/>
+                <constraint firstItem="5QF-FB-4Dw" firstAttribute="centerY" secondItem="NUF-xj-Rs5" secondAttribute="centerY" id="yao-7y-50a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2qC-Pv-NSZ"/>
+            <size key="customSize" width="257" height="384"/>
+            <connections>
+                <outlet property="emptyIcon" destination="5QF-FB-4Dw" id="nUp-3m-KyL"/>
+                <outlet property="imageView" destination="NUF-xj-Rs5" id="UUc-T5-LOW"/>
+                <outlet property="title" destination="H0g-KU-Unf" id="JbG-tS-3vi"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="194"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" width="46" height="46"/>
+    </resources>
+</document>
