@@ -128,8 +128,9 @@ extension DateView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let interitemSpacing = layout.minimumInteritemSpacing
-        let width = (collectionView.frame.width - (collectionView.contentInset.left * 2) - interitemSpacing) / CGFloat(date.count) - 7
-        let height = collectionView.frame.height - (collectionView.contentInset.top * 2)
+        let width = (UIScreen.main.bounds.width - (collectionView.contentInset.left * 2) - interitemSpacing) / CGFloat(date.count) - 7
+        let height = UIScreen.main.bounds .height - (collectionView.contentInset.top * 2)
         return CGSize(width: width, height: height)
     }
+    
 }
