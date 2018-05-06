@@ -17,8 +17,9 @@ class AnalysisSelectionViewController: UIViewController, UINavigationControllerD
     private var text: String = ""
     private var viewModels: [model] = []
     private var filteredViewModels: [model] = []
-    private let searchController = UISearchController(searchResultsController: nil)
-
+    private var searchController: UISearchController!
+    private var resultController = UITableViewController()
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -68,10 +69,13 @@ class AnalysisSelectionViewController: UIViewController, UINavigationControllerD
     }
     
     private func configureSearchController() {
+        resultController.tableView.delegate = self
+        resultController.tableView.dataSource = self
+        resultController.tableView.register(nibModels: [model.self])
+        searchController = UISearchController.init(searchResultsController: resultController)
         searchController.searchBar.sizeToFit()
         searchController.searchResultsUpdater = self
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
+        searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchBar.placeholder = "Поиск"
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
@@ -93,7 +97,7 @@ class AnalysisSelectionViewController: UIViewController, UINavigationControllerD
         filteredViewModels = viewModels.filter({( candy : model) -> Bool in
             return candy.name.lowercased().contains(searchText.lowercased())
         })
-        reloadTableView()
+        resultController.tableView.reloadData()
     }
     
     private func isFiltering() -> Bool {
@@ -127,9 +131,16 @@ extension AnalysisSelectionViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let title = viewModels[indexPath.row].name
-        text = title
-        output.selectAnalysis(text: title)
+        var model: String!
+        if searchController.isActive {
+            model = filteredViewModels[indexPath.row].name
+            text = model
+            dismiss(animated: false, completion: nil)
+        } else {
+            model = viewModels[indexPath.row].name
+            text = model
+        }
+        output.selectAnalysis(text: model)
     }
 }
 
