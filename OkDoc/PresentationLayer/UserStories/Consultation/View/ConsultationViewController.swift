@@ -23,6 +23,10 @@ final class ConsultationViewController: UIViewController, ConsultationViewInput,
         output.viewIsReady()
         segmentBar.createViewModel(titles: ["Записи", "Завершенные"])
     }
+    
+    deinit {
+        print("deinit ConsultationViewController")
+    }
 
     // MARK: - IBActions
     @IBAction func menuDidPress(_ sender: UIButton) {

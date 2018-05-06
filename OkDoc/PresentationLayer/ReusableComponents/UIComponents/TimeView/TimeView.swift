@@ -47,6 +47,10 @@ class TimeView: UIView {
         super.init(coder: aDecoder)
     }
     
+    deinit {
+        print("deinit TimeView")
+    }
+    
     // MARK: - Helpers
     private func configureCollectionView() {
         collectionView.delegate = self
@@ -92,7 +96,7 @@ extension TimeView: UICollectionViewDelegateFlowLayout {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let interitemSpacing = layout.minimumInteritemSpacing
         let lineSpacing = layout.minimumLineSpacing
-        let width = (collectionView.frame.width - (collectionView.contentInset.left * 2) - interitemSpacing) / 3 - 3
+        let width = (UIScreen.main.bounds.width - (collectionView.contentInset.left * 2) - interitemSpacing) / 3 - 3
         let height = (collectionView.frame.height - (collectionView.contentInset.top * 2) - lineSpacing) / 3 - 3
         return CGSize(width: width, height: height)
     }

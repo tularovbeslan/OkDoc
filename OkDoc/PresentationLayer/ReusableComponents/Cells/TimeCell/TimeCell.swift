@@ -29,6 +29,10 @@ class TimeCell: UICollectionViewCell {
         setBackgroundColor()
     }
     
+    deinit {
+        print("deinit TimeCell")
+    }
+    
     // MARK: - Helpers
     private func setCornerRadius() {
         contentView.layer.cornerRadius = 8

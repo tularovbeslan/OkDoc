@@ -24,6 +24,10 @@ class DoctorDetailCommonInfoCell: UITableViewCell {
         self.language.attributedText = setAttributed(string: "Языки: русский, английский, немецкий")
     }
     
+    deinit {
+        print("deinit DoctorDetailCommonInfoCell")
+    }
+    
     // MARK: - Helpers
     private func setRaiting(location: Int) -> NSAttributedString {
         let string = NSMutableAttributedString(string: "★★★★★")

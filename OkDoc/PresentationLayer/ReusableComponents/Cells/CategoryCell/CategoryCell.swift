@@ -21,6 +21,10 @@ class CategoryCell: UITableViewCell {
         let feedbackEnagine = FeedbackEngine()
         feedbackEnagine.feedback(type: .selection)
     }
+    
+    deinit {
+        print("deinit CategoryCell")
+    }
 }
 
 extension CategoryCell {

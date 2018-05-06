@@ -32,6 +32,10 @@ class SegmentCell: UICollectionViewCell {
     override func awakeFromNib() {
         feedbackEngine = FeedbackEngine()
     }
+    
+    deinit {
+        print("deinit SegmentCell")
+    }
 }
 
 extension SegmentCell {

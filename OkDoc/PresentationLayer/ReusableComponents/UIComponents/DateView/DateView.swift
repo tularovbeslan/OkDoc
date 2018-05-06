@@ -14,14 +14,12 @@ class DateView: UIView {
         didSet {
             createTestViewModel()
             configureCollectionView()
-            setupHorizontalBarView()
             let indexPath = IndexPath.init(item: 0, section: 0)
             collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .top)
         }
     }
     private var viewModels: [DateViewModel] = []
     private var selectedIndex: Int = 0
-    private var currentWidth: CGFloat = 0
     private var horizontalBarLeftConstraint: NSLayoutConstraint?
     private var horizontalBarWidthConstraint: NSLayoutConstraint?
     private lazy var horizontalBarView: UIView = {
@@ -56,16 +54,23 @@ class DateView: UIView {
         super.init(coder: aDecoder)
     }
     
+    deinit {
+        print("deinit DateView")
+    }
+    
     // MARK: - Helpers
     private func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(nibModels: [DateViewModel.self])
-        collectionView.contentInset = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
+        collectionView.contentInset = UIEdgeInsets.init(top: 5, left: 18, bottom: 5, right: 18)
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        collectionView.performBatchUpdates(nil, completion: { [weak self] (result) in
+            self?.setupHorizontalBarView()
+        })
     }
     
     private func createTestViewModel() {
@@ -80,7 +85,9 @@ class DateView: UIView {
     
     private func setupHorizontalBarView() {
         addSubview(horizontalBarView)
-        horizontalBarLeftConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 18)
+        let indexPath = IndexPath.init(item: 0, section: 0)
+        let cell = collectionView.cellForItem(at: indexPath) as! DateCell
+        horizontalBarLeftConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: collectionView.contentInset.left + cell.stackView.frame.origin.x)
         horizontalBarLeftConstraint?.isActive = true
         horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         horizontalBarView.heightAnchor.constraint(equalToConstant: 2).isActive = true
@@ -90,9 +97,9 @@ class DateView: UIView {
     
     private func configureHorizontalBarPositionBy(cell: DateCell) {
         let width = cell.convert(cell.date.frame, to: self).size.width
-        let xOffset = cell.convert(cell.date.frame, to: self).origin.x + collectionView.contentInset.left + width
-        horizontalBarWidthConstraint?.constant = width + 4
-        horizontalBarLeftConstraint?.constant = xOffset - 2
+        let xOffset = cell.convert(cell.date.frame, to: self).origin.x + cell.stackView.frame.origin.x
+        horizontalBarWidthConstraint?.constant = width
+        horizontalBarLeftConstraint?.constant = xOffset
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: nil)
@@ -128,8 +135,22 @@ extension DateView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let interitemSpacing = layout.minimumInteritemSpacing
-        let width = (collectionView.frame.width - (collectionView.contentInset.left * 2) - interitemSpacing) / CGFloat(date.count) - 7
+        let width = (UIScreen.main.bounds.width - (collectionView.contentInset.left * 2) - interitemSpacing) / 7
         let height = collectionView.frame.height - (collectionView.contentInset.top * 2)
         return CGSize(width: width, height: height)
     }
+}
+
+extension DateView: UIScrollViewDelegate {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let velocity = scrollView.panGestureRecognizer.velocity(in: collectionView).x
+//        if velocity > 0 {
+//            print(scrollView.contentOffset.x / 100)
+//            horizontalBarLeftConstraint?.constant += (scrollView.contentOffset.x / 100)
+//        } else if velocity < 0 {
+//            print(scrollView.contentOffset.x / 100)
+//
+//            horizontalBarLeftConstraint?.constant += (scrollView.contentOffset.x / 100)
+//        }
+//    }
 }

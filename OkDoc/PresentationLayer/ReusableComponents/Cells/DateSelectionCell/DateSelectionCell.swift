@@ -18,6 +18,10 @@ final class DateSelectionCell: UITableViewCell, XibInitializable {
         super.awakeFromNib()
         
     }
+    
+    deinit {
+        print("deinit DateSelectionCell")
+    }
 }
 
 extension DateSelectionCell {

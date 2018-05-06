@@ -56,6 +56,11 @@ class OkDocButton: UIControl {
         configureStackViewConstraints()
     }
     
+    
+    deinit {
+        print("deinit OkDocButton")
+    }
+    
     open func setTitle(text: String) {
         titleLabel?.text = text
     }

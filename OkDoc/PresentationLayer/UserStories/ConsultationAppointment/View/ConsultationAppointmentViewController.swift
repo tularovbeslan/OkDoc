@@ -31,7 +31,10 @@ class ConsultationAppointmentViewController: UIViewController, Delegatable, Cons
     
     deinit {
         destroyKeyboardNotifications()
+        print("deinit ConsultationAppointmentViewController")
     }
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == String.init(describing: AnalysisSelectionViewController.self) {

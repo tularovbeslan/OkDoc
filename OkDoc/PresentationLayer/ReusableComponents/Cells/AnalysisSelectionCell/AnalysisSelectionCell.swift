@@ -19,6 +19,10 @@ class AnalysisSelectionCell: UITableViewCell {
         setFontFor(label: name)
     }
     
+    deinit {
+        print("deinit AnalysisSelectionCell")
+    }
+    
     // MARK: - Helpers
     private func setFontFor(label: UILabel) {
         label.font = UIFont.avertaCY(size: 16)

@@ -14,6 +14,10 @@ class DoctorDetailInfoCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    deinit {
+        print("deinit DoctorDetailInfoCell")
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

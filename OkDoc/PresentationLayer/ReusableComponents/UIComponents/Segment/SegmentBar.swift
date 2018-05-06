@@ -47,6 +47,10 @@ class SegmentBar: UIView {
         super.init(coder: aDecoder)
     }
     
+    deinit {
+        print("deinit SegmentBar")
+    }
+    
     // MARK: - Helpers
     private func configureCollectionView() {
         collectionView.delegate = self

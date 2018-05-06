@@ -38,6 +38,10 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    deinit {
+        print("deinit DoctorDetailViewController")
+    }
 
     // MARK: - IBActions
     @IBAction func backArrowDidPress(_ sender: UIButton) {

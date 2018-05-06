@@ -33,6 +33,10 @@ final class AnalysisCell: UITableViewCell, XibInitializable {
         configureCollectionView()
     }
     
+    deinit {
+        print("deinit AnalysisCell")
+    }
+    
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         var size = super.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)
         collectionView.layoutIfNeeded()

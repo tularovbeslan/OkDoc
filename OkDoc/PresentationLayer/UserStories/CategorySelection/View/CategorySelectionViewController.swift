@@ -23,6 +23,10 @@ final class CategorySelectionViewController: UIViewController, CategorySelection
         output.viewIsReady()
     }
     
+    deinit {
+        print("deinit CategorySelectionViewController")
+    }
+    
     // MARK: - IBActions
     @IBAction func menuDidPress(_ sender: UIButton) {
         output.menuButtonDidPress()

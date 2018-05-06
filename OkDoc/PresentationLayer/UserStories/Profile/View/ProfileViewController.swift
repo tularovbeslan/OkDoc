@@ -24,6 +24,10 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
         output.viewDidLoad()
     }
     
+    deinit {
+        print("deinit ConsultationViewController")
+    }
+    
     // MARK: - DialogsViewInput
     func setupInitialState() {
         configureTableView()

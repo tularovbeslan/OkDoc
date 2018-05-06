@@ -30,6 +30,10 @@ final class QuestionnaireCell: UITableViewCell, XibInitializable {
         configureEnroll()
     }
     
+    deinit {
+        print("deinit QuestionnaireCell")
+    }
+    
     // MARK: - Helpers
     private func setTexViewsConfigure(textViews: [UITextView]) {
         textViews.forEach { [weak self] (textView) in

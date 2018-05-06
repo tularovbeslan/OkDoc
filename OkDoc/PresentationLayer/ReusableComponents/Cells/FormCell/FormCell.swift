@@ -29,6 +29,10 @@ final class FormCell: UITableViewCell, XibInitializable {
         configureForm()
     }
     
+    deinit {
+        print("deinit FormCell")
+    }
+    
     // MARK: Helpers
     private func configureTitle() {
         title.font = UIFont.avertaCY(size: 15)

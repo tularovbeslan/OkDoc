@@ -24,6 +24,10 @@ class AnalysisDataCell: UICollectionViewCell {
         configureImageView()
     }
     
+    deinit {
+        print("deinit AnalysisDataCell")
+    }
+    
     // MARK: - Helpers
     private func emptyIcon(isHidden: Bool) {
         emptyIcon.isHidden = isHidden

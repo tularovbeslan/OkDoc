@@ -23,6 +23,10 @@ class DoctorInfoCell: UITableViewCell {
         configureRadius(layer: photoView.layer, radius: width / 2)
     }
     
+    deinit {
+        print("deinit DoctorInfoCell")
+    }
+    
     // MARK: - Helpers
     private func configureRadius(layer: CALayer, radius: CGFloat) {
         layer.cornerRadius = radius

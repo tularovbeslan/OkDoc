@@ -28,6 +28,10 @@ class DialogsCell: UITableViewCell {
         setDateText(color: UIColor.init(red: 160/255, green: 171/255, blue: 184/255, alpha: 1))
     }
     
+    deinit {
+        print("deinit DialogsCell")
+    }
+    
     // MARK: - Helpers
     private func configureDateBackground() {
         dateBackgroundView.backgroundColor = UIColor.init(red: 2/255, green: 123/255, blue: 255/255, alpha: 1)

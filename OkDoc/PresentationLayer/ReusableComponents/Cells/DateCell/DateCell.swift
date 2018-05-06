@@ -21,12 +21,17 @@ class DateCell: UICollectionViewCell {
     }
     
     // MARK: - IBOutlets
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var weekDay: UILabel!
     @IBOutlet weak var date: UILabel!
 
     // MARK: - Life cycle
     override func awakeFromNib() {
         setTitlesColor()
+    }
+    
+    deinit {
+        print("deinit DateCell")
     }
     
     // MARK: - Helpers
