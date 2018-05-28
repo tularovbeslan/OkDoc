@@ -48,6 +48,7 @@ class DateView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(collectionView)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -118,6 +119,8 @@ extension DateView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         let model = viewModels[indexPath.item]
         return collectionView.dequeueReusableCell(withModel: model, for: indexPath)
     }

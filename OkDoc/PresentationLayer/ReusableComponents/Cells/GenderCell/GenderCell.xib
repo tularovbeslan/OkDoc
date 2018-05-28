@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenderCell" rowHeight="92" id="t9L-5M-yvg" customClass="GenderCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t9L-5M-yvg" id="MZi-Ed-o3R">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWH-Fm-Qc4">
+                        <rect key="frame" x="203.5" y="36" width="118" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="C2B-1T-eoQ"/>
+                            <constraint firstAttribute="width" constant="118" id="PzC-Vw-9B3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                        <state key="normal" title="Мужской">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <connections>
+                            <action selector="selectMale:" destination="t9L-5M-yvg" eventType="touchUpInside" id="15n-jV-H0X"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пол" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K71-BM-BxB">
+                        <rect key="frame" x="10" y="10" width="28" height="19"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="15"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.57647058823529407" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4e-cj-zpw">
+                        <rect key="frame" x="55.5" y="36" width="118" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="ldw-ts-40G"/>
+                            <constraint firstAttribute="width" constant="118" id="nAH-KH-eeW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                        <state key="normal" title="Женский">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <connections>
+                            <action selector="selectFeMale:" destination="t9L-5M-yvg" eventType="touchUpInside" id="Rxi-MN-yHe"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DWH-Fm-Qc4" firstAttribute="top" secondItem="K71-BM-BxB" secondAttribute="bottom" constant="7" id="1gw-ai-6RH"/>
+                    <constraint firstItem="DWH-Fm-Qc4" firstAttribute="leading" secondItem="d4e-cj-zpw" secondAttribute="trailing" constant="30" id="5Yb-Nl-LVX"/>
+                    <constraint firstItem="DWH-Fm-Qc4" firstAttribute="centerX" secondItem="MZi-Ed-o3R" secondAttribute="centerX" multiplier="1.4" id="LER-Xm-Mis"/>
+                    <constraint firstItem="d4e-cj-zpw" firstAttribute="centerY" secondItem="DWH-Fm-Qc4" secondAttribute="centerY" id="SGY-QV-X7N"/>
+                    <constraint firstItem="K71-BM-BxB" firstAttribute="leading" secondItem="MZi-Ed-o3R" secondAttribute="leading" constant="10" id="aVj-gE-ieW"/>
+                    <constraint firstAttribute="bottom" secondItem="DWH-Fm-Qc4" secondAttribute="bottom" constant="10" id="alP-tw-VGi"/>
+                    <constraint firstItem="K71-BM-BxB" firstAttribute="top" secondItem="MZi-Ed-o3R" secondAttribute="top" constant="10" id="kCM-NC-g65"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K71-BM-BxB" secondAttribute="trailing" constant="10" id="zNm-LZ-48H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="female" destination="d4e-cj-zpw" id="v3j-Ga-0KU"/>
+                <outlet property="male" destination="DWH-Fm-Qc4" id="S9z-be-SVR"/>
+                <outlet property="title" destination="K71-BM-BxB" id="7Sy-AB-ndv"/>
+                <outlet property="trailing" destination="zNm-LZ-48H" id="fyY-Lo-H0v"/>
+                <outlet property="verticalSpacing" destination="1gw-ai-6RH" id="nB8-Cm-bOY"/>
+            </connections>
+            <point key="canvasLocation" x="103.5" y="-154"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -25,7 +25,7 @@ class AnalysisSelectionCell: UITableViewCell {
     
     // MARK: - Helpers
     private func setFontFor(label: UILabel) {
-        label.font = UIFont.avertaCY(size: 16)
+		label.font = UIFont.avertaCY(style: .Semibold, size: 16)
     }
 }
 

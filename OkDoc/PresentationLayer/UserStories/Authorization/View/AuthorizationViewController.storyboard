@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XP6-ux-VIE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Regular.otf">
+            <string>AvertaCY-Regular</string>
+        </array>
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="9sp-9Z-j7T">
+            <objects>
+                <viewController storyboardIdentifier="AuthorizationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DYa-VI-Wam" customClass="WalkthroughViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FDe-Mj-ELM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoo-Vc-GSy">
+                                <rect key="frame" x="10" y="612" width="355" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7Qe-D7-fyc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                                <state key="normal" title="Далее"/>
+                                <connections>
+                                    <action selector="next:" destination="DYa-VI-Wam" eventType="touchUpInside" id="9F4-q7-x99"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UKg-U1-fGc">
+                                <rect key="frame" x="168" y="572" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0078431372550000003" green="0.4823529412" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bMz-K7-Nh9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ClS-l7-5Xj">
+                                    <size key="itemSize" width="375" height="552"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="walk" id="0JV-4L-oxm">
+                                        <rect key="frame" x="0.0" y="10" width="375" height="552"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в OkDoc! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-U0-28A">
+                                                    <rect key="frame" x="20" y="339.5" width="335" height="64.5"/>
+                                                    <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лечиться стало еще удобнее! Можно не выходя из дома получить консультацию самых лучших квалифициронных специалистов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jew-La-brn">
+                                                    <rect key="frame" x="20" y="424" width="335" height="74.5"/>
+                                                    <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="9de-IJ-Ith">
+                                                    <rect key="frame" x="0.0" y="39.5" width="374.5" height="280"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="9de-IJ-Ith" secondAttribute="height" multiplier="75:56" id="NBy-sv-0ro"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="SLY-U0-28A" firstAttribute="leading" secondItem="0JV-4L-oxm" secondAttribute="leading" constant="20" id="70k-WS-24p"/>
+                                            <constraint firstItem="jew-La-brn" firstAttribute="leading" secondItem="0JV-4L-oxm" secondAttribute="leading" constant="20" id="CjZ-Gy-ht7"/>
+                                            <constraint firstItem="jew-La-brn" firstAttribute="top" secondItem="SLY-U0-28A" secondAttribute="bottom" constant="20" id="I73-Aq-0d0"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jew-La-brn" secondAttribute="bottom" constant="20" id="JWQ-sK-S12"/>
+                                            <constraint firstItem="9de-IJ-Ith" firstAttribute="leading" secondItem="0JV-4L-oxm" secondAttribute="leading" id="NRg-S0-opg"/>
+                                            <constraint firstItem="SLY-U0-28A" firstAttribute="top" secondItem="9de-IJ-Ith" secondAttribute="bottom" constant="20" id="Pgo-hq-YJw"/>
+                                            <constraint firstItem="SLY-U0-28A" firstAttribute="centerX" secondItem="9de-IJ-Ith" secondAttribute="centerX" id="d0t-1B-uj5"/>
+                                            <constraint firstAttribute="trailing" secondItem="SLY-U0-28A" secondAttribute="trailing" constant="20" id="p7u-1u-Eao"/>
+                                            <constraint firstItem="9de-IJ-Ith" firstAttribute="centerY" secondItem="0JV-4L-oxm" secondAttribute="centerY" multiplier="0.65" priority="750" id="pcb-DC-jXI"/>
+                                            <constraint firstAttribute="trailing" secondItem="jew-La-brn" secondAttribute="trailing" constant="20" id="teL-B1-sDm"/>
+                                            <constraint firstAttribute="trailing" secondItem="9de-IJ-Ith" secondAttribute="trailing" id="u2B-2q-liB"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iO-mg-myj" firstAttribute="bottom" secondItem="eoo-Vc-GSy" secondAttribute="bottom" constant="20" id="4OP-Xn-KP2"/>
+                            <constraint firstItem="UKg-U1-fGc" firstAttribute="top" secondItem="bMz-K7-Nh9" secondAttribute="bottom" id="94Y-j7-lr4"/>
+                            <constraint firstItem="eoo-Vc-GSy" firstAttribute="leading" secondItem="5iO-mg-myj" secondAttribute="leading" constant="10" id="EZD-ae-qmT"/>
+                            <constraint firstItem="bMz-K7-Nh9" firstAttribute="trailing" secondItem="5iO-mg-myj" secondAttribute="trailing" id="F8Y-HT-7UA"/>
+                            <constraint firstItem="bMz-K7-Nh9" firstAttribute="top" secondItem="FDe-Mj-ELM" secondAttribute="top" id="Fpp-vV-nSu"/>
+                            <constraint firstItem="bMz-K7-Nh9" firstAttribute="leading" secondItem="5iO-mg-myj" secondAttribute="leading" id="HQB-b1-gnI"/>
+                            <constraint firstItem="5iO-mg-myj" firstAttribute="trailing" secondItem="eoo-Vc-GSy" secondAttribute="trailing" constant="10" id="LE6-0J-2cS"/>
+                            <constraint firstItem="eoo-Vc-GSy" firstAttribute="top" secondItem="UKg-U1-fGc" secondAttribute="bottom" constant="3" id="cbS-km-Qr7"/>
+                            <constraint firstItem="UKg-U1-fGc" firstAttribute="centerX" secondItem="eoo-Vc-GSy" secondAttribute="centerX" id="peT-M5-hCZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5iO-mg-myj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dvk-Iy-EGe">
+                        <barButtonItem key="backBarButtonItem" title=" " id="boH-Ig-7f8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="bMz-K7-Nh9" id="DfV-Wn-gRU"/>
+                        <outlet property="nextButton" destination="eoo-Vc-GSy" id="gui-6B-gTe"/>
+                        <outlet property="pageControl" destination="UKg-U1-fGc" id="Xho-iI-f3B"/>
+                        <segue destination="cid-LB-JMS" kind="show" identifier="Auth" id="dRJ-qs-GLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWb-XP-lY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-322.48875562218893"/>
+        </scene>
+        <!--Authorization View Controller-->
+        <scene sceneID="MbL-3j-wuV">
+            <objects>
+                <viewController id="cid-LB-JMS" customClass="AuthorizationViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rwV-ac-yim">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, введите свой номер телефона. Мы отправим Вам SMS с кодом. Мы никому не раздаем телефонные номера" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbC-mP-wti">
+                                <rect key="frame" x="20" y="84" width="335" height="56"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрируясь, вы принимаете Пользовательское соглашение" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-i6-sbF">
+                                <rect key="frame" x="65.5" y="543.5" width="244" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="tec-qP-rs5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-wp-51i">
+                                <rect key="frame" x="63" y="601" width="249" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="gMw-eq-KQe"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="cid-LB-JMS" eventType="touchUpInside" id="xwT-jf-3KP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-UD-igo" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                <rect key="frame" x="37.5" y="170" width="300" height="37"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zdl-GY-70O" firstAttribute="trailing" secondItem="lbC-mP-wti" secondAttribute="trailing" constant="20" id="07n-64-Rma"/>
+                            <constraint firstItem="T1y-UD-igo" firstAttribute="width" secondItem="rwV-ac-yim" secondAttribute="width" multiplier="0.8" id="6VV-vF-pOM"/>
+                            <constraint firstItem="p5B-wp-51i" firstAttribute="top" secondItem="Kwt-i6-sbF" secondAttribute="bottom" constant="20" id="6cm-xc-H0F"/>
+                            <constraint firstItem="T1y-UD-igo" firstAttribute="top" secondItem="lbC-mP-wti" secondAttribute="bottom" constant="30" id="6u5-Go-C6b"/>
+                            <constraint firstItem="lbC-mP-wti" firstAttribute="top" secondItem="Zdl-GY-70O" secondAttribute="top" constant="20" id="CAw-lk-H8R"/>
+                            <constraint firstItem="Zdl-GY-70O" firstAttribute="trailing" secondItem="p5B-wp-51i" secondAttribute="trailing" constant="63" id="Jqo-kB-dSA"/>
+                            <constraint firstItem="Kwt-i6-sbF" firstAttribute="centerX" secondItem="p5B-wp-51i" secondAttribute="centerX" id="Nvj-Af-2yy"/>
+                            <constraint firstItem="p5B-wp-51i" firstAttribute="leading" secondItem="Zdl-GY-70O" secondAttribute="leading" constant="63" id="gi5-Pi-XIk"/>
+                            <constraint firstItem="lbC-mP-wti" firstAttribute="leading" secondItem="Zdl-GY-70O" secondAttribute="leading" constant="20" id="jgV-Lp-4kG"/>
+                            <constraint firstItem="T1y-UD-igo" firstAttribute="centerX" secondItem="rwV-ac-yim" secondAttribute="centerX" id="rcs-8s-OA7"/>
+                            <constraint firstItem="Zdl-GY-70O" firstAttribute="bottom" secondItem="p5B-wp-51i" secondAttribute="bottom" constant="20" id="yzf-or-55F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zdl-GY-70O"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xkg-Av-Dgd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xeh-9L-4T5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonBottomConstraint" destination="yzf-or-55F" id="Vc3-ka-IGh"/>
+                        <outlet property="nextButton" destination="p5B-wp-51i" id="sEj-XE-1j6"/>
+                        <outlet property="phoneTextField" destination="T1y-UD-igo" id="6Nb-fO-jiX"/>
+                        <segue destination="bPI-lO-Oob" kind="show" identifier="RegistrationViewController" id="tdc-cq-eaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sc-za-pWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-322.48875562218893"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nm8-jG-8IX">
+            <objects>
+                <viewController id="9A4-7g-bMw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fg-Nu-aES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhR-j8-WQb">
+                                <rect key="frame" x="20" y="612" width="335" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="vlj-MB-SUD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="17"/>
+                                <state key="normal" title="Код не пришел ?"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы отправили на номер +7 (928) 895–01–40 проверочный код. Введите его в форму, будьте любезны" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sss-y8-JOp">
+                                <rect key="frame" x="20" y="40" width="335" height="56"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Regular" family="Averta CY" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sss-y8-JOp" firstAttribute="top" secondItem="HUB-Mz-L44" secondAttribute="top" constant="20" id="DgV-84-VzX"/>
+                            <constraint firstAttribute="trailing" secondItem="sss-y8-JOp" secondAttribute="trailing" constant="20" id="RyR-Ey-hku"/>
+                            <constraint firstItem="sss-y8-JOp" firstAttribute="leading" secondItem="HUB-Mz-L44" secondAttribute="leading" constant="20" id="fCH-95-3sw"/>
+                            <constraint firstItem="HUB-Mz-L44" firstAttribute="bottom" secondItem="GhR-j8-WQb" secondAttribute="bottom" constant="20" id="sgB-zs-XnL"/>
+                            <constraint firstAttribute="trailing" secondItem="GhR-j8-WQb" secondAttribute="trailing" constant="20" id="uad-PM-xMn"/>
+                            <constraint firstItem="GhR-j8-WQb" firstAttribute="leading" secondItem="HUB-Mz-L44" secondAttribute="leading" constant="20" id="vQn-vZ-TUL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HUB-Mz-L44"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9G-iL-t2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3191" y="-322"/>
+        </scene>
+        <!--RegistrationViewController-->
+        <scene sceneID="hhw-Te-Wxk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RegistrationViewController" storyboardName="RegistrationViewController" id="bPI-lO-Oob" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvk-8R-NKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="-323"/>
+        </scene>
+        <!--App Navigation Controller-->
+        <scene sceneID="Kg4-iW-JMX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XP6-ux-VIE" customClass="AppNavigationController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RdD-nd-lHt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DYa-VI-Wam" kind="relationship" relationship="rootViewController" id="vkB-M0-wqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGt-ap-BS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="-322.48875562218893"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="people" width="375" height="281"/>
+    </resources>
+</document>

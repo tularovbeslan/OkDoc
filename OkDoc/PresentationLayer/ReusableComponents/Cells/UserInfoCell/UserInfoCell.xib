@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserInfoCell" rowHeight="131" id="PXJ-qt-DsW" customClass="UserInfoCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PXJ-qt-DsW" id="wIQ-eK-Ysg">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="128.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlw-pd-G0L">
+                        <rect key="frame" x="20" y="20" width="88" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="88" id="Fvm-7X-Pqd"/>
+                            <constraint firstAttribute="width" constant="88" id="MFz-QN-com"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-2S-t1R">
+                        <rect key="frame" x="20" y="20" width="88" height="88"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="15"/>
+                        <connections>
+                            <action selector="setPhoto:" destination="PXJ-qt-DsW" eventType="touchUpInside" id="qwp-4G-bOS"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Урюмцева Елена Николаевна" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-iF-uNZ">
+                        <rect key="frame" x="128" y="53" width="277" height="22.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uEK-2S-t1R" firstAttribute="width" secondItem="tlw-pd-G0L" secondAttribute="width" id="2WT-Uu-yZm"/>
+                    <constraint firstItem="tlw-pd-G0L" firstAttribute="leading" secondItem="wIQ-eK-Ysg" secondAttribute="leading" constant="20" id="7mH-TP-Fz0"/>
+                    <constraint firstItem="tlw-pd-G0L" firstAttribute="top" secondItem="wIQ-eK-Ysg" secondAttribute="top" constant="20" id="Fxl-l5-192"/>
+                    <constraint firstAttribute="trailing" secondItem="RxK-iF-uNZ" secondAttribute="trailing" constant="10" id="J0L-zd-F4m"/>
+                    <constraint firstItem="uEK-2S-t1R" firstAttribute="centerX" secondItem="tlw-pd-G0L" secondAttribute="centerX" id="LXZ-l7-D3s"/>
+                    <constraint firstItem="RxK-iF-uNZ" firstAttribute="centerY" secondItem="uEK-2S-t1R" secondAttribute="centerY" id="MqD-mQ-u0f"/>
+                    <constraint firstItem="uEK-2S-t1R" firstAttribute="height" secondItem="tlw-pd-G0L" secondAttribute="height" id="UU9-xz-7YO"/>
+                    <constraint firstItem="RxK-iF-uNZ" firstAttribute="leading" secondItem="tlw-pd-G0L" secondAttribute="trailing" constant="20" id="Zfh-GG-z92"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tlw-pd-G0L" secondAttribute="bottom" constant="20" id="gIz-9X-6Yb"/>
+                    <constraint firstItem="uEK-2S-t1R" firstAttribute="centerY" secondItem="tlw-pd-G0L" secondAttribute="centerY" id="tRO-WY-PUZ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RxK-iF-uNZ" secondAttribute="bottom" constant="10" id="xiE-I0-tgb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="photoImageView" destination="tlw-pd-G0L" id="qqI-Ca-3BY"/>
+                <outlet property="setPhotoButton" destination="uEK-2S-t1R" id="tIA-pM-a5f"/>
+                <outlet property="title" destination="RxK-iF-uNZ" id="dN8-Iy-EZe"/>
+            </connections>
+            <point key="canvasLocation" x="115.5" y="74.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -35,12 +35,12 @@ final class FormCell: UITableViewCell, XibInitializable {
     
     // MARK: Helpers
     private func configureTitle() {
-        title.font = UIFont.avertaCY(size: 15)
+		title.font = UIFont.avertaCY(style: .Semibold, size: 15)
         title.textColor = UIColor.init(red: 133/255, green: 147/255, blue: 164/255, alpha: 1)
     }
     
     private func configureForm() {
-        form.font = UIFont.avertaCY(size: 18)
+		form.font = UIFont.avertaCY(style: .Semibold, size: 18)
         form.textColor = .black
         form.layer.cornerRadius = 8
         form.backgroundColor = UIColor.init(red: 241/255, green: 242/255, blue: 245/255, alpha: 1)

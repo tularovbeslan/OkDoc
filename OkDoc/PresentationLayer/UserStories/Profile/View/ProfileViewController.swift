@@ -9,11 +9,12 @@
 import UIKit
 
 final class ProfileViewController: UIViewController, ProfileViewInput, StoryboardInitializable {
+	
     // MARK: - Properties
-    typealias model = FormViewModel
     var output: ProfileViewOutput!
+	typealias model = FormViewModel
     private var viewModels: [model] = []
-    private var cells: [FormCell] = []
+    private var cells: [UITableViewCell] = []
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -50,8 +51,8 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
     }
     
     private func testModels() {
-        let titles = ["Как к Вам обращаться?", "Пол", "Возраст", "Вес, кг", "Рост, см"]
-        let text = ["Анонимно", "Женский", "47", "98", "198"]
+        let titles = ["Как к Вам обращаться?", "Возраст", "Вес, кг", "Рост, см"]
+        let text = ["Анонимно", "47", "98", "198"]
         
         for (index, _) in titles.enumerated() {
             let viewModel = FormViewModel.init(title: titles[index], text: text[index])
@@ -61,7 +62,10 @@ final class ProfileViewController: UIViewController, ProfileViewInput, Storyboar
             cell.delegate = self
             cells.append(cell)
         }
-        
+		
+		let cell = GenderCell.fromXib()
+		cell.selectedIndex = 1
+        cells.insert(cell, at: 1)
         tableView.reloadData()
     }
 }

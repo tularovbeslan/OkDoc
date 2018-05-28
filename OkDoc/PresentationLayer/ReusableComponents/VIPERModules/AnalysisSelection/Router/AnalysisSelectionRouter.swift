@@ -14,7 +14,7 @@ class AnalysisSelectionRouter: AnalysisSelectionRouterInput {
 
     func showActionSheet(text: String) {
         let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
-        let messageAttrString = NSMutableAttributedString(string: text, attributes: [NSAttributedStringKey.font: UIFont.avertaCY(size: 15)])
+		let messageAttrString = NSMutableAttributedString(string: text, attributes: [NSAttributedStringKey.font: UIFont.avertaCY(style: .Semibold, size: 15)])
         alert.setValue(messageAttrString, forKey: "attributedMessage")
         
         alert.addAction(UIAlertAction(title: "Выбрать из галереи", style: .default , handler:{ [weak self] (UIAlertAction)in

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic SemiBold.otf">
+            <string>AvertaCY-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExitCell" id="TFy-Wh-Es0" customClass="ExitCell" customModule="OkDoc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TFy-Wh-Es0" id="bZO-U4-SgA">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-6G-EBF">
+                        <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="16"/>
+                        <state key="normal" title="Выход">
+                            <color key="titleColor" red="1" green="0.20765605340000001" blue="0.18736512529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="exit:" destination="TFy-Wh-Es0" eventType="touchUpInside" id="fnO-kN-DxS"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wqd-6G-EBF" firstAttribute="leading" secondItem="bZO-U4-SgA" secondAttribute="leading" constant="20" id="MRP-ER-qME"/>
+                    <constraint firstAttribute="bottom" secondItem="wqd-6G-EBF" secondAttribute="bottom" id="OGz-w3-n7R"/>
+                    <constraint firstItem="wqd-6G-EBF" firstAttribute="top" secondItem="bZO-U4-SgA" secondAttribute="top" id="QVV-eh-swO"/>
+                    <constraint firstAttribute="trailing" secondItem="wqd-6G-EBF" secondAttribute="trailing" id="Wcw-zE-IrC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="10000" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="button" destination="wqd-6G-EBF" id="EU9-PB-6FL"/>
+            </connections>
+            <point key="canvasLocation" x="54" y="86"/>
+        </tableViewCell>
+    </objects>
+</document>

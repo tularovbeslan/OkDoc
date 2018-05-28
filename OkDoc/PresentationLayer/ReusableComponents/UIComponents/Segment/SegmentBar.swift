@@ -124,7 +124,13 @@ extension SegmentBar: UICollectionViewDelegateFlowLayout {
     }
     
     func sizeOfString(string: String, constrainedToHeight height: Double) -> CGSize {
-        let font = UIFont.avertaCY(size: 20)
+		let font = UIFont.avertaCY(style: .Semibold, size: 20)
         return NSString(string: string).boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil).size
+    }
+}
+
+extension SegmentBar: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		
     }
 }

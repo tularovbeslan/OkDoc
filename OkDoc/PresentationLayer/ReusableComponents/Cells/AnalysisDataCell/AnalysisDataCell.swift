@@ -42,7 +42,6 @@ class AnalysisDataCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.backgroundColor = grayColor
     }
-    
 }
 
 extension AnalysisDataCell {

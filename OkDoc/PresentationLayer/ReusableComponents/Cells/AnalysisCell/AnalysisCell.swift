@@ -50,6 +50,7 @@ final class AnalysisCell: UITableViewCell, XibInitializable {
     }
     
     private func configureCollectionView() {
+        collectionView.cellForItem(at: )
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -86,6 +87,7 @@ extension AnalysisCell: UICollectionViewDelegate {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension AnalysisCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         return CGSize.init(width: itemWidth, height: itemHeight)
     }
     
