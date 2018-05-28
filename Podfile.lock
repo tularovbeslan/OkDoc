@@ -1,0 +1,39 @@
+PODS:
+  - GrowingTextView (0.5.6)
+  - PhoneNumberKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
+    - PhoneNumberKit/UIKit (= 2.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
+  - PhoneNumberKit/UIKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - Reachability (3.2)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
+
+DEPENDENCIES:
+  - GrowingTextView (~> 0.5)
+  - PhoneNumberKit (~> 2.1)
+  - Reachability
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GrowingTextView
+    - PhoneNumberKit
+    - Reachability
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
+  PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+
+PODFILE CHECKSUM: eff380884ed2e5de1527a9cae893922c7689638e
+
+COCOAPODS: 1.5.3
