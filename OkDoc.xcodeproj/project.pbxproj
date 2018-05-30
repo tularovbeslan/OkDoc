@@ -85,8 +85,6 @@
 		56D37EC420809FAA00C8F65B /* DoctorDetailCommonInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D37EC320809FAA00C8F65B /* DoctorDetailCommonInfoViewModel.swift */; };
 		56EF4A85206FE92300E48942 /* OkDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4A84206FE92300E48942 /* OkDocTests.swift */; };
 		56EF4A90206FE92300E48942 /* OkDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4A8F206FE92300E48942 /* OkDocUITests.swift */; };
-		56EF4ACA206FE99A00E48942 /* OneAccount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4A9E206FE99A00E48942 /* OneAccount.xcdatamodeld */; };
-		56EF4ACB206FE99A00E48942 /* OkDoc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4AA0206FE99A00E48942 /* OkDoc.xcdatamodeld */; };
 		56EF4ACE206FE99A00E48942 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4AA8206FE99A00E48942 /* UITableViewExtension.swift */; };
 		56EF4ACF206FE99A00E48942 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4AA9206FE99A00E48942 /* UICollectionViewExtension.swift */; };
 		56EF4AD0206FE99A00E48942 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4AAA206FE99A00E48942 /* UIImageExtension.swift */; };
@@ -394,8 +392,6 @@
 		56EF4A8B206FE92300E48942 /* OkDocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkDocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EF4A8F206FE92300E48942 /* OkDocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkDocUITests.swift; sourceTree = "<group>"; };
 		56EF4A91206FE92300E48942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56EF4A9F206FE99A00E48942 /* OneAccount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneAccount.xcdatamodel; sourceTree = "<group>"; };
-		56EF4AA1206FE99A00E48942 /* OkDoc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OkDoc.xcdatamodel; sourceTree = "<group>"; };
 		56EF4AA3206FE99A00E48942 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EF4AA8206FE99A00E48942 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		56EF4AA9206FE99A00E48942 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
@@ -1113,8 +1109,6 @@
 		56EF4A9D206FE99A00E48942 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				56EF4A9E206FE99A00E48942 /* OneAccount.xcdatamodeld */,
-				56EF4AA0206FE99A00E48942 /* OkDoc.xcdatamodeld */,
 				57B9F33C20BB218200AE9A07 /* Message.swift */,
 			);
 			path = Model;
@@ -2485,11 +2479,9 @@
 			files = (
 				56EF4AD6206FE99A00E48942 /* AppDelegate.swift in Sources */,
 				56EF4AD7206FE99A00E48942 /* SetupableViewModel.swift in Sources */,
-				56EF4ACB206FE99A00E48942 /* OkDoc.xcdatamodeld in Sources */,
 				DD6CB36A2095054400B48F79 /* XibInitializable.swift in Sources */,
 				575911512098AB1C007036D7 /* AnalysisServiceImplementation.swift in Sources */,
 				576F055E208E773B00D3AC07 /* TimeCell.swift in Sources */,
-				56EF4ACA206FE99A00E48942 /* OneAccount.xcdatamodeld in Sources */,
 				57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */,
 				56EF4B2E2073D43500E48942 /* AppNavigationController.swift in Sources */,
 				56EF4AD9206FE99A00E48942 /* TransitionHandler.swift in Sources */,
@@ -2886,7 +2878,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MTVD7A69KL;
 				INFOPLIST_FILE = "$(SRCROOT)/OkDoc/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BTR.OkDoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2909,7 +2901,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MTVD7A69KL;
 				INFOPLIST_FILE = "$(SRCROOT)/OkDoc/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BTR.OkDoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3027,29 +3019,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		56EF4A9E206FE99A00E48942 /* OneAccount.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				56EF4A9F206FE99A00E48942 /* OneAccount.xcdatamodel */,
-			);
-			currentVersion = 56EF4A9F206FE99A00E48942 /* OneAccount.xcdatamodel */;
-			path = OneAccount.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		56EF4AA0206FE99A00E48942 /* OkDoc.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				56EF4AA1206FE99A00E48942 /* OkDoc.xcdatamodel */,
-			);
-			currentVersion = 56EF4AA1206FE99A00E48942 /* OkDoc.xcdatamodel */;
-			path = OkDoc.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 56EF4A61206FE92300E48942 /* Project object */;
 }

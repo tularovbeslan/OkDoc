@@ -49,8 +49,10 @@ final class DoctorDetailViewController: UIViewController, DoctorDetailViewInput,
     }
     
     @IBAction func burgerMenuDidPress(_ sender: UIButton) {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+		if #available(iOS 10.0, *) {
+			let generator = UIImpactFeedbackGenerator(style: .medium)
+			generator.impactOccurred()
+		}
     }
     
     @IBAction func oppointmentDidPress(_ sender: OkDocButton) {

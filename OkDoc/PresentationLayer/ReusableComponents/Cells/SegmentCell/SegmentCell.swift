@@ -11,8 +11,8 @@ import UIKit
 class SegmentCell: UICollectionViewCell {
     
     // MARK: - Properties
-    var feedbackEngine: FeedbackEngine!
-    override var isHighlighted: Bool {
+
+	override var isHighlighted: Bool {
         didSet {
             title.textColor = isHighlighted ? .black : UIColor(red:159/255.0, green:171/255.0, blue:185/255.0, alpha: 1)
         }
@@ -20,7 +20,9 @@ class SegmentCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            feedbackEngine.feedback(type: .selection)
+			if #available(iOS 10.0, *) {
+				FeedbackEngine().feedback(type: .selection)
+			}
             title.textColor = isSelected ? .black : UIColor(red:159/255.0, green:171/255.0, blue:185/255.0, alpha: 1)
         }
     }
@@ -30,7 +32,7 @@ class SegmentCell: UICollectionViewCell {
     
     // MARK: - Life cycle
     override func awakeFromNib() {
-        feedbackEngine = FeedbackEngine()
+		
     }
     
     deinit {

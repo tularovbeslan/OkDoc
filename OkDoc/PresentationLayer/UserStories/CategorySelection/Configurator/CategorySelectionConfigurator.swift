@@ -20,16 +20,17 @@ class CategorySelectionModuleConfigurator {
     private func configure(viewController: CategorySelectionViewController) {
 
         let router = CategorySelectionRouter()
-        
-        let feedbackEngine = FeedbackEngine()
-        
-        let feedbackService = FeedbackServiceImplementation()
-        feedbackService.feedbackEngine = feedbackEngine
 
         let presenter = CategorySelectionPresenter()
         presenter.view = viewController
         presenter.router = router
-        presenter.feedbackService = feedbackService
+		
+		if #available(iOS 10.0, *) {
+			let feedbackEngine = FeedbackEngine()
+			let feedbackService = FeedbackServiceImplementation()
+			feedbackService.feedbackEngine = feedbackEngine
+			presenter.feedbackService = feedbackService
+		}
 
         let interactor = CategorySelectionInteractor()
         interactor.output = presenter

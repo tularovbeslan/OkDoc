@@ -8,6 +8,7 @@
 
 import UIKit.UIFeedbackGenerator
 
+@available(iOS 10.0, *)
 class FeedbackEngine {
     func feedback(type: EngineType) {
         switch type {
@@ -24,6 +25,7 @@ class FeedbackEngine {
     }
 }
 
+@available(iOS 10.0, *)
 extension FeedbackEngine {
     enum EngineType {
         case notification (UINotificationFeedbackType)

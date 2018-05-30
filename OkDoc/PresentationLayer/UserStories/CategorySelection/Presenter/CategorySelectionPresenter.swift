@@ -20,6 +20,8 @@ class CategorySelectionPresenter: CategorySelectionModuleInput, CategorySelectio
     }
     
     func menuButtonDidPress() {
-        feedbackService.feedback(by: .impact(.medium))
+		if #available(iOS 10.0, *) {
+			feedbackService.feedback(by: .impact(.medium))
+		}
     }
 }

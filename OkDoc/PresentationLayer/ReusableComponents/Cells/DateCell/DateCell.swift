@@ -13,8 +13,10 @@ class DateCell: UICollectionViewCell {
     // MARK: - Properties
     override var isSelected: Bool {
         didSet {
-            let feedbackEnagine = FeedbackEngine()
-            feedbackEnagine.feedback(type: .selection)
+			if #available(iOS 10.0, *) {
+				let feedbackEnagine = FeedbackEngine()
+				feedbackEnagine.feedback(type: .selection)
+			}
             weekDay.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
             date.textColor = isSelected ? .black : UIColor.init(red: 159/255, green: 171/255, blue: 185/255, alpha: 1)
         }

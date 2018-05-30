@@ -77,8 +77,10 @@ extension AnalysisCell: UICollectionViewDataSource {
 extension AnalysisCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == viewModels.count - 1 {
-            let feedbackEnagine = FeedbackEngine()
-            feedbackEnagine.feedback(type: .selection)
+			if #available(iOS 10.0, *) {
+				let feedbackEnagine = FeedbackEngine()
+				feedbackEnagine.feedback(type: .selection)
+			}
             delegate?.appendNewAnalysis()
         }
     }

@@ -17,8 +17,10 @@ class AppNavigationController: UINavigationController {
     }
 
     override func popViewController(animated: Bool) -> UIViewController? {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+		if #available(iOS 10.0, *) {
+			let generator = UIImpactFeedbackGenerator(style: .light)
+			generator.impactOccurred()
+		}
         let popViewController = super.popViewController(animated: animated)
         return popViewController
     }

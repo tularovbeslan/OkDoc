@@ -9,5 +9,6 @@
 import Foundation
 
 protocol FeedbackService {
-    func feedback(by type: FeedbackEngine.EngineType)
+	@available(iOS 10.0, *)
+	func feedback(by type: FeedbackEngine.EngineType)
 }

@@ -23,6 +23,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
         super.viewDidLoad()
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
+		setupTableView()
     }
 	
 	deinit {
@@ -37,13 +38,13 @@ class ConversationViewController: UIViewController, ConversationViewInput {
     }
 	
 	// MARK: - Helpers
-	func setupTexField() {
+	private func setupTexField() {
 		growingTextView.trimWhiteSpaceWhenEndEditing = false
 		growingTextView.placeholder = "Сообщение..."
-		growingTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
+		growingTextView.placeholderColor = UIColor.sweetGray
 		growingTextView.minHeight = 34.0
 		growingTextView.maxHeight = 68.0
-		growingTextView.textContainerInset = UIEdgeInsets(top: 5,
+		growingTextView.textContainerInset = UIEdgeInsets(top: 6,
 														  left: 15,
 														  bottom: 5,
 														  right: 15)
@@ -52,6 +53,11 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		growingTextView.layer.masksToBounds = true
 		growingTextView.layer.borderWidth = 1
 		growingTextView.layer.borderColor = UIColor.sweetGray.cgColor
+	}
+	
+	private func setupTableView() {
+		tableView.tableFooterView = UIView.init(frame: .zero)
+		tableView.dataSource = self
 	}
 	
 	// MARK: - Actions
@@ -63,6 +69,17 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		
 	}
 	
+}
+
+extension ConversationViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 5
+	}
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+		cell.textLabel?.text = "Привет Марха"
+		return cell
+	}
 }
 
 extension ConversationViewController: GrowingTextViewDelegate {

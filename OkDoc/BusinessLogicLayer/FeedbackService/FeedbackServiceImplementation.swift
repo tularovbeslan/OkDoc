@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 10.0, *)
 class FeedbackServiceImplementation: FeedbackService {
     // MARK: - Properties
     var feedbackEngine: FeedbackEngine!

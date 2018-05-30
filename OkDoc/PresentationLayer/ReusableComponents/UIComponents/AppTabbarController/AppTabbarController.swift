@@ -23,8 +23,10 @@ class AppTabbarController: UITabBarController {
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+		if #available(iOS 10.0, *) {
+			let generator = UIImpactFeedbackGenerator(style: .medium)
+			generator.impactOccurred()
+		} 
     }
 }
 

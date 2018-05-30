@@ -30,8 +30,10 @@ final class ConsultationViewController: UIViewController, ConsultationViewInput,
 
     // MARK: - IBActions
     @IBAction func menuDidPress(_ sender: UIButton) {
-        let feedbackEngine = FeedbackEngine.init()
-        feedbackEngine.feedback(type: .impact(.medium))
+		if #available(iOS 10.0, *) {
+			let feedbackEngine = FeedbackEngine.init()
+			feedbackEngine.feedback(type: .impact(.medium))
+		}
     }
 
     // MARK: - ConsultationViewInput

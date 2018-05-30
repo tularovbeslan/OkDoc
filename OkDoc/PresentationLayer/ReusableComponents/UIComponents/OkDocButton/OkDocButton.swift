@@ -83,8 +83,10 @@ class OkDocButton: UIControl {
     
     @objc private func touchedUpInside() {
         self.sendActions(for: .valueChanged)
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+		if #available(iOS 10.0, *) {
+			let generator = UIImpactFeedbackGenerator(style: .medium)
+			generator.impactOccurred()
+		}
     }
 }
 

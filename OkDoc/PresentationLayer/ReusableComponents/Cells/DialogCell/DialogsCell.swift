@@ -20,9 +20,11 @@ class DialogsCell: UITableViewCell {
     // MARK: - Life cycle
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        let feedbackEnagine = FeedbackEngine()
-        feedbackEnagine.feedback(type: .selection)
-        
+		if #available(iOS 10.0, *) {
+			let feedbackEnagine = FeedbackEngine()
+			feedbackEnagine.feedback(type: .selection)
+		}
+		
         configureDateBackground()
         configurePhotoView()
         setDateText(color: UIColor.init(red: 160/255, green: 171/255, blue: 184/255, alpha: 1))

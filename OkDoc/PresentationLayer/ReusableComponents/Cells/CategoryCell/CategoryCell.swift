@@ -18,8 +18,10 @@ class CategoryCell: UITableViewCell {
     // MARK: - Life cycle
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        let feedbackEnagine = FeedbackEngine()
-        feedbackEnagine.feedback(type: .selection)
+		if #available(iOS 10.0, *) {
+			let feedbackEnagine = FeedbackEngine()
+			feedbackEnagine.feedback(type: .selection)
+		}
     }
     
     deinit {
