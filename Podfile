@@ -6,4 +6,5 @@ target 'OkDoc' do
 	pod 'PhoneNumberKit', '~> 2.1'
 	pod 'RealmSwift'
 	pod 'GrowingTextView', '~> 0.5'
+	pod 'Texture'
 end

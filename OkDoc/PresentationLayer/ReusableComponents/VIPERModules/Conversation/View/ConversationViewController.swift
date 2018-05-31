@@ -14,17 +14,23 @@ class ConversationViewController: UIViewController, ConversationViewInput {
     var output: ConversationViewOutput!
 	
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var growingTextView: GrowingTextView!
 	@IBOutlet weak var timerLabel: UILabel!
+	
+	var messeges = ["Neverthink will be back on Monday", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо"]
 
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
-		setupTableView()
+		setupCollectionView()
     }
+	
+	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		collectionView.collectionViewLayout.invalidateLayout()
+	}
 	
 	deinit {
 		destroyKeyboardNotifications()
@@ -55,9 +61,11 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		growingTextView.layer.borderColor = UIColor.sweetGray.cgColor
 	}
 	
-	private func setupTableView() {
-		tableView.tableFooterView = UIView.init(frame: .zero)
-		tableView.dataSource = self
+	private func setupCollectionView() {
+		collectionView.register(OutCommingCell.self, forCellWithReuseIdentifier: "cell")
+		collectionView.alwaysBounceVertical = true
+		collectionView.dataSource = self
+		collectionView.delegate = self
 	}
 	
 	// MARK: - Actions
@@ -68,17 +76,34 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	@IBAction func medcard(_ sender: UIButton) {
 		
 	}
-	
 }
 
-extension ConversationViewController: UITableViewDataSource {
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+extension ConversationViewController: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return messeges.count
 	}
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-		cell.textLabel?.text = "Привет Марха"
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OutCommingCell
+		let message = messeges[indexPath.row]
+		cell.textView.text = message
+		cell.bubbleWidth?.constant = estimatedFrameForText(string: message).width + 32
 		return cell
+	}
+}
+
+extension ConversationViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		var height: CGFloat = 80
+		let text = messeges[indexPath.item]
+		height = estimatedFrameForText(string: text).height + 20
+		return CGSize.init(width: view.frame.width, height: height)
+	}
+	
+	fileprivate func estimatedFrameForText(string: String) -> CGSize {
+		let font = UIFont.avertaCY(style: .Semibold, size: 16)
+		return NSString(string: string).boundingRect(with: CGSize(width: UIScreen.main.bounds.width * 0.6, height: 1000), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil).size
+		
 	}
 }
 

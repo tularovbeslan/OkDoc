@@ -127,6 +127,7 @@
 		5712D9F62091539F0017FD96 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9F52091539F0017FD96 /* DateCell.swift */; };
 		5712D9F8209153A70017FD96 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5712D9F7209153A70017FD96 /* DateCell.xib */; };
 		5712D9FB209155160017FD96 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9FA209155160017FD96 /* DateViewModel.swift */; };
+		572597AF20BF5D9400723F97 /* OutCommingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597AE20BF5D9400723F97 /* OutCommingCell.swift */; };
 		57273EC1208E7CDD00408375 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC0208E7CDD00408375 /* TimeViewModel.swift */; };
 		57273EC5208E7DEB00408375 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57273EC4208E7DEB00408375 /* AppAppearance.swift */; };
 		572B41DC3CE0C01B7900F849 /* DialogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55AC9D1EAEE888CE6B1626 /* DialogConfigurator.swift */; };
@@ -435,6 +436,7 @@
 		5712D9F52091539F0017FD96 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		5712D9F7209153A70017FD96 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		5712D9FA209155160017FD96 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		572597AE20BF5D9400723F97 /* OutCommingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingCell.swift; sourceTree = "<group>"; };
 		57273EC0208E7CDD00408375 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		57273EC4208E7DEB00408375 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		5730A73120935AE1009D7256 /* DateSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionCell.swift; sourceTree = "<group>"; };
@@ -1281,6 +1283,7 @@
 		56EF4B262073D3C900E48942 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				572597AD20BF5D6F00723F97 /* ConversationCell */,
 				573C5E8620B085FD007908A2 /* UserInfoCell */,
 				573C5E8120B073E6007908A2 /* ExitCell */,
 				573C5E7C20B07239007908A2 /* StateableCell */,
@@ -1363,6 +1366,14 @@
 				5712D9FA209155160017FD96 /* DateViewModel.swift */,
 			);
 			path = DateViewModel;
+			sourceTree = "<group>";
+		};
+		572597AD20BF5D6F00723F97 /* ConversationCell */ = {
+			isa = PBXGroup;
+			children = (
+				572597AE20BF5D9400723F97 /* OutCommingCell.swift */,
+			);
+			path = ConversationCell;
 			sourceTree = "<group>";
 		};
 		57273EBF208E7CC000408375 /* TimeViewModel */ = {
@@ -2452,18 +2463,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OkDoc/Pods-OkDoc-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2551,6 +2570,7 @@
 				8E81877A67A91E44218AEB8A /* CategorySelectionInteractorOutput.swift in Sources */,
 				BB2F726E2B649A45B7DF3249 /* CategorySelectionInteractor.swift in Sources */,
 				5778CF8920A413200048D20A /* GenderCell.swift in Sources */,
+				572597AF20BF5D9400723F97 /* OutCommingCell.swift in Sources */,
 				6AA5029573FA1434D85B656A /* CategorySelectionRouterInput.swift in Sources */,
 				8BA2B96726F17EE36A3FAF6E /* CategorySelectionRouter.swift in Sources */,
 				C56777144A81F3918423E1D6 /* CategorySelectionConfigurator.swift in Sources */,
