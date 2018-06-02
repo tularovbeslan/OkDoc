@@ -39,7 +39,7 @@ class InCommingImageCell: ASCellNode {
 		
 		let stackSpec = ASStackLayoutSpec.init(direction: .vertical, spacing: 0, justifyContent: .start, alignItems: .start, children: [rationSpec])
 		
-		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 50, 5, 20), child: stackSpec)
+		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 100, 5, 20), child: stackSpec)
 		
 		return stackInsetnsSpec
 	}
