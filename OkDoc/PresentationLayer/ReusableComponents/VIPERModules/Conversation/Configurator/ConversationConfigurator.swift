@@ -18,6 +18,8 @@ class ConversationModuleConfigurator {
     }
 
     private func configure(viewController: ConversationViewController) {
+		
+		let storageManager = RealmManager()
 
         let router = ConversationRouter()
 
@@ -27,6 +29,7 @@ class ConversationModuleConfigurator {
 
         let interactor = ConversationInteractor()
         interactor.output = presenter
+		interactor.storageManager = storageManager
 
         presenter.interactor = interactor
         viewController.output = presenter

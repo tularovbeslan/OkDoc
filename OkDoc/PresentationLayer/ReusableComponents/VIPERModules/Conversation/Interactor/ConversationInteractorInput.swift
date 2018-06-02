@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConversationInteractorInput {
-
+	func insert(object: Message)
 }

@@ -1,4 +1,7 @@
 PODS:
+  - GBDeviceInfo (4.4.0):
+    - GBDeviceInfo/Core (= 4.4.0)
+  - GBDeviceInfo/Core (4.4.0)
   - GrowingTextView (0.5.6)
   - PhoneNumberKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
@@ -36,6 +39,7 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
+  - GBDeviceInfo (~> 4.2)
   - GrowingTextView (~> 0.5)
   - PhoneNumberKit (~> 2.1)
   - Reachability
@@ -44,6 +48,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GBDeviceInfo
     - GrowingTextView
     - PhoneNumberKit
     - PINCache
@@ -55,6 +60,7 @@ SPEC REPOS:
     - Texture
 
 SPEC CHECKSUMS:
+  GBDeviceInfo: 2ec90c6808d063061b16773ec8e857257058dc5d
   GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
@@ -65,6 +71,6 @@ SPEC CHECKSUMS:
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
 
-PODFILE CHECKSUM: ff07d47fc815b80939a9606f3d902cf4cfc0af6f
+PODFILE CHECKSUM: c0b6f9a8e175c6841f495c2bacfc57d2424a8cca
 
 COCOAPODS: 1.5.3

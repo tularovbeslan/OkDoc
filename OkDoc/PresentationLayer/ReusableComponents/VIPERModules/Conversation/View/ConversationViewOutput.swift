@@ -14,4 +14,5 @@ protocol ConversationViewOutput {
     */
 
     func viewIsReady()
+	func send(object: Message)
 }

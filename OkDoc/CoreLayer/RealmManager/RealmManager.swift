@@ -52,6 +52,16 @@ class RealmManager {
 		}
 	}
 	
+	func clear() {
+		do {
+			try realm.write {
+				realm.deleteAll()
+			}
+		} catch {
+			post(error)
+		}
+	}
+	
 	func post(_ error: Error) {
 		NotificationCenter.default.post(name: NotificationError, object: error)
 	}

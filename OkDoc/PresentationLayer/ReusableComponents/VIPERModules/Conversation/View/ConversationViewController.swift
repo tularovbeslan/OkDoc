@@ -8,28 +8,59 @@
 
 import UIKit
 import GrowingTextView
+import AsyncDisplayKit
+import GBDeviceInfo
+import RealmSwift
 
 class ConversationViewController: UIViewController, ConversationViewInput {
 
     var output: ConversationViewOutput!
+	var tableNode = ASTableNode()
+	var deviceInfo = GBDeviceInfo.deviceInfo()
+	var messeges: Results<Message>!
+	var token: NotificationToken? = nil
+	let realManager = RealmManager()
 	
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var growingTextView: GrowingTextView!
 	@IBOutlet weak var timerLabel: UILabel!
+	@IBOutlet weak var containerView: UIView!
 	
-	var messeges = ["Neverthink will be back on Monday", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо", "You’ll get a notification when they reply", "Здравстуйте. Болит все", "Все поправимо"]
-
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		view.addSubnode(tableNode)
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
 		setupCollectionView()
+		messeges = realManager.realm.objects(Message.self).sorted(byKeyPath: "date", ascending: true)
+		token = messeges.observe { changes in
+			switch changes {
+			case .initial:
+				self.tableNode.reloadData()
+			case .update(_, let deletions, let insertions, let modifications):
+				self.tableNode.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .none)
+				self.tableNode.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }), with: .none)
+				self.tableNode.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .none)
+			case .error(let error):
+				self.realManager.post(error)
+				()
+			}
+		}
     }
 	
-	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-		collectionView.collectionViewLayout.invalidateLayout()
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		if deviceInfo?.model == GBDeviceModel.modeliPhoneX {
+			tableNode.view.frame = CGRect.init(x: 0, y: 102, width: view.frame.width, height: (view.frame.height - 84) - 102)
+
+		} else {
+			tableNode.view.frame = CGRect.init(x: 0, y: 64, width: view.frame.width, height: (view.frame.height - 50) - 64)
+
+		}
+		tableNode.view.separatorStyle = .none
+		//tableNode.inverted = true
 	}
 	
 	deinit {
@@ -62,10 +93,21 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	private func setupCollectionView() {
-		collectionView.register(OutCommingCell.self, forCellWithReuseIdentifier: "cell")
-		collectionView.alwaysBounceVertical = true
-		collectionView.dataSource = self
-		collectionView.delegate = self
+		tableNode.dataSource = self
+		tableNode.delegate = self
+	}
+	
+	private func uploadImage(image: UIImage) {
+		
+	}
+	
+	private func sendMessage(text: String) {
+		let message = Message.init(text: text, imageData: nil, date: Date())
+		output.send(object: message)
+		growingTextView.text = nil
+		DispatchQueue.main.async {
+			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: true)
+		}
 	}
 	
 	// MARK: - Actions
@@ -76,40 +118,73 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	@IBAction func medcard(_ sender: UIButton) {
 		
 	}
+	
+	@IBAction func send(_ sender: UIButton) {
+		let text = growingTextView.text
+		if text != "" && text != " " && text != nil {
+			sendMessage(text: text!)
+		}
+	}
+	
+	@IBAction func loadImage(_ sender: UIButton) {
+		let imagePickerController = UIImagePickerController()
+		imagePickerController.delegate = self
+		present(imagePickerController, animated: true, completion: nil)
+	}
 }
 
-extension ConversationViewController: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension ConversationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		var selectedImage: UIImage?
+		if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+			selectedImage = editedImage
+		} else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+			selectedImage = originalImage
+		}
+		
+		guard let image = selectedImage else { return }
+		uploadImage(image: image)
+		dismiss(animated: true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		dismiss(animated: true, completion:  nil)
+	}
+}
+
+extension ConversationViewController: ASTableDataSource {
+	func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
 		return messeges.count
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OutCommingCell
+	func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
 		let message = messeges[indexPath.row]
-		cell.textView.text = message
-		cell.bubbleWidth?.constant = estimatedFrameForText(string: message).width + 32
-		return cell
+		let threadSafeReference = ThreadSafeReference(to: message)
+
+		return {
+			let node = InCommingDefaultCell.init(threadSafeReference: threadSafeReference)
+//			if indexPath.row == 0 {
+//				node.imageNode.image = #imageLiteral(resourceName: "doc4")
+//			} else if indexPath.row == 2 {
+//				node.imageNode.image = #imageLiteral(resourceName: "image1")
+//			} else {
+//				node.imageNode.image = #imageLiteral(resourceName: "butterfly")
+//			}
+			
+			return node
+		}
 	}
 }
 
-extension ConversationViewController: UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		var height: CGFloat = 80
-		let text = messeges[indexPath.item]
-		height = estimatedFrameForText(string: text).height + 20
-		return CGSize.init(width: view.frame.width, height: height)
-	}
-	
-	fileprivate func estimatedFrameForText(string: String) -> CGSize {
-		let font = UIFont.avertaCY(style: .Semibold, size: 16)
-		return NSString(string: string).boundingRect(with: CGSize(width: UIScreen.main.bounds.width * 0.6, height: 1000), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil).size
-		
+extension ConversationViewController: ASTableDelegate {
+	func shouldBatchFetchForCollectionNode(collectionNode: ASCollectionNode) -> Bool {
+		return true
 	}
 }
 
 extension ConversationViewController: GrowingTextViewDelegate {
 	func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
-		print(height)
 		textView.frame.size.height = height
 		UIView.animate(withDuration: 0.2) {
 			self.view.layoutIfNeeded()
@@ -118,10 +193,17 @@ extension ConversationViewController: GrowingTextViewDelegate {
 	
 	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
 		if text == "\n" {
+			if text != "" && text != " " && text != "\n" {
+				sendMessage(text: text)
+			}
 			textView.resignFirstResponder()
 			return false
 		}
 		return true
+	}
+	
+	func textViewDidBeginEditing(_ textView: UITextView) {
+		tableNode.scrollToRow(at: IndexPath.init(row: messeges.count - 1, section: 0), at: .bottom, animated: true)
 	}
 }
 
@@ -140,9 +222,11 @@ extension ConversationViewController {
 		guard let userInfo = notification.userInfo else { return }
 		guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else {return}
 		let isKeyboardShowing = notification.name == .UIKeyboardWillShow
-		bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height : 20
+		bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height : 0
 		UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
 			self.view.layoutIfNeeded()
+			self.tableNode.frame = self.containerView.frame
+
 		}, completion: nil)
 	}
 }

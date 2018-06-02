@@ -12,7 +12,13 @@ class ConversationPresenter: ConversationModuleInput, ConversationViewOutput, Co
     var interactor: ConversationInteractorInput!
     var router: ConversationRouterInput!
 
+	// MARK: - ConversationViewOutput
     func viewIsReady() {
 		view.setupInitialState()
     }
+	
+	func send(object: Message) {
+		interactor.insert(object: object)
+	}
+
 }

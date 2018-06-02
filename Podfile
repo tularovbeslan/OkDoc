@@ -7,4 +7,6 @@ target 'OkDoc' do
 	pod 'RealmSwift'
 	pod 'GrowingTextView', '~> 0.5'
 	pod 'Texture'
+	pod 'GBDeviceInfo', '~> 4.2'
+	pod 'Keynode'
 end

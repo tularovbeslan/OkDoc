@@ -9,5 +9,11 @@
 class ConversationInteractor: ConversationInteractorInput {
 
     weak var output: ConversationInteractorOutput!
-
+	var storageManager: RealmManager!
+	
+	// MARK: - ConversationInteractorInput
+	
+	func insert(object: Message) {
+		storageManager.create(object)
+	}
 }
