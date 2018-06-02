@@ -440,7 +440,6 @@
 		5712D9F7209153A70017FD96 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		5712D9FA209155160017FD96 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingDefaultCell.swift; sourceTree = "<group>"; };
-		572597B120C0C2A600723F97 /* OkDoc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OkDoc-Bridging-Header.h"; sourceTree = "<group>"; };
 		572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B720C1D5F800723F97 /* InCommingImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingImageCell.swift; sourceTree = "<group>"; };
 		57273EC0208E7CDD00408375 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
@@ -1127,7 +1126,6 @@
 			isa = PBXGroup;
 			children = (
 				56EF4AA3206FE99A00E48942 /* Info.plist */,
-				572597B120C0C2A600723F97 /* OkDoc-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -2474,9 +2472,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OkDoc/Pods-OkDoc-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GBDeviceInfo/GBDeviceInfo.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
-				"${BUILT_PRODUCTS_DIR}/Keynode/Keynode.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
@@ -2489,9 +2485,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBDeviceInfo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keynode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
@@ -2926,7 +2920,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "OkDoc/Supporting Files/OkDoc-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2952,7 +2946,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "OkDoc/Supporting Files/OkDoc-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";

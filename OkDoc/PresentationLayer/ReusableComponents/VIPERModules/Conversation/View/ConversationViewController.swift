@@ -9,7 +9,6 @@
 import UIKit
 import GrowingTextView
 import AsyncDisplayKit
-import GBDeviceInfo
 import RealmSwift
 import SnapKit
 
@@ -17,7 +16,6 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 
     var output: ConversationViewOutput!
 	var tableNode = ASTableNode()
-	var deviceInfo = GBDeviceInfo.deviceInfo()
 	var messeges: Results<Message>!
 	var token: NotificationToken? = nil
 	let realManager = RealmManager()
@@ -34,7 +32,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		containerView.addSubnode(tableNode)
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
-		setupCollectionView()
+		setupTableNode()
 		messeges = realManager.realm.objects(Message.self).sorted(byKeyPath: "date", ascending: true)
 		token = messeges.observe { changes in
 			switch changes {
@@ -46,27 +44,14 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 				self.tableNode.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .none)
 			case .error(let error):
 				self.realManager.post(error)
-				()
 			}
 		}
 		
-		
-		tableNode.view.snp.makeConstraints { (make) in
-			make.top.left.right.bottom.equalToSuperview()
-		}
-		
-
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		tableNode.view.separatorStyle = .none
 	}
 	
 	deinit {
 		destroyKeyboardNotifications()
 	}
-
 
     // MARK: ConversationViewInput
     func setupInitialState() {
@@ -92,7 +77,11 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		growingTextView.layer.borderColor = UIColor.sweetGray.cgColor
 	}
 	
-	private func setupCollectionView() {
+	private func setupTableNode() {
+		tableNode.view.snp.makeConstraints { (make) in
+			make.top.left.right.bottom.equalToSuperview()
+		}
+		tableNode.view.separatorStyle = .none
 		tableNode.dataSource = self
 		tableNode.delegate = self
 	}
@@ -209,10 +198,6 @@ extension ConversationViewController: GrowingTextViewDelegate {
 			return false
 		}
 		return true
-	}
-	
-	func textViewDidBeginEditing(_ textView: UITextView) {
-
 	}
 }
 
