@@ -14,11 +14,13 @@ class Message: Object {
 	dynamic var text: String = ""
 	dynamic var imageData: Data? = nil
 	dynamic var date: Date? = nil
+	dynamic var incomming: Bool = false
 	
-	convenience init(text: String, imageData: Data?, date: Date?) {
+	convenience init(text: String, imageData: Data?, date: Date?, incomming: Bool) {
 		self.init()
 		self.text		= text
 		self.imageData	= imageData
 		self.date		= date
+		self.incomming 	= incomming
 	}
 }

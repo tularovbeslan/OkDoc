@@ -127,6 +127,7 @@
 		5712D9F62091539F0017FD96 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9F52091539F0017FD96 /* DateCell.swift */; };
 		5712D9F8209153A70017FD96 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5712D9F7209153A70017FD96 /* DateCell.xib */; };
 		5712D9FB209155160017FD96 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712D9FA209155160017FD96 /* DateViewModel.swift */; };
+		5713A76C20C350AC00141A76 /* BubbleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A76B20C350AC00141A76 /* BubbleBuilder.swift */; };
 		572597AF20BF5D9400723F97 /* OutCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */; };
 		572597B620C0C8E400723F97 /* InCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */; };
 		572597B820C1D5F800723F97 /* InCommingImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B720C1D5F800723F97 /* InCommingImageCell.swift */; };
@@ -439,6 +440,7 @@
 		5712D9F52091539F0017FD96 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		5712D9F7209153A70017FD96 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		5712D9FA209155160017FD96 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		5713A76B20C350AC00141A76 /* BubbleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleBuilder.swift; sourceTree = "<group>"; };
 		572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B720C1D5F800723F97 /* InCommingImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingImageCell.swift; sourceTree = "<group>"; };
@@ -1746,6 +1748,7 @@
 				3D9743CF192C4E0DC368DBE9 /* ConversationViewOutput.swift */,
 				EFAC40C208CC13D4FC4B3BFB /* ConversationViewController.swift */,
 				57B9F33E20BB265400AE9A07 /* ConversationViewController.storyboard */,
+				5713A76B20C350AC00141A76 /* BubbleBuilder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2694,6 +2697,7 @@
 				57B9F33B20BAFF8300AE9A07 /* RealmManager.swift in Sources */,
 				68105EF11302DD19469577D6 /* ProfileModuleInput.swift in Sources */,
 				18C56EB798421982986E8F1F /* ProfilePresenter.swift in Sources */,
+				5713A76C20C350AC00141A76 /* BubbleBuilder.swift in Sources */,
 				56B1D3E431E05690ABD4AB36 /* ProfileInteractorInput.swift in Sources */,
 				1DF396FA4D7F92C0BD4D88E8 /* ProfileInteractorOutput.swift in Sources */,
 				B34BB7AF7C33A36E4F4482D6 /* ProfileInteractor.swift in Sources */,

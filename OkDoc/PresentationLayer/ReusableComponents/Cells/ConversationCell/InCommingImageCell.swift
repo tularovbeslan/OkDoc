@@ -13,13 +13,11 @@ import RealmSwift
 class InCommingImageCell: ASCellNode {
 	var imageNode: ASImageNode
 	
-	init(threadSafeReference: ThreadSafeReference<Message>) {
+	init(model: Message) {
 		imageNode = ASImageNode()
 		
 		super.init()
 		
-		let realm = try! Realm()
-		guard let model = realm.resolve(threadSafeReference) else { return }
 		guard let data = model.imageData else { return }
 		selectionStyle = .none
 		imageNode.image = UIImage(data: data)
@@ -41,7 +39,7 @@ class InCommingImageCell: ASCellNode {
 		
 		let stackSpec = ASStackLayoutSpec.init(direction: .vertical, spacing: 0, justifyContent: .start, alignItems: .start, children: [rationSpec])
 		
-		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 20, 5, 50), child: stackSpec)
+		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 50, 5, 20), child: stackSpec)
 		
 		return stackInsetnsSpec
 	}

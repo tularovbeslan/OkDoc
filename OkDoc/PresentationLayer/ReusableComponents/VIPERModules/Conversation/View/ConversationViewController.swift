@@ -33,6 +33,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
 		setupTableNode()
+//		realManager.clear()
 		messeges = realManager.realm.objects(Message.self).sorted(byKeyPath: "date", ascending: true)
 		token = messeges.observe { changes in
 			switch changes {
@@ -86,12 +87,12 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	private func uploadImage(image: UIImage) {
-		let message = Message.init(text: "", imageData: image.data(), date: Date())
+		let message = Message.init(text: "", imageData: image.data(), date: Date(), incomming: false)
 		output.send(object: message)
 	}
 	
 	private func sendMessage(text: String) {
-		let message = Message.init(text: text, imageData: nil, date: Date())
+		let message = Message.init(text: text, imageData: nil, date: Date(), incomming: true)
 		output.send(object: message)
 		growingTextView.text = nil
 		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
@@ -160,15 +161,7 @@ extension ConversationViewController: ASTableDataSource {
 		let threadSafeReference = ThreadSafeReference(to: message)
 
 		return {
-			let node = InCommingImageCell.init(threadSafeReference: threadSafeReference)
-//			if indexPath.row == 0 {
-//				node.imageNode.image = #imageLiteral(resourceName: "doc4")
-//			} else if indexPath.row == 2 {
-//				node.imageNode.image = #imageLiteral(resourceName: "image1")
-//			} else {
-//				node.imageNode.image = #imageLiteral(resourceName: "butterfly")
-//			}
-			
+			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
 			return node
 		}
 	}
