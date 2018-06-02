@@ -8,17 +8,22 @@
 
 import UIKit
 import AsyncDisplayKit
+import RealmSwift
 
 class OutCommingDefaultCell: ASCellNode {
 	
 	fileprivate var message: ASTextNode
 	fileprivate var bubble: ASDisplayNode
 	
-	init(model: Message) {
+	init(threadSafeReference: ThreadSafeReference<Message>) {
 		message = ASTextNode()
 		bubble = ASDisplayNode()
 		
 		super.init()
+		
+		let realm = try! Realm()
+		guard let model = realm.resolve(threadSafeReference) else { return }
+		
 		selectionStyle = .none
 
 		let paragraphStyle = NSMutableParagraphStyle()

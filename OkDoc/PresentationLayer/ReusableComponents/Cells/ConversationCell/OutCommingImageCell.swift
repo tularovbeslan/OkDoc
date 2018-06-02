@@ -8,16 +8,21 @@
 
 import UIKit
 import AsyncDisplayKit
+import RealmSwift
 
 class OutCommingImageCell: ASCellNode {
 	var imageNode: ASImageNode
 	
-	init(model: Message) {
+	init(threadSafeReference: ThreadSafeReference<Message>) {
 		imageNode = ASImageNode()
 		
 		super.init()
-		selectionStyle = .none
 		
+		let realm = try! Realm()
+		guard let model = realm.resolve(threadSafeReference) else { return }
+		guard let data = model.imageData else { return }
+		selectionStyle = .none
+		imageNode.image = UIImage(data: data)
 		imageNode.cornerRadius = 12
 		imageNode.contentMode = .scaleAspectFill
 		

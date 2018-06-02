@@ -46,7 +46,6 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 				self.realManager.post(error)
 			}
 		}
-		
 	}
 	
 	deinit {
@@ -87,7 +86,8 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	private func uploadImage(image: UIImage) {
-		
+		let message = Message.init(text: "", imageData: image.data(), date: Date())
+		output.send(object: message)
 	}
 	
 	private func sendMessage(text: String) {
@@ -160,7 +160,7 @@ extension ConversationViewController: ASTableDataSource {
 		let threadSafeReference = ThreadSafeReference(to: message)
 
 		return {
-			let node = InCommingDefaultCell.init(threadSafeReference: threadSafeReference)
+			let node = InCommingImageCell.init(threadSafeReference: threadSafeReference)
 //			if indexPath.row == 0 {
 //				node.imageNode.image = #imageLiteral(resourceName: "doc4")
 //			} else if indexPath.row == 2 {
