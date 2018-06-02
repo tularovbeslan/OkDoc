@@ -11,6 +11,7 @@ import GrowingTextView
 import AsyncDisplayKit
 import GBDeviceInfo
 import RealmSwift
+import SnapKit
 
 class ConversationViewController: UIViewController, ConversationViewInput {
 
@@ -25,11 +26,12 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	@IBOutlet weak var growingTextView: GrowingTextView!
 	@IBOutlet weak var timerLabel: UILabel!
 	@IBOutlet weak var containerView: UIView!
-	
+	@IBOutlet weak var inputTextView: UIView!
+
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-		view.addSubnode(tableNode)
+		containerView.addSubnode(tableNode)
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
 		setupCollectionView()
@@ -47,20 +49,18 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 				()
 			}
 		}
-    }
+		
+		
+		tableNode.view.snp.makeConstraints { (make) in
+			make.top.left.right.bottom.equalToSuperview()
+		}
+		
+
+	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
-		if deviceInfo?.model == GBDeviceModel.modeliPhoneX {
-			tableNode.view.frame = CGRect.init(x: 0, y: 102, width: view.frame.width, height: (view.frame.height - 84) - 102)
-
-		} else {
-			tableNode.view.frame = CGRect.init(x: 0, y: 64, width: view.frame.width, height: (view.frame.height - 50) - 64)
-
-		}
 		tableNode.view.separatorStyle = .none
-		//tableNode.inverted = true
 	}
 	
 	deinit {
@@ -80,10 +80,10 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		growingTextView.placeholder = "Сообщение..."
 		growingTextView.placeholderColor = UIColor.sweetGray
 		growingTextView.minHeight = 34.0
-		growingTextView.maxHeight = 68.0
-		growingTextView.textContainerInset = UIEdgeInsets(top: 6,
+		growingTextView.maxHeight = 150.0
+		growingTextView.textContainerInset = UIEdgeInsets(top: 7,
 														  left: 15,
-														  bottom: 5,
+														  bottom: 7,
 														  right: 15)
 		growingTextView.delegate = self
 		growingTextView.layer.cornerRadius = 18
@@ -105,9 +105,17 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		let message = Message.init(text: text, imageData: nil, date: Date())
 		output.send(object: message)
 		growingTextView.text = nil
-		DispatchQueue.main.async {
+		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
 			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: true)
 		}
+	}
+	
+	fileprivate func scrollToBottom(animated: Bool) {
+		var yOffset: CGFloat = 0.0
+		if tableNode.view.contentSize.height > tableNode.view.bounds.size.height {
+			yOffset = tableNode.view.contentSize.height - tableNode.view.bounds.size.height
+		}
+		self.tableNode.setContentOffset(CGPoint.init(x: 0, y: yOffset), animated: animated)
 	}
 	
 	// MARK: - Actions
@@ -186,8 +194,9 @@ extension ConversationViewController: ASTableDelegate {
 extension ConversationViewController: GrowingTextViewDelegate {
 	func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
 		textView.frame.size.height = height
-		UIView.animate(withDuration: 0.2) {
-			self.view.layoutIfNeeded()
+
+		DispatchQueue.main.async {
+			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: false)
 		}
 	}
 	
@@ -203,7 +212,7 @@ extension ConversationViewController: GrowingTextViewDelegate {
 	}
 	
 	func textViewDidBeginEditing(_ textView: UITextView) {
-		tableNode.scrollToRow(at: IndexPath.init(row: messeges.count - 1, section: 0), at: .bottom, animated: true)
+
 	}
 }
 
@@ -223,10 +232,12 @@ extension ConversationViewController {
 		guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else {return}
 		let isKeyboardShowing = notification.name == .UIKeyboardWillShow
 		bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height : 0
-		UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-			self.view.layoutIfNeeded()
-			self.tableNode.frame = self.containerView.frame
 
+		UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
+			self.view.layoutIfNeeded()
 		}, completion: nil)
+		
+		scrollToBottom(animated: false)
+		
 	}
 }

@@ -3,6 +3,7 @@ PODS:
     - GBDeviceInfo/Core (= 4.4.0)
   - GBDeviceInfo/Core (4.4.0)
   - GrowingTextView (0.5.6)
+  - Keynode (3.0.3)
   - PhoneNumberKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
     - PhoneNumberKit/UIKit (= 2.1.0)
@@ -30,6 +31,7 @@ PODS:
   - Realm/Headers (3.5.0)
   - RealmSwift (3.5.0):
     - Realm (= 3.5.0)
+  - SnapKit (4.0.0)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -41,15 +43,18 @@ PODS:
 DEPENDENCIES:
   - GBDeviceInfo (~> 4.2)
   - GrowingTextView (~> 0.5)
+  - Keynode
   - PhoneNumberKit (~> 2.1)
   - Reachability
   - RealmSwift
+  - SnapKit (~> 4.0.0)
   - Texture
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GBDeviceInfo
     - GrowingTextView
+    - Keynode
     - PhoneNumberKit
     - PINCache
     - PINOperation
@@ -57,11 +62,13 @@ SPEC REPOS:
     - Reachability
     - Realm
     - RealmSwift
+    - SnapKit
     - Texture
 
 SPEC CHECKSUMS:
   GBDeviceInfo: 2ec90c6808d063061b16773ec8e857257058dc5d
   GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
+  Keynode: e80d259a9fc0b91df1d43db85ea69782bbfe5611
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
@@ -69,8 +76,9 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
 
-PODFILE CHECKSUM: c0b6f9a8e175c6841f495c2bacfc57d2424a8cca
+PODFILE CHECKSUM: 4009b6288fa5182850161f1eb9a678634d499a0d
 
 COCOAPODS: 1.5.3

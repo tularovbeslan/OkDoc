@@ -144,6 +144,7 @@
                         <outlet property="bottomConstraint" destination="Cgj-v4-0AF" id="Bkj-dm-ioj"/>
                         <outlet property="containerView" destination="xax-NL-nOb" id="fmv-Ce-zVF"/>
                         <outlet property="growingTextView" destination="tXx-DM-9Wt" id="NYu-u0-YJR"/>
+                        <outlet property="inputTextView" destination="1yz-xg-9l5" id="CiO-9B-4lH"/>
                         <outlet property="timerLabel" destination="OzP-PH-nRi" id="5JI-15-c6u"/>
                     </connections>
                 </viewController>

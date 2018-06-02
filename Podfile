@@ -9,4 +9,5 @@ target 'OkDoc' do
 	pod 'Texture'
 	pod 'GBDeviceInfo', '~> 4.2'
 	pod 'Keynode'
+	pod 'SnapKit', '~> 4.0.0'
 end
