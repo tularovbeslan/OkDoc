@@ -13,13 +13,15 @@ import RealmSwift
 class Message: Object {
 	dynamic var text: String = ""
 	dynamic var imageData: Data? = nil
+	dynamic var videoURL: String = ""
 	dynamic var date: Date? = nil
 	dynamic var incomming: Bool = false
 	
-	convenience init(text: String, imageData: Data?, date: Date?, incomming: Bool) {
+	convenience init(text: String, imageData: Data?, videoURL: String, date: Date?, incomming: Bool) {
 		self.init()
 		self.text		= text
 		self.imageData	= imageData
+		self.videoURL	= videoURL
 		self.date		= date
 		self.incomming 	= incomming
 	}

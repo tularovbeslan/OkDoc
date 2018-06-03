@@ -11,6 +11,8 @@ import GrowingTextView
 import AsyncDisplayKit
 import RealmSwift
 import SnapKit
+import MobileCoreServices
+import AVFoundation
 
 class ConversationViewController: UIViewController, ConversationViewInput {
 
@@ -29,11 +31,12 @@ class ConversationViewController: UIViewController, ConversationViewInput {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		directoryPath(path: Directory.Videos.rawValue)
+		directoryPath(path: Directory.Audios.rawValue)
 		containerView.addSubnode(tableNode)
 		automaticallyAdjustsScrollViewInsets = false
         output.viewIsReady()
 		setupTableNode()
-//		realManager.clear()
 		messeges = realManager.realm.objects(Message.self).sorted(byKeyPath: "date", ascending: true)
 		token = messeges.observe { changes in
 			switch changes {
@@ -86,13 +89,18 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		tableNode.delegate = self
 	}
 	
+	private func uploadVideo(urlString: String) {
+		let message = Message.init(text: "", imageData: nil, videoURL: urlString, date: Date(), incomming: false)
+		output.send(object: message)
+	}
+	
 	private func uploadImage(image: UIImage) {
-		let message = Message.init(text: "", imageData: image.data(), date: Date(), incomming: false)
+		let message = Message.init(text: "", imageData: image.data(), videoURL: "", date: Date(), incomming: false)
 		output.send(object: message)
 	}
 	
 	private func sendMessage(text: String) {
-		let message = Message.init(text: text, imageData: nil, date: Date(), incomming: true)
+		let message = Message.init(text: text, imageData: nil, videoURL: "", date: Date(), incomming: true)
 		output.send(object: message)
 		growingTextView.text = nil
 		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
@@ -106,6 +114,10 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 			yOffset = tableNode.view.contentSize.height - tableNode.view.bounds.size.height
 		}
 		self.tableNode.setContentOffset(CGPoint.init(x: 0, y: yOffset), animated: animated)
+	}
+	
+	fileprivate func directoryPath(path: String) {
+		FileStorageManager.createPath(path: path)
 	}
 	
 	// MARK: - Actions
@@ -127,6 +139,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	@IBAction func loadImage(_ sender: UIButton) {
 		let imagePickerController = UIImagePickerController()
 		imagePickerController.delegate = self
+		imagePickerController.mediaTypes = [kUTTypeImage, kUTTypeMovie] as [String]
 		present(imagePickerController, animated: true, completion: nil)
 	}
 }
@@ -134,20 +147,38 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 extension ConversationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		if let videoURL = info[UIImagePickerControllerMediaURL] as?  URL {
+			handleSelectVideoForURL(url: videoURL)
+		} else {
+			handleSelectImageForInfo(info: info)
+		}
+		
+		dismiss(animated: true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		dismiss(animated: true, completion:  nil)
+	}
+	
+	private func handleSelectVideoForURL(url: URL) {
+		FileStorageManager.saveFileby(type: .mp4, directory: .Videos, url: url) { (complated, error, path) in
+			if complated {
+				DispatchQueue.main.async {
+					self.uploadVideo(urlString: path)
+				}
+			}
+		}
+	}
+	
+	private func handleSelectImageForInfo(info: [String: Any]) {
 		var selectedImage: UIImage?
 		if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
 			selectedImage = editedImage
 		} else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
 			selectedImage = originalImage
 		}
-		
 		guard let image = selectedImage else { return }
 		uploadImage(image: image)
-		dismiss(animated: true, completion: nil)
-	}
-	
-	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-		dismiss(animated: true, completion:  nil)
 	}
 }
 
@@ -178,7 +209,8 @@ extension ConversationViewController: GrowingTextViewDelegate {
 		textView.frame.size.height = height
 
 		DispatchQueue.main.async {
-			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: false)
+			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0),
+									   at: .bottom, animated: false)
 		}
 	}
 	
@@ -196,8 +228,14 @@ extension ConversationViewController: GrowingTextViewDelegate {
 
 extension ConversationViewController {
 	private func setKeyboardNotifications() {
-		NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillShow, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillHide, object: nil)
+		NotificationCenter.default.addObserver(self,
+											   selector: #selector(handleKeyboard(notification:)),
+											   name: .UIKeyboardWillShow,
+											   object: nil)
+		NotificationCenter.default.addObserver(self,
+											   selector: #selector(handleKeyboard(notification:)),
+											   name: .UIKeyboardWillHide,
+											   object: nil)
 	}
 	
 	private func destroyKeyboardNotifications() {
