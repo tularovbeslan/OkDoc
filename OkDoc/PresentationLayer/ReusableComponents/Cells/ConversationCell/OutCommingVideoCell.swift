@@ -41,7 +41,7 @@ class OutCommingVideoCell: ASCellNode {
 		
 		let stackSpec = ASStackLayoutSpec.init(direction: .vertical, spacing: 0, justifyContent: .end, alignItems: .end, children: [videoNode])
 		
-		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 10, 5, 10), child: stackSpec)
+		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 50, 5, 20), child: stackSpec)
 		
 		return stackInsetnsSpec
 	}
