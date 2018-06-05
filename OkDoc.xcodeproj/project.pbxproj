@@ -130,6 +130,7 @@
 		5713A76C20C350AC00141A76 /* BubbleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A76B20C350AC00141A76 /* BubbleBuilder.swift */; };
 		5713A76F20C418EC00141A76 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A76E20C418EC00141A76 /* FileStorageManager.swift */; };
 		5713A77120C4228100141A76 /* OutCommingVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A77020C4228100141A76 /* OutCommingVideoCell.swift */; };
+		5713A77320C499F300141A76 /* OutCommingAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A77220C499F200141A76 /* OutCommingAudioCell.swift */; };
 		572597AF20BF5D9400723F97 /* OutCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */; };
 		572597B620C0C8E400723F97 /* InCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */; };
 		572597B820C1D5F800723F97 /* InCommingImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B720C1D5F800723F97 /* InCommingImageCell.swift */; };
@@ -445,6 +446,7 @@
 		5713A76B20C350AC00141A76 /* BubbleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleBuilder.swift; sourceTree = "<group>"; };
 		5713A76E20C418EC00141A76 /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		5713A77020C4228100141A76 /* OutCommingVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingVideoCell.swift; sourceTree = "<group>"; };
+		5713A77220C499F200141A76 /* OutCommingAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingAudioCell.swift; sourceTree = "<group>"; };
 		572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B720C1D5F800723F97 /* InCommingImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingImageCell.swift; sourceTree = "<group>"; };
@@ -1139,6 +1141,7 @@
 		56EF4AA4206FE99A00E48942 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5713A77420C4B43700141A76 /* AudioManager */,
 				5713A76D20C418D800141A76 /* FileStorageManager */,
 				57B9F33920BAFF7200AE9A07 /* RealmManager */,
 				57E9244D208C1B400009120D /* Network */,
@@ -1389,12 +1392,20 @@
 			path = FileStorageManager;
 			sourceTree = "<group>";
 		};
+		5713A77420C4B43700141A76 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AudioManager;
+			sourceTree = "<group>";
+		};
 		572597AD20BF5D6F00723F97 /* ConversationCell */ = {
 			isa = PBXGroup;
 			children = (
 				572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */,
 				57FC6FAB20C215C0009F8306 /* OutCommingImageCell.swift */,
 				5713A77020C4228100141A76 /* OutCommingVideoCell.swift */,
+				5713A77220C499F200141A76 /* OutCommingAudioCell.swift */,
 				572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */,
 				572597B720C1D5F800723F97 /* InCommingImageCell.swift */,
 				5713A76B20C350AC00141A76 /* BubbleBuilder.swift */,
@@ -2498,6 +2509,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SoundWave/SoundWave.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2511,6 +2523,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SoundWave.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2537,6 +2550,7 @@
 				56EF4AD5206FE99A00E48942 /* ViewModelFactory.swift in Sources */,
 				5759114820989D3C007036D7 /* AnalysisSelectionCell.swift in Sources */,
 				56EF4AD8206FE99A00E48942 /* CellViewModel.swift in Sources */,
+				5713A77320C499F300141A76 /* OutCommingAudioCell.swift in Sources */,
 				56EF4ACE206FE99A00E48942 /* UITableViewExtension.swift in Sources */,
 				56D37EB72080883E00C8F65B /* DoctorDetailCommonInfoCell.swift in Sources */,
 				577468E4209CF5E800927379 /* DoctorsServiceImplementation.swift in Sources */,

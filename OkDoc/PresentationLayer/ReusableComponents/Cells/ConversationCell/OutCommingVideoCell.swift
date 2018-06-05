@@ -25,7 +25,7 @@ class OutCommingVideoCell: ASCellNode {
 			self.videoNode.asset = asset
 		}
 		videoNode.cornerRadius = 12
-		videoNode.shouldAutoplay = true
+		videoNode.delegate = self
 		videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
 		videoNode.backgroundColor = .black
 		addSubnode(videoNode)
@@ -44,5 +44,15 @@ class OutCommingVideoCell: ASCellNode {
 		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 50, 5, 20), child: stackSpec)
 		
 		return stackInsetnsSpec
+	}
+}
+
+extension OutCommingVideoCell: ASVideoNodeDelegate {
+	func didTap(_ videoNode: ASVideoNode) {
+		videoNode.isPlaying() ? videoNode.pause() : videoNode.play()
+	}
+	
+	func videoNode(_ videoNode: ASVideoNode, willChange state: ASVideoNodePlayerState, to toState: ASVideoNodePlayerState) {
+		print(state)
 	}
 }

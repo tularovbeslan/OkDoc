@@ -33,13 +33,18 @@ class OutCommingDefaultCell: ASCellNode {
 		]
 		
 		message.attributedText = NSAttributedString(string: model.text, attributes: attributes)
-		
-		bubble.cornerRadius = 12
-		bubble.clipsToBounds = true
-		bubble.backgroundColor = .outCommingGray
-		
+
 		addSubnode(bubble)
 		addSubnode(message)
+	}
+	
+	override func didLoad() {
+		bubble.clipsToBounds = true
+		bubble.backgroundColor = .outCommingGray
+	}
+	
+	override func layoutDidFinish() {
+		bubble.cornerRadius = 12
 	}
 	
 	override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

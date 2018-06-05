@@ -28,6 +28,7 @@ PODS:
   - RealmSwift (3.5.0):
     - Realm (= 3.5.0)
   - SnapKit (4.0.0)
+  - SoundWave (0.1.2)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - Reachability
   - RealmSwift
   - SnapKit (~> 4.0.0)
+  - SoundWave
   - Texture
 
 SPEC REPOS:
@@ -55,6 +57,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SnapKit
+    - SoundWave
     - Texture
 
 SPEC CHECKSUMS:
@@ -67,8 +70,9 @@ SPEC CHECKSUMS:
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SoundWave: 74af192045482ba1b881c6fd063655bb46162fa0
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
 
-PODFILE CHECKSUM: d98ec93b0f1e054ac7115b91d780c62986bd8024
+PODFILE CHECKSUM: 95e0cd7cc43d3047765e508017a886d7fd7c6aed
 
 COCOAPODS: 1.5.3

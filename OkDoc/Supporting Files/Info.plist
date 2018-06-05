@@ -25,12 +25,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>OkDoc хочет получить доступ к камере чтобы вы могли отправлять анализы</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>OkDoc хочет получить доступ к для отправки голосовых сообщений во время консультации</string>
 	<key>NSCameraUsageDescription</key>
-	<string>OkDoc хочет получить доступ к камере чтобы вы могли отправлять анализы</string>
+	<string>OkDoc хочет получить доступ к камере чтобы вы могли отправлять видео запись</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>OkDoc хочет получить доступ к камере чтобы вы могли отправлять анализы</string>
+	<string>OkDoc хочет получить доступ к фото чтобы вы могли отправлять анализы</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -27,6 +27,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	@IBOutlet weak var timerLabel: UILabel!
 	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var inputTextView: UIView!
+	@IBOutlet weak var sendButton: UIButton!
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -192,7 +193,8 @@ extension ConversationViewController: ASTableDataSource {
 		let threadSafeReference = ThreadSafeReference(to: message)
 
 		return {
-			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
+//			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
+			let node = OutCommingAudioCell(model: message)
 			return node
 		}
 	}

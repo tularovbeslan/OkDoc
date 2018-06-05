@@ -90,7 +90,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Peg-El-a0J"/>
                                             <constraint firstAttribute="width" constant="47" id="cVA-Lw-b73"/>
                                         </constraints>
-                                        <state key="normal" image="sendMessage"/>
+                                        <state key="normal" image="microphone"/>
                                         <connections>
                                             <action selector="send:" destination="oEt-Je-u4L" eventType="touchUpInside" id="PPQ-9R-Pi9"/>
                                         </connections>
@@ -145,6 +145,7 @@
                         <outlet property="containerView" destination="xax-NL-nOb" id="fmv-Ce-zVF"/>
                         <outlet property="growingTextView" destination="tXx-DM-9Wt" id="NYu-u0-YJR"/>
                         <outlet property="inputTextView" destination="1yz-xg-9l5" id="CiO-9B-4lH"/>
+                        <outlet property="sendButton" destination="YLm-li-9fR" id="Smu-QI-bP6"/>
                         <outlet property="timerLabel" destination="OzP-PH-nRi" id="5JI-15-c6u"/>
                     </connections>
                 </viewController>
@@ -162,6 +163,6 @@
         <image name="attachIcon" width="32" height="32"/>
         <image name="complateIcon" width="20" height="20"/>
         <image name="medCardIcon" width="20" height="20"/>
-        <image name="sendMessage" width="21" height="21"/>
+        <image name="microphone" width="20" height="30"/>
     </resources>
 </document>
