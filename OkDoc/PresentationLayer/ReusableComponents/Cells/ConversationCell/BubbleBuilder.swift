@@ -21,22 +21,27 @@ class BubbleBuilder {
 	
 	public func build() -> ASCellNode{
 		if model.videoURL == "" {
-			if model.incomming {
-				if model.imageData == nil {
-					let node = InCommingDefaultCell.init(model: model)
-					return node
+			if model.audioURL == "" {
+				if model.incomming {
+					if model.imageData == nil {
+						let node = InCommingDefaultCell.init(model: model)
+						return node
+					} else {
+						let node = InCommingImageCell.init(model: model)
+						return node
+					}
 				} else {
-					let node = InCommingImageCell.init(model: model)
-					return node
+					if model.imageData == nil {
+						let node = OutCommingDefaultCell.init(model: model)
+						return node
+					} else {
+						let node = OutCommingImageCell.init(model: model)
+						return node
+					}
 				}
 			} else {
-				if model.imageData == nil {
-					let node = OutCommingDefaultCell.init(model: model)
-					return node
-				} else {
-					let node = OutCommingImageCell.init(model: model)
-					return node
-				}
+				let node = OutCommingAudioCell.init(model: model)
+				return node
 			}
 		} else {
 			let node = OutCommingVideoCell.init(model: model)

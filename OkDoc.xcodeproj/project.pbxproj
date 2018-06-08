@@ -156,6 +156,8 @@
 		573C5E9020B0950C007908A2 /* StateableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C5E8F20B0950C007908A2 /* StateableViewModel.swift */; };
 		573C5E9320B0965E007908A2 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C5E9220B0965E007908A2 /* UserInfoViewModel.swift */; };
 		573C5E9620B17734007908A2 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573C5E9520B17734007908A2 /* RegistrationViewController.storyboard */; };
+		574A2C0F20C98E2800DADD07 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A2C0E20C98E2800DADD07 /* AudioManager.swift */; };
+		574A2C1320C9C93900DADD07 /* ConversationRecordFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A2C1220C9C93900DADD07 /* ConversationRecordFlow.swift */; };
 		5759113E20966175007036D7 /* QuestionnaireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5759113D20966175007036D7 /* QuestionnaireCell.swift */; };
 		575911402096617E007036D7 /* QuestionnaireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5759113F2096617E007036D7 /* QuestionnaireCell.xib */; };
 		5759114220989BCC007036D7 /* AnalysisSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5759114120989BCC007036D7 /* AnalysisSelectionViewController.storyboard */; };
@@ -471,6 +473,8 @@
 		573C5E8F20B0950C007908A2 /* StateableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateableViewModel.swift; sourceTree = "<group>"; };
 		573C5E9220B0965E007908A2 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		573C5E9520B17734007908A2 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
+		574A2C0E20C98E2800DADD07 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		574A2C1220C9C93900DADD07 /* ConversationRecordFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRecordFlow.swift; sourceTree = "<group>"; };
 		5759113D20966175007036D7 /* QuestionnaireCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireCell.swift; sourceTree = "<group>"; };
 		5759113F2096617E007036D7 /* QuestionnaireCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionnaireCell.xib; sourceTree = "<group>"; };
 		5759114120989BCC007036D7 /* AnalysisSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnalysisSelectionViewController.storyboard; sourceTree = "<group>"; };
@@ -1395,6 +1399,7 @@
 		5713A77420C4B43700141A76 /* AudioManager */ = {
 			isa = PBXGroup;
 			children = (
+				574A2C0E20C98E2800DADD07 /* AudioManager.swift */,
 			);
 			path = AudioManager;
 			sourceTree = "<group>";
@@ -1773,6 +1778,7 @@
 				D2F4B7C8169AD5D2B1288E11 /* ConversationViewInput.swift */,
 				3D9743CF192C4E0DC368DBE9 /* ConversationViewOutput.swift */,
 				EFAC40C208CC13D4FC4B3BFB /* ConversationViewController.swift */,
+				574A2C1220C9C93900DADD07 /* ConversationRecordFlow.swift */,
 				57B9F33E20BB265400AE9A07 /* ConversationViewController.storyboard */,
 			);
 			path = View;
@@ -2573,6 +2579,7 @@
 				56D37EC220809F9900C8F65B /* DoctorDetailInfoViewModel.swift in Sources */,
 				B51CC6AFD17402C9D394F97A /* DoctorsListInteractorOutput.swift in Sources */,
 				562465EC207EDE1C0007751D /* SegmentViewModel.swift in Sources */,
+				574A2C1320C9C93900DADD07 /* ConversationRecordFlow.swift in Sources */,
 				FBCECB8B70A3C122284203BC /* DoctorsListInteractor.swift in Sources */,
 				84ED5866AB369C33B70EF2C0 /* DoctorsListRouterInput.swift in Sources */,
 				4913F58929F8B6814E7CA28E /* DoctorsListRouter.swift in Sources */,
@@ -2586,6 +2593,7 @@
 				C3403AFA0B2A558B25D7C7B3 /* DoctorDetailPresenter.swift in Sources */,
 				57E9243F208BF31B0009120D /* DialogsCell.swift in Sources */,
 				4BAC90547DE8F991464464BE /* DoctorDetailInteractorInput.swift in Sources */,
+				574A2C0F20C98E2800DADD07 /* AudioManager.swift in Sources */,
 				FDC0234C5BEB5A18A6C0E6E3 /* DoctorDetailInteractorOutput.swift in Sources */,
 				2D7DD4C0B22208340B10BCC8 /* DoctorDetailInteractor.swift in Sources */,
 				CBD24127B347344BE020AD37 /* DoctorDetailRouterInput.swift in Sources */,

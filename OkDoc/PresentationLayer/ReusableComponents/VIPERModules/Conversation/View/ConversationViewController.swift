@@ -17,11 +17,17 @@ import AVFoundation
 class ConversationViewController: UIViewController, ConversationViewInput {
 
     var output: ConversationViewOutput!
+	var recorder: AVAudioRecorder!
+	var metters = [Float]()
+	var meterTimer: Timer!
+	var audioFileURL: URL!
 	var tableNode = ASTableNode()
 	var messeges: Results<Message>!
 	var token: NotificationToken? = nil
 	let realManager = RealmManager()
 	
+	
+	@IBOutlet weak var inputHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 	@IBOutlet weak var growingTextView: GrowingTextView!
 	@IBOutlet weak var timerLabel: UILabel!
@@ -91,17 +97,30 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	private func uploadVideo(urlString: String) {
-		let message = Message.init(text: "", imageData: nil, videoURL: urlString, date: Date(), incomming: false)
+		let message = Message.init(text: "", imageData: nil, videoURL: urlString, audioURL: "", metters: List<Float>(), date: Date(), incomming: false)
 		output.send(object: message)
 	}
 	
 	private func uploadImage(image: UIImage) {
-		let message = Message.init(text: "", imageData: image.data(), videoURL: "", date: Date(), incomming: false)
+		let message = Message.init(text: "", imageData: image.data(), videoURL: "", audioURL: "", metters: List<Float>(), date: Date(), incomming: false)
+		output.send(object: message)
+	}
+	
+	func sendAudio(urlString: String) {
+		
+		let list = List<Float>()
+		
+		
+		metters.forEach { (metter) in
+			list.append(metter)
+		}
+		
+		let message = Message.init(text: "", imageData: nil, videoURL: "", audioURL: urlString, metters: list, date: Date(), incomming: false)
 		output.send(object: message)
 	}
 	
 	private func sendMessage(text: String) {
-		let message = Message.init(text: text, imageData: nil, videoURL: "", date: Date(), incomming: true)
+		let message = Message.init(text: text, imageData: nil, videoURL: "", audioURL: "", metters: List<Float>(), date: Date(), incomming: true)
 		output.send(object: message)
 		growingTextView.text = nil
 		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
@@ -131,10 +150,20 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	@IBAction func send(_ sender: UIButton) {
-		let text = growingTextView.text
-		if text != "" && text != " " && text != nil {
-			sendMessage(text: text!)
+		let image = sender.image(for: .normal)
+		if image == #imageLiteral(resourceName: "send") {
+			let text = growingTextView.text
+			if text != "" && text != " " && text != nil {
+				sendMessage(text: text!)
+			}
+		} else if image == #imageLiteral(resourceName: "record") {
+			sender.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+			startRecord()
+		} else {
+			sender.setImage(#imageLiteral(resourceName: "record"), for: .normal)
+			stopRecording()
 		}
+		
 	}
 	
 	@IBAction func loadImage(_ sender: UIButton) {
@@ -193,8 +222,7 @@ extension ConversationViewController: ASTableDataSource {
 		let threadSafeReference = ThreadSafeReference(to: message)
 
 		return {
-//			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
-			let node = OutCommingAudioCell(model: message)
+			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
 			return node
 		}
 	}
@@ -213,6 +241,14 @@ extension ConversationViewController: GrowingTextViewDelegate {
 		DispatchQueue.main.async {
 			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0),
 									   at: .bottom, animated: false)
+		}
+	}
+	
+	func textViewDidChange(_ textView: UITextView) {
+		if textView.text != "" {
+			sendButton.setImage(#imageLiteral(resourceName: "send"), for: .normal)
+		} else {
+			sendButton.setImage(#imageLiteral(resourceName: "record"), for: .normal)
 		}
 	}
 	
@@ -250,6 +286,7 @@ extension ConversationViewController {
 		guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else {return}
 		let isKeyboardShowing = notification.name == .UIKeyboardWillShow
 		bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height : 0
+		inputHeightConstraint.constant = isKeyboardShowing ? 50 : 70
 
 		UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
 			self.view.layoutIfNeeded()

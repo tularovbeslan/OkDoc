@@ -17,7 +17,8 @@ class OutCommingAudioCell: ASCellNode {
 	fileprivate var button: ASButtonNode
 	fileprivate var time: ASTextNode
 	fileprivate var wave: ASDisplayNode
-	
+	fileprivate var metters: [Float] = []
+
 	init(model: Message) {
 		bubble		= ASDisplayNode()
 		button		= ASButtonNode()
@@ -42,6 +43,10 @@ class OutCommingAudioCell: ASCellNode {
 		
 		time.attributedText = NSAttributedString(string: "1:00", attributes: attributes)
 		
+		model.metters.forEach { (metter) in
+			metters.append(metter)
+		}
+		
 		addSubnode(bubble)
 		addSubnode(button)
 		addSubnode(time)
@@ -58,7 +63,7 @@ class OutCommingAudioCell: ASCellNode {
 		bubble.cornerRadius = 22
 		
 		let audioVisualizationView = AudioVisualizationView(frame: wave.view.bounds)
-		audioVisualizationView.meteringLevels = [0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31, 0.1, 0.67, 0.13, 0.78, 0.31]
+		audioVisualizationView.meteringLevels = metters
 		audioVisualizationView.backgroundColor = UIColor.outCommingGray
 		audioVisualizationView.gradientStartColor = UIColor.inCommingBlue
 		audioVisualizationView.gradientStartColor = UIColor.inCommingBlue
@@ -75,8 +80,7 @@ class OutCommingAudioCell: ASCellNode {
 	override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 		
 		button.style.preferredSize = CGSize.init(width: 30, height: 30)
-		//bubble.style.preferredSize = CGSize.init(width: 250, height: 44)
-		wave.style.height = ASDimension.init(unit: .points, value: 44)
+		wave.style.height = ASDimension.init(unit: .points, value: 30)
 		wave.style.flexGrow = 1
 				
 		let buttonSpec = ASStackLayoutSpec.init(direction: .horizontal, spacing: 5, justifyContent: .spaceBetween, alignItems: .center, flexWrap: .wrap, alignContent: .spaceBetween, children: [button, wave, time])
@@ -85,7 +89,7 @@ class OutCommingAudioCell: ASCellNode {
 		
 		let backgroundSpec = ASBackgroundLayoutSpec(child: buttonInsetnsSpec, background: bubble)
 		
-		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 20, 5, 100), child: backgroundSpec)
+		let stackInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(5, 20, 5, 50), child: backgroundSpec)
 		
 		return stackInsetnsSpec
 	}
