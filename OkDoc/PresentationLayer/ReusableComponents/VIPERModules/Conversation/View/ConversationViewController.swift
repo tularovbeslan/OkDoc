@@ -26,7 +26,8 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	var messeges: Results<Message>!
 	var token: NotificationToken? = nil
 	let realManager = RealmManager()
-	
+	var consultationTimer: Timer!
+	var consultationTime = 1800 // 30 minutes
 	
 	@IBOutlet weak var inputHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -39,6 +40,10 @@ class ConversationViewController: UIViewController, ConversationViewInput {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		consultationTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
+
+		
 		directoryPath(path: Directory.Videos.rawValue)
 		directoryPath(path: Directory.Audios.rawValue)
 		containerView.addSubnode(tableNode)
@@ -63,6 +68,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	}
 	
 	deinit {
+		consultationTimer.invalidate()
 		destroyKeyboardNotifications()
 	}
 
@@ -97,6 +103,14 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		tableNode.view.separatorStyle = .none
 		tableNode.dataSource = self
 		tableNode.delegate = self
+	}
+	
+	@objc private func timerUpdate() {
+		consultationTime -= 1
+		let currentTime = Int(consultationTime)
+		let minutes = currentTime / 60
+		let seconds = currentTime - minutes * 60
+		timerLabel.text = String.init(format: "%.2d:%.2d", minutes, seconds)
 	}
 	
 	private func uploadVideo(urlString: String) {

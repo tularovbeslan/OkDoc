@@ -13,13 +13,13 @@ import SoundWave
 import SnapKit
 
 class OutCommingAudioCell: ASCellNode {
-
+	var audioVisualizationView: AudioVisualizationView?
+	var button: ASButtonNode
+	var duration: TimeInterval!
 	let audioPlayer: AudioPlayerManager
 	fileprivate var bubble: ASDisplayNode
-	var button: ASButtonNode
 	fileprivate var time: ASTextNode
 	fileprivate var wave: ASDisplayNode
-	var audioVisualizationView: AudioVisualizationView?
 	fileprivate var metters: [Float] = []
 	fileprivate var fileName: String = ""
 	
@@ -29,9 +29,12 @@ class OutCommingAudioCell: ASCellNode {
 		time					= ASTextNode()
 		wave					= ASDisplayNode()
 		audioPlayer				= AudioPlayerManager.shared
-		
 		super.init()
-
+		
+		DispatchQueue.main.async {
+			self.audioVisualizationView	= AudioVisualizationView(frame: .zero)
+		}
+		
 		selectionStyle = .none
 		
 		button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
@@ -77,7 +80,7 @@ class OutCommingAudioCell: ASCellNode {
 	override func layoutDidFinish() {
 		bubble.cornerRadius = 22
 		button.view.tag = Int(arc4random())
-		audioVisualizationView = AudioVisualizationView(frame: wave.view.bounds)
+		audioVisualizationView?.frame = wave.view.bounds
 		audioVisualizationView?.meteringLevels = metters
 		audioVisualizationView?.backgroundColor = UIColor.outCommingGray
 		audioVisualizationView?.gradientStartColor = UIColor.init(red: 223/255, green: 223/255, blue: 223/255, alpha: 1)
@@ -101,16 +104,16 @@ class OutCommingAudioCell: ASCellNode {
 		do {
 			switch audioPlayer.state {
 			case .playing:
-				try!  audioPlayer.pause()
+				try! audioPlayer.pause()
 				audioVisualizationView?.pause()
 				button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
 			case .paused:
-				let duration = try audioPlayer.resume()
+				duration = try audioPlayer.resume()
 				audioVisualizationView?.play(for: duration)
 				button.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
 			case .stop:
 				audioPlayer.tag = button.view.tag
-				let duration = try audioPlayer.play(at: url, with: 0.05, cell: self)
+				duration = try audioPlayer.play(at: url, with: 0.05, cell: self)
 				audioVisualizationView?.play(for: duration)
 				button.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
 			}
@@ -131,9 +134,25 @@ class OutCommingAudioCell: ASCellNode {
 		button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
 	}
 	
-	func countdown(current: TimeInterval, duration: TimeInterval) {
+	func countdown(current: TimeInterval) {
+		let currentTime =  Int(duration - current)
+		let minutes = currentTime / 60
+		let seconds = currentTime - minutes * 60
 		
-		let currentTime = Int(current)
+		let paragraphStyle = NSMutableParagraphStyle()
+		paragraphStyle.lineSpacing = 5.0
+		
+		let attributes = [
+			NSAttributedStringKey.font: UIFont.avertaCY(style: .Semibold, size: 11),
+			NSAttributedStringKey.paragraphStyle: paragraphStyle,
+			NSAttributedStringKey.foregroundColor: UIColor.black
+		]
+	
+		self.time.attributedText = NSAttributedString(string: String.init(format: "%.2d:%.2d", minutes, seconds), attributes: attributes)
+	}
+	
+	private func setDiration() {
+		let currentTime =  Int(duration)
 		let minutes = currentTime / 60
 		let seconds = currentTime - minutes * 60
 		
@@ -146,15 +165,21 @@ class OutCommingAudioCell: ASCellNode {
 			NSAttributedStringKey.foregroundColor: UIColor.black
 		]
 		
-		self.time.attributedText = NSAttributedString(string: NSString(format: "%02d:%02d", minutes,seconds) as String, attributes: attributes)
+		self.time.attributedText = NSAttributedString(string: String.init(format: "%.2d:%.2d", minutes, seconds), attributes: attributes)
+	}
+	
+	func stopPlaying() {
+		button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
+		audioVisualizationView?.stop()
+		setDiration()
 	}
 	
 	override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 		
-		button.style.preferredSize = CGSize.init(width: 30, height: 30)
-		wave.style.height = ASDimension.init(unit: .points, value: 30)
-		wave.style.flexGrow = 1
-		time.style.flexShrink = 1
+		button.style.preferredSize 	= CGSize.init(width: 30, height: 30)
+		wave.style.height 			= ASDimension.init(unit: .points, value: 30)
+		wave.style.flexGrow 		= 1
+		time.style.width 			= ASDimension.init(unit: .points, value: 35)
 		let buttonSpec = ASStackLayoutSpec.init(direction: .horizontal, spacing: 5, justifyContent: .spaceBetween, alignItems: .center, flexWrap: .wrap, alignContent: .spaceBetween, children: [button, wave, time])
 		
 		let buttonInsetnsSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(7, 7, 7, 15), child: buttonSpec)

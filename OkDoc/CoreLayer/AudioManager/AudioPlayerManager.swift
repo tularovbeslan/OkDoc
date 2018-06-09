@@ -23,7 +23,7 @@ class AudioPlayerManager: NSObject {
 	}
 	
 	var state: AudioPlayerState = .stop
-	var timer: DispatchSourceTimer!
+	var timer: Timer!
 	var tag: Int = 0
 	
 	private var audioPlayer: AVAudioPlayer?
@@ -33,9 +33,9 @@ class AudioPlayerManager: NSObject {
 
 	
 	func play(at url: URL, with audioVisualizationTimeInterval: TimeInterval = 0.05, cell: OutCommingAudioCell) throws -> TimeInterval {
+		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerDidUpdateTime), userInfo: nil, repeats: true)
 		preCell = currentCell
 		currentCell = cell
-		progress()
 		if currentCell == preCell {
 			if self.isRunning {
 				self.audioPlayer?.pause()
@@ -53,8 +53,7 @@ class AudioPlayerManager: NSObject {
 		}
 		
 		if preCell != nil {
-			preCell?.button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
-			preCell?.audioVisualizationView?.stop()
+			preCell?.stopPlaying()
 		}
 		
 		return self.audioPlayer!.duration
@@ -75,7 +74,6 @@ class AudioPlayerManager: NSObject {
 			throw AudioErrorType.internalError
 		}
 		state = .playing
-		timer.resume()
 		return self.audioPlayer!.duration - self.audioPlayer!.currentTime
 	}
 	
@@ -85,7 +83,6 @@ class AudioPlayerManager: NSObject {
 		}
 		
 		state = .paused
-		timer.suspend()
 		self.audioPlayer?.pause()
 	}
 	
@@ -94,21 +91,12 @@ class AudioPlayerManager: NSObject {
 			throw AudioErrorType.notCurrentlyPlaying
 		}
 		state = .stop
-		timer.cancel()
 		self.audioPlayer?.stop()
 	}
 	
-	func progress() {
-		let queue = DispatchQueue(label: "com.domain.app.timer")
-		timer = DispatchSource.makeTimerSource(queue: queue)
-		timer.setEventHandler { [weak self] in
-			guard let current = self?.audioPlayer?.currentTime else { return }
-			guard let duration = self?.audioPlayer?.duration else { return }
-			self?.currentCell?.countdown(current: current, duration: duration)
-			
-		}
-		timer.schedule(deadline: .now(), repeating: 1.0)
-		timer.resume()
+	@objc private func timerDidUpdateTime() {
+		guard let current = audioPlayer?.currentTime else { return }
+		currentCell?.countdown(current: current)
 	}
 	
 	@objc private func timerDidUpdateMeter() {
@@ -125,7 +113,7 @@ extension AudioPlayerManager: AVAudioPlayerDelegate {
 	func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
 		NotificationCenter.default.post(name: .meteringLevelDidFinish, object: self)
 		state = .stop
-		timer.cancel()
+		timer.invalidate()
 	}
 }
 
