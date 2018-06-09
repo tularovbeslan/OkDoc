@@ -52,6 +52,10 @@ extension OutCommingVideoCell: ASVideoNodeDelegate {
 		videoNode.isPlaying() ? videoNode.pause() : videoNode.play()
 	}
 	
+	func videoDidPlay(toEnd videoNode: ASVideoNode) {
+		videoNode.resetToPlaceholder()
+	}
+	
 	func videoNode(_ videoNode: ASVideoNode, willChange state: ASVideoNodePlayerState, to toState: ASVideoNodePlayerState) {
 		print(state)
 	}

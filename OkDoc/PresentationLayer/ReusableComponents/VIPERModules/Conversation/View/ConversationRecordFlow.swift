@@ -9,13 +9,13 @@
 import UIKit
 import AVFoundation
 
-extension ConversationViewController {
+extension ConversationViewController {	
 	@objc func updateAudioMeter(_ timer: Timer) {
 		if let recorder = self.recorder {
 			if recorder.isRecording {
 				recorder.updateMeters()
 				let averagePower = recorder.averagePower(forChannel: 0)
-				let percentage: Float = pow(10, (0.05 * averagePower))
+				let percentage: Float = pow(10, (0.03 * averagePower))
 				print(percentage)
 				try! realManager.realm.write {
 					metters.append(percentage)
@@ -44,7 +44,8 @@ extension ConversationViewController {
 	}
 	
 	func setupRecorder() {
-		self.audioFileURL = FileStorageManager.urlFrom(directory: .Audios, and: getFileName())
+		fileName = getFileName()
+		self.audioFileURL = FileStorageManager.urlFrom(directory: .Audios, and: fileName)
 		
 		let recordSettings: [String: Any] = [
 			AVFormatIDKey: kAudioFormatAppleLossless,
@@ -107,7 +108,7 @@ extension ConversationViewController {
 extension ConversationViewController: AVAudioRecorderDelegate {
 	func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder,
 										 successfully flag: Bool) {
-		sendAudio(urlString: getFileName())
+		sendAudio(urlString: fileName)
 		self.recorder = nil
 		self.metters.removeAll()
 	}
@@ -118,3 +119,4 @@ extension ConversationViewController: AVAudioRecorderDelegate {
 		}
 	}
 }
+

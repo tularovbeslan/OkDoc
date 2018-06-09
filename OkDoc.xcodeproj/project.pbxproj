@@ -131,6 +131,9 @@
 		5713A76F20C418EC00141A76 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A76E20C418EC00141A76 /* FileStorageManager.swift */; };
 		5713A77120C4228100141A76 /* OutCommingVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A77020C4228100141A76 /* OutCommingVideoCell.swift */; };
 		5713A77320C499F300141A76 /* OutCommingAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713A77220C499F200141A76 /* OutCommingAudioCell.swift */; };
+		571B002520CAB6F3004E204C /* AudioErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B002420CAB6F3004E204C /* AudioErrorType.swift */; };
+		571B002720CB33F3004E204C /* BaseBubleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B002620CB33F3004E204C /* BaseBubleCell.swift */; };
+		571B002A20CB6114004E204C /* RepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B002920CB6114004E204C /* RepeatingTimer.swift */; };
 		572597AF20BF5D9400723F97 /* OutCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */; };
 		572597B620C0C8E400723F97 /* InCommingDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */; };
 		572597B820C1D5F800723F97 /* InCommingImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572597B720C1D5F800723F97 /* InCommingImageCell.swift */; };
@@ -156,7 +159,7 @@
 		573C5E9020B0950C007908A2 /* StateableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C5E8F20B0950C007908A2 /* StateableViewModel.swift */; };
 		573C5E9320B0965E007908A2 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C5E9220B0965E007908A2 /* UserInfoViewModel.swift */; };
 		573C5E9620B17734007908A2 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573C5E9520B17734007908A2 /* RegistrationViewController.storyboard */; };
-		574A2C0F20C98E2800DADD07 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A2C0E20C98E2800DADD07 /* AudioManager.swift */; };
+		574A2C0F20C98E2800DADD07 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A2C0E20C98E2800DADD07 /* AudioPlayerManager.swift */; };
 		574A2C1320C9C93900DADD07 /* ConversationRecordFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A2C1220C9C93900DADD07 /* ConversationRecordFlow.swift */; };
 		5759113E20966175007036D7 /* QuestionnaireCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5759113D20966175007036D7 /* QuestionnaireCell.swift */; };
 		575911402096617E007036D7 /* QuestionnaireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5759113F2096617E007036D7 /* QuestionnaireCell.xib */; };
@@ -449,6 +452,9 @@
 		5713A76E20C418EC00141A76 /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		5713A77020C4228100141A76 /* OutCommingVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingVideoCell.swift; sourceTree = "<group>"; };
 		5713A77220C499F200141A76 /* OutCommingAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingAudioCell.swift; sourceTree = "<group>"; };
+		571B002420CAB6F3004E204C /* AudioErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioErrorType.swift; sourceTree = "<group>"; };
+		571B002620CB33F3004E204C /* BaseBubleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBubleCell.swift; sourceTree = "<group>"; };
+		571B002920CB6114004E204C /* RepeatingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingTimer.swift; sourceTree = "<group>"; };
 		572597AE20BF5D9400723F97 /* OutCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingDefaultCell.swift; sourceTree = "<group>"; };
 		572597B720C1D5F800723F97 /* InCommingImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCommingImageCell.swift; sourceTree = "<group>"; };
@@ -473,7 +479,7 @@
 		573C5E8F20B0950C007908A2 /* StateableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateableViewModel.swift; sourceTree = "<group>"; };
 		573C5E9220B0965E007908A2 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		573C5E9520B17734007908A2 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
-		574A2C0E20C98E2800DADD07 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		574A2C0E20C98E2800DADD07 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		574A2C1220C9C93900DADD07 /* ConversationRecordFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRecordFlow.swift; sourceTree = "<group>"; };
 		5759113D20966175007036D7 /* QuestionnaireCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireCell.swift; sourceTree = "<group>"; };
 		5759113F2096617E007036D7 /* QuestionnaireCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionnaireCell.xib; sourceTree = "<group>"; };
@@ -1399,7 +1405,8 @@
 		5713A77420C4B43700141A76 /* AudioManager */ = {
 			isa = PBXGroup;
 			children = (
-				574A2C0E20C98E2800DADD07 /* AudioManager.swift */,
+				574A2C0E20C98E2800DADD07 /* AudioPlayerManager.swift */,
+				571B002420CAB6F3004E204C /* AudioErrorType.swift */,
 			);
 			path = AudioManager;
 			sourceTree = "<group>";
@@ -1414,6 +1421,7 @@
 				572597B520C0C8E400723F97 /* InCommingDefaultCell.swift */,
 				572597B720C1D5F800723F97 /* InCommingImageCell.swift */,
 				5713A76B20C350AC00141A76 /* BubbleBuilder.swift */,
+				571B002620CB33F3004E204C /* BaseBubleCell.swift */,
 			);
 			path = ConversationCell;
 			sourceTree = "<group>";
@@ -1429,6 +1437,7 @@
 		57273EC2208E7D9900408375 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				571B002920CB6114004E204C /* RepeatingTimer.swift */,
 				56EF4AA6206FE99A00E48942 /* Extensions */,
 				57273EC3208E7DC900408375 /* AppAppearance */,
 			);
@@ -2593,7 +2602,7 @@
 				C3403AFA0B2A558B25D7C7B3 /* DoctorDetailPresenter.swift in Sources */,
 				57E9243F208BF31B0009120D /* DialogsCell.swift in Sources */,
 				4BAC90547DE8F991464464BE /* DoctorDetailInteractorInput.swift in Sources */,
-				574A2C0F20C98E2800DADD07 /* AudioManager.swift in Sources */,
+				574A2C0F20C98E2800DADD07 /* AudioPlayerManager.swift in Sources */,
 				FDC0234C5BEB5A18A6C0E6E3 /* DoctorDetailInteractorOutput.swift in Sources */,
 				2D7DD4C0B22208340B10BCC8 /* DoctorDetailInteractor.swift in Sources */,
 				CBD24127B347344BE020AD37 /* DoctorDetailRouterInput.swift in Sources */,
@@ -2628,6 +2637,7 @@
 				57708A82209347440074EE94 /* AnalysisDataViewModel.swift in Sources */,
 				5778CF8D20A4164F0048D20A /* WalkthroughViewController.swift in Sources */,
 				56EF4B3B2073E7C800E48942 /* StoryboardInitializable.swift in Sources */,
+				571B002A20CB6114004E204C /* RepeatingTimer.swift in Sources */,
 				572597B620C0C8E400723F97 /* InCommingDefaultCell.swift in Sources */,
 				8984492C966112C11D07D5E4 /* CategorySelectionInitializer.swift in Sources */,
 				5759114520989D0B007036D7 /* AnalysisSelectionViewModel.swift in Sources */,
@@ -2755,6 +2765,7 @@
 				497C33659C8C20A5A7CABFDC /* RegistrationInteractor.swift in Sources */,
 				2C715522C5063B393D03DF2E /* RegistrationRouterInput.swift in Sources */,
 				C22DBD2B6DE72B1DD1182E74 /* RegistrationRouter.swift in Sources */,
+				571B002720CB33F3004E204C /* BaseBubleCell.swift in Sources */,
 				6F427FE37F1A1C3BC1725641 /* RegistrationConfigurator.swift in Sources */,
 				C04216CF803E25414B232C88 /* RegistrationInitializer.swift in Sources */,
 				D2BC8E8345E1E34C886C171C /* DrProfileViewInput.swift in Sources */,
@@ -2763,6 +2774,7 @@
 				CDF40F65118421415EF870F4 /* DrProfileModuleInput.swift in Sources */,
 				B994B3E4D92A97275899FCBA /* DrProfilePresenter.swift in Sources */,
 				A19E8582BF9C9C8ABDE357A0 /* DrProfileInteractorInput.swift in Sources */,
+				571B002520CAB6F3004E204C /* AudioErrorType.swift in Sources */,
 				1EFA5434200A78812FAB3552 /* DrProfileInteractorOutput.swift in Sources */,
 				9BD722488D0765FFC3A2A9BC /* DrProfileInteractor.swift in Sources */,
 				30129BA92E81D9DB98653D68 /* DrProfileRouterInput.swift in Sources */,

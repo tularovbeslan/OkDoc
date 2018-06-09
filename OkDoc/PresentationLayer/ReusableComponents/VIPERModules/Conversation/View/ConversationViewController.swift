@@ -21,6 +21,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	var metters = [Float]()
 	var meterTimer: Timer!
 	var audioFileURL: URL!
+	var fileName: String = ""
 	var tableNode = ASTableNode()
 	var messeges: Results<Message>!
 	var token: NotificationToken? = nil
@@ -57,6 +58,8 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 				self.realManager.post(error)
 			}
 		}
+		
+		scrollToLastRow(animeted: false)
 	}
 	
 	deinit {
@@ -99,32 +102,36 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	private func uploadVideo(urlString: String) {
 		let message = Message.init(text: "", imageData: nil, videoURL: urlString, audioURL: "", metters: List<Float>(), date: Date(), incomming: false)
 		output.send(object: message)
+		scrollToLastRow(animeted: true)
 	}
 	
 	private func uploadImage(image: UIImage) {
 		let message = Message.init(text: "", imageData: image.data(), videoURL: "", audioURL: "", metters: List<Float>(), date: Date(), incomming: false)
 		output.send(object: message)
+		scrollToLastRow(animeted: true)
 	}
 	
 	func sendAudio(urlString: String) {
-		
 		let list = List<Float>()
-		
-		
 		metters.forEach { (metter) in
 			list.append(metter)
 		}
 		
 		let message = Message.init(text: "", imageData: nil, videoURL: "", audioURL: urlString, metters: list, date: Date(), incomming: false)
 		output.send(object: message)
+		scrollToLastRow(animeted: true)
 	}
 	
 	private func sendMessage(text: String) {
 		let message = Message.init(text: text, imageData: nil, videoURL: "", audioURL: "", metters: List<Float>(), date: Date(), incomming: true)
 		output.send(object: message)
 		growingTextView.text = nil
+		scrollToLastRow(animeted: true)
+	}
+	
+	fileprivate func scrollToLastRow(animeted: Bool) {
 		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
-			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: true)
+			self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: animeted)
 		}
 	}
 	
@@ -223,6 +230,9 @@ extension ConversationViewController: ASTableDataSource {
 
 		return {
 			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
+//			if let audioCell = node as? OutCommingAudioCell {
+//				audioCell.playAudio()
+//			}
 			return node
 		}
 	}

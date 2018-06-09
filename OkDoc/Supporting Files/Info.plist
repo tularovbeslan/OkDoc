@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -25,10 +20,15 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>OkDoc хочет получить доступ к для отправки голосовых сообщений во время консультации</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>OkDoc хочет получить доступ к камере чтобы вы могли отправлять видео запись</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>OkDoc хочет получить доступ к для отправки голосовых сообщений во время консультации</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>OkDoc хочет получить доступ к фото чтобы вы могли отправлять анализы</string>
 	<key>UILaunchStoryboardName</key>
