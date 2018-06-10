@@ -244,11 +244,12 @@ extension ConversationViewController: ASTableDataSource {
 
 		return {
 			let node = BubbleBuilder(threadSafeReference: threadSafeReference).build()
-//			if let audioCell = node as? OutCommingAudioCell {
-//				audioCell.playAudio()
-//			}
 			return node
 		}
+	}
+	
+	func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+		
 	}
 }
 
