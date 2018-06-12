@@ -9,9 +9,9 @@
 import Foundation
 
 struct CategoryViewModel {
-    var title: String
-    var subTitle: String
-    var photo: String
+    var title: String?
+    var subTitle: String?
+    var photo: String?
 }
 
 extension CategoryViewModel: CellViewModel {

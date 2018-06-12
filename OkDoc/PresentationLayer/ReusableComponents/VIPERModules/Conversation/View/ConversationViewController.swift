@@ -14,7 +14,7 @@ import SnapKit
 import MobileCoreServices
 import AVFoundation
 
-class ConversationViewController: UIViewController, ConversationViewInput {
+final class ConversationViewController: UIViewController, ConversationViewInput, StoryboardInitializable {
 
     var output: ConversationViewOutput!
 	var recorder: AVAudioRecorder!
@@ -27,22 +27,21 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	var token: NotificationToken? = nil
 	let realManager = RealmManager()
 	var consultationTimer: Timer!
-	var consultationTime = 1800 // 30 minutes
+	var consultationTime = 1800
+	var emptyView = UIView()
 	
 	@IBOutlet weak var inputHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-	@IBOutlet weak var growingTextView: GrowingTextView!
 	@IBOutlet weak var timerLabel: UILabel!
 	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var inputTextView: UIView!
 	@IBOutlet weak var sendButton: UIButton!
+	@IBOutlet weak var growingTextView: GrowingTextView!
 
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-		
 		consultationTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
-
 		
 		directoryPath(path: Directory.Videos.rawValue)
 		directoryPath(path: Directory.Audios.rawValue)
@@ -63,13 +62,29 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 				self.realManager.post(error)
 			}
 		}
-		
-		scrollToLastRow(animeted: false)
+		setupEmptyView()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.tableNode.scrollToRow(at: IndexPath.init(row: self.messeges.count - 1, section: 0), at: .bottom, animated: false)
+		emptyView.removeFromSuperview()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		self.navigationController?.setNavigationBarHidden(false, animated: animated)
 	}
 	
 	deinit {
 		consultationTimer.invalidate()
 		destroyKeyboardNotifications()
+		print("ConversationViewController deinit")
 	}
 
     // MARK: ConversationViewInput
@@ -103,6 +118,14 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 		tableNode.view.separatorStyle = .none
 		tableNode.dataSource = self
 		tableNode.delegate = self
+	}
+	
+	func setupEmptyView() {
+		containerView.addSubview(emptyView)
+		emptyView.backgroundColor = .white
+		emptyView.snp.makeConstraints { (make) in
+			make.left.top.right.bottom.equalToSuperview()
+		}
 	}
 	
 	@objc private func timerUpdate() {
@@ -163,7 +186,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 	
 	// MARK: - Actions
 	@IBAction func complate(_ sender: UIButton) {
-		
+		navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func medcard(_ sender: UIButton) {
@@ -176,6 +199,7 @@ class ConversationViewController: UIViewController, ConversationViewInput {
 			let text = growingTextView.text
 			if text != "" && text != " " && text != nil {
 				sendMessage(text: text!)
+				sender.setImage(#imageLiteral(resourceName: "record"), for: .normal)
 			}
 		} else if image == #imageLiteral(resourceName: "record") {
 			sender.setImage(#imageLiteral(resourceName: "stop"), for: .normal)

@@ -135,24 +135,11 @@ class OutCommingAudioCell: ASCellNode {
 	}
 	
 	func countdown(current: TimeInterval) {
-		let currentTime =  Int(duration - current)
-		let minutes = currentTime / 60
-		let seconds = currentTime - minutes * 60
-		
-		let paragraphStyle = NSMutableParagraphStyle()
-		paragraphStyle.lineSpacing = 5.0
-		
-		let attributes = [
-			NSAttributedStringKey.font: UIFont.avertaCY(style: .Semibold, size: 11),
-			NSAttributedStringKey.paragraphStyle: paragraphStyle,
-			NSAttributedStringKey.foregroundColor: UIColor.black
-		]
-	
-		self.time.attributedText = NSAttributedString(string: String.init(format: "%.2d:%.2d", minutes, seconds), attributes: attributes)
+		setTimeTitle(time: duration - current)
 	}
 	
-	private func setDiration() {
-		let currentTime =  Int(duration)
+	private func setTimeTitle(time: TimeInterval) {
+		let currentTime =  Int(time)
 		let minutes = currentTime / 60
 		let seconds = currentTime - minutes * 60
 		
@@ -171,7 +158,6 @@ class OutCommingAudioCell: ASCellNode {
 	func stopPlaying() {
 		button.setImage(#imageLiteral(resourceName: "playInComming"), for: .normal)
 		audioVisualizationView?.stop()
-		setDiration()
 	}
 	
 	override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'OkDoc' do
@@ -9,4 +9,5 @@ target 'OkDoc' do
 	pod 'Texture'
 	pod 'SnapKit', '~> 4.0.0'
 	pod 'SoundWave'
+	pod 'Alamofire', '~> 4.7'
 end

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d2f-6Z-S7v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d2f-6Z-S7v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Category View Controller-->
         <scene sceneID="Ttb-wQ-xdS">
@@ -19,21 +24,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTS-f5-I90">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="112.5" width="375" height="554.5"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="18" minY="20" maxX="18" maxY="18"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmG-dO-EbZ" customClass="SegmentBar" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72.5" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OuD-4N-xvk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наши врачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-T1-SAf">
+                                <rect key="frame" x="18" y="22" width="201" height="42.5"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FTS-f5-I90" firstAttribute="top" secondItem="HmG-dO-EbZ" secondAttribute="bottom" id="0RR-H1-qHv"/>
+                            <constraint firstItem="HmG-dO-EbZ" firstAttribute="leading" secondItem="O6c-cy-1ND" secondAttribute="leading" id="8TW-y1-OCD"/>
+                            <constraint firstItem="qeS-cK-GLu" firstAttribute="trailing" secondItem="HmG-dO-EbZ" secondAttribute="trailing" id="9hg-G9-PK9"/>
                             <constraint firstItem="FTS-f5-I90" firstAttribute="leading" secondItem="qeS-cK-GLu" secondAttribute="leading" id="W4A-cC-5PI"/>
+                            <constraint firstItem="PL4-T1-SAf" firstAttribute="leading" secondItem="qeS-cK-GLu" secondAttribute="leading" constant="18" id="apR-W8-WtV"/>
+                            <constraint firstItem="HmG-dO-EbZ" firstAttribute="top" secondItem="PL4-T1-SAf" secondAttribute="bottom" constant="8" id="dO1-98-T6j"/>
                             <constraint firstItem="qeS-cK-GLu" firstAttribute="bottom" secondItem="FTS-f5-I90" secondAttribute="bottom" id="ddS-Uz-aSd"/>
+                            <constraint firstItem="PL4-T1-SAf" firstAttribute="top" secondItem="qeS-cK-GLu" secondAttribute="top" constant="2" id="oge-h5-REh"/>
                             <constraint firstItem="qeS-cK-GLu" firstAttribute="trailing" secondItem="FTS-f5-I90" secondAttribute="trailing" id="rj2-z7-Ge5"/>
-                            <constraint firstItem="FTS-f5-I90" firstAttribute="top" secondItem="qeS-cK-GLu" secondAttribute="top" id="syu-CP-Jq8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qeS-cK-GLu"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SSs-gD-ONg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tG9-6l-xKr"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="odq-Zb-eJV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JRP-Ud-b8a">
+                                <rect key="frame" x="313" y="0.0" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="burger"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="segmentBar" destination="HmG-dO-EbZ" id="OhC-yx-OJI"/>
                         <outlet property="tableView" destination="FTS-f5-I90" id="YcV-e6-8YA"/>
                         <segue destination="TRY-df-mg1" kind="show" identifier="DoctorsListViewController" id="58u-dS-VCX"/>
                     </connections>
@@ -45,7 +79,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="146" y="54"/>
+            <point key="canvasLocation" x="144.80000000000001" y="53.523238380809602"/>
         </scene>
         <!--DoctorsListViewController-->
         <scene sceneID="DxC-Vr-BGP">
@@ -56,4 +90,7 @@
             <point key="canvasLocation" x="834" y="52"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="burger" width="44" height="44"/>
+    </resources>
 </document>

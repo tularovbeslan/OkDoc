@@ -16,6 +16,7 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var segmentBar: SegmentBar!
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ final class CategoryViewController: UIViewController, CategoryViewInput, Transit
 
     // MARK: - CategoryViewInput
     func setupInitialState() {
+		segmentBar.createViewModel(titles: ["Взрослые", "Дети"])
         configureTableView()
         output.viewIsReady()
     }

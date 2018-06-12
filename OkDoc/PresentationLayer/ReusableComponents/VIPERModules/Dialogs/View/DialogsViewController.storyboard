@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wl9-02-PZL">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wl9-02-PZL">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,32 +9,70 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta Cyrillic Bold.otf">
+            <string>AvertaCY-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Dialogs View Controller-->
         <scene sceneID="d7J-oL-Dc3">
             <objects>
                 <viewController storyboardIdentifier="DialogsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wl9-02-PZL" customClass="DialogsViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J95-1R-yF2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNp-5m-Zg9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="18" minY="20" maxX="18" maxY="18"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Консультации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O23-Ga-ZBs">
+                                <rect key="frame" x="18" y="22" width="228" height="43"/>
+                                <fontDescription key="fontDescription" name="AvertaCY-Bold" family="Averta CY" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-if-Czb" customClass="SegmentBar" customModule="OkDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="73" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0fZ-6x-aFN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="O23-Ga-ZBs" firstAttribute="top" secondItem="Ej9-fx-Gp3" secondAttribute="top" constant="2" id="470-NG-nNR"/>
+                            <constraint firstItem="O23-Ga-ZBs" firstAttribute="leading" secondItem="Ej9-fx-Gp3" secondAttribute="leading" constant="18" id="8hj-QU-5v9"/>
                             <constraint firstItem="Ej9-fx-Gp3" firstAttribute="trailing" secondItem="VNp-5m-Zg9" secondAttribute="trailing" id="COj-gB-qyW"/>
-                            <constraint firstItem="VNp-5m-Zg9" firstAttribute="top" secondItem="Ej9-fx-Gp3" secondAttribute="top" id="Ecc-lh-fbH"/>
+                            <constraint firstItem="6fW-if-Czb" firstAttribute="leading" secondItem="J95-1R-yF2" secondAttribute="leading" id="CSR-Xd-1Ac"/>
+                            <constraint firstItem="VNp-5m-Zg9" firstAttribute="top" secondItem="6fW-if-Czb" secondAttribute="bottom" id="Xiy-Xr-QXw"/>
                             <constraint firstItem="VNp-5m-Zg9" firstAttribute="leading" secondItem="Ej9-fx-Gp3" secondAttribute="leading" id="bVk-B0-KcI"/>
                             <constraint firstItem="Ej9-fx-Gp3" firstAttribute="bottom" secondItem="VNp-5m-Zg9" secondAttribute="bottom" id="dCq-IW-1Be"/>
+                            <constraint firstItem="Ej9-fx-Gp3" firstAttribute="trailing" secondItem="6fW-if-Czb" secondAttribute="trailing" id="gR6-ys-VHp"/>
+                            <constraint firstItem="6fW-if-Czb" firstAttribute="top" secondItem="O23-Ga-ZBs" secondAttribute="bottom" constant="8" id="qlP-iJ-wcL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ej9-fx-Gp3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g1A-bp-nY8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cUC-Id-7Jy"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="5j7-af-0QA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Im6-HV-3UJ">
+                                <rect key="frame" x="313" y="0.0" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="menuDidPress:" destination="Wl9-02-PZL" eventType="touchUpInside" id="BFn-yw-tTU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="segmentBar" destination="6fW-if-Czb" id="4nI-RA-scB"/>
                         <outlet property="tableView" destination="VNp-5m-Zg9" id="vXj-tg-JRP"/>
+                        <outlet property="titlelb" destination="O23-Ga-ZBs" id="MgG-wg-nmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iki-Ow-3ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +82,10 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="146" y="54"/>
+            <point key="canvasLocation" x="144.80000000000001" y="53.940886699507388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="burger" width="44" height="44"/>
+    </resources>
 </document>

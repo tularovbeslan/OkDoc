@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oEt-Je-u4L">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,57 +21,74 @@
         <!--Conversation View Controller-->
         <scene sceneID="wfI-8H-eEK">
             <objects>
-                <viewController storyboardIdentifier="ConversationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oEt-Je-u4L" customClass="ConversationViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oEt-Je-u4L" customClass="ConversationViewController" customModule="OkDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R3V-XH-JzB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB1-p5-tYM">
-                                <rect key="frame" x="10" y="48" width="75" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="km5-NV-p7X">
+                                <rect key="frame" x="0.0" y="20" width="375" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB1-p5-tYM">
+                                        <rect key="frame" x="10" y="14" width="75" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="cZM-GN-paR"/>
+                                            <constraint firstAttribute="height" constant="44" id="iXG-6k-iby"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="23" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="27" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Завершить" image="complateIcon">
+                                            <color key="titleColor" red="0.62352941176470589" green="0.6705882352941176" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="complate:" destination="oEt-Je-u4L" eventType="touchUpInside" id="LXN-52-v1g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-oJ-Fvm">
+                                        <rect key="frame" x="296" y="14" width="69" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="69" id="Eqh-8c-4wu"/>
+                                            <constraint firstAttribute="height" constant="44" id="hwr-XD-1ua"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="23" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Медкарта" image="medCardIcon">
+                                            <color key="titleColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="medcard:" destination="oEt-Je-u4L" eventType="touchUpInside" id="u4F-bA-aVn"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Консультация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13a-m6-Q6E">
+                                        <rect key="frame" x="120.5" y="10" width="134" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzP-PH-nRi">
+                                        <rect key="frame" x="166.5" y="37" width="42" height="19"/>
+                                        <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="15"/>
+                                        <color key="textColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="cZM-GN-paR"/>
-                                    <constraint firstAttribute="height" constant="44" id="iXG-6k-iby"/>
+                                    <constraint firstItem="13a-m6-Q6E" firstAttribute="top" secondItem="km5-NV-p7X" secondAttribute="top" constant="10" id="GJR-ze-ZaV"/>
+                                    <constraint firstAttribute="bottom" secondItem="uVO-oJ-Fvm" secondAttribute="bottom" constant="10" id="PeT-CC-UUA"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVO-oJ-Fvm" secondAttribute="trailing" constant="10" id="ZYH-Yx-rre"/>
+                                    <constraint firstItem="tB1-p5-tYM" firstAttribute="leading" secondItem="km5-NV-p7X" secondAttribute="leading" constant="10" id="cxC-J9-5ec"/>
+                                    <constraint firstAttribute="height" constant="68" id="eWN-PK-mEA"/>
+                                    <constraint firstItem="OzP-PH-nRi" firstAttribute="centerX" secondItem="km5-NV-p7X" secondAttribute="centerX" id="nad-7a-b8b"/>
+                                    <constraint firstAttribute="bottom" secondItem="tB1-p5-tYM" secondAttribute="bottom" constant="10" id="sUZ-sp-tPy"/>
+                                    <constraint firstItem="13a-m6-Q6E" firstAttribute="centerX" secondItem="km5-NV-p7X" secondAttribute="centerX" id="tgS-ZH-9ud"/>
+                                    <constraint firstItem="OzP-PH-nRi" firstAttribute="top" secondItem="13a-m6-Q6E" secondAttribute="bottom" constant="2" id="tly-gk-FWb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
-                                <inset key="titleEdgeInsets" minX="-20" minY="23" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="27" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Завершить" image="complateIcon">
-                                    <color key="titleColor" red="0.62352941176470589" green="0.6705882352941176" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="complate:" destination="oEt-Je-u4L" eventType="touchUpInside" id="LXN-52-v1g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-oJ-Fvm">
-                                <rect key="frame" x="296" y="48" width="69" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="Eqh-8c-4wu"/>
-                                    <constraint firstAttribute="height" constant="44" id="hwr-XD-1ua"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="13"/>
-                                <inset key="titleEdgeInsets" minX="-20" minY="23" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Медкарта" image="medCardIcon">
-                                    <color key="titleColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="medcard:" destination="oEt-Je-u4L" eventType="touchUpInside" id="u4F-bA-aVn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Консультация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13a-m6-Q6E">
-                                <rect key="frame" x="120.66666666666669" y="44" width="134" height="25"/>
-                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzP-PH-nRi">
-                                <rect key="frame" x="168" y="71" width="39" height="19"/>
-                                <fontDescription key="fontDescription" name="AvertaCY-Semibold" family="Averta CY" pointSize="15"/>
-                                <color key="textColor" red="0.62352941179999999" green="0.6705882353" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yz-xg-9l5">
-                                <rect key="frame" x="0.0" y="742" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6h-KO-ea6">
                                         <rect key="frame" x="0.0" y="5" width="47" height="50"/>
@@ -119,30 +136,26 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xax-NL-nOb">
-                                <rect key="frame" x="0.0" y="102" width="375" height="640"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="509"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tB1-p5-tYM" firstAttribute="top" secondItem="SIV-kp-lMI" secondAttribute="top" constant="4" id="13L-Xq-g1T"/>
-                            <constraint firstItem="OzP-PH-nRi" firstAttribute="centerX" secondItem="R3V-XH-JzB" secondAttribute="centerX" id="4lY-4g-OeG"/>
+                            <constraint firstItem="km5-NV-p7X" firstAttribute="trailing" secondItem="SIV-kp-lMI" secondAttribute="trailing" id="1ZJ-uT-M1c"/>
                             <constraint firstItem="SIV-kp-lMI" firstAttribute="trailing" secondItem="xax-NL-nOb" secondAttribute="trailing" id="BZm-z9-ZtB"/>
                             <constraint firstAttribute="bottom" secondItem="1yz-xg-9l5" secondAttribute="bottom" id="Cgj-v4-0AF"/>
                             <constraint firstItem="1yz-xg-9l5" firstAttribute="top" secondItem="xax-NL-nOb" secondAttribute="bottom" id="DD4-ZM-asi"/>
-                            <constraint firstItem="OzP-PH-nRi" firstAttribute="top" secondItem="13a-m6-Q6E" secondAttribute="bottom" constant="2" id="DYe-aW-FkR"/>
-                            <constraint firstItem="13a-m6-Q6E" firstAttribute="top" secondItem="SIV-kp-lMI" secondAttribute="top" id="IJz-Xm-SjB"/>
-                            <constraint firstItem="xax-NL-nOb" firstAttribute="top" secondItem="tB1-p5-tYM" secondAttribute="bottom" constant="10" id="IcT-PC-Icd"/>
-                            <constraint firstItem="uVO-oJ-Fvm" firstAttribute="top" secondItem="SIV-kp-lMI" secondAttribute="top" constant="4" id="JVk-Wz-vJl"/>
-                            <constraint firstItem="13a-m6-Q6E" firstAttribute="centerX" secondItem="R3V-XH-JzB" secondAttribute="centerX" id="QoT-0T-zbF"/>
-                            <constraint firstItem="SIV-kp-lMI" firstAttribute="trailing" secondItem="uVO-oJ-Fvm" secondAttribute="trailing" constant="10" id="RTg-82-jal"/>
+                            <constraint firstItem="km5-NV-p7X" firstAttribute="leading" secondItem="SIV-kp-lMI" secondAttribute="leading" id="HLV-p3-xMk"/>
+                            <constraint firstItem="km5-NV-p7X" firstAttribute="top" secondItem="SIV-kp-lMI" secondAttribute="top" id="Rtm-oI-K4F"/>
                             <constraint firstItem="SIV-kp-lMI" firstAttribute="trailing" secondItem="1yz-xg-9l5" secondAttribute="trailing" id="V8T-3d-woo"/>
                             <constraint firstItem="1yz-xg-9l5" firstAttribute="leading" secondItem="SIV-kp-lMI" secondAttribute="leading" id="X4Y-3i-j4N"/>
                             <constraint firstItem="xax-NL-nOb" firstAttribute="leading" secondItem="SIV-kp-lMI" secondAttribute="leading" id="fZR-2U-o49"/>
-                            <constraint firstItem="tB1-p5-tYM" firstAttribute="leading" secondItem="SIV-kp-lMI" secondAttribute="leading" constant="10" id="yZX-PM-PQx"/>
+                            <constraint firstItem="xax-NL-nOb" firstAttribute="top" secondItem="km5-NV-p7X" secondAttribute="bottom" id="kvF-6N-XS8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SIV-kp-lMI"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="Cgj-v4-0AF" id="Bkj-dm-ioj"/>
                         <outlet property="containerView" destination="xax-NL-nOb" id="fmv-Ce-zVF"/>
@@ -160,7 +173,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="223.53823088455775"/>
+            <point key="canvasLocation" x="157.59999999999999" y="223.15270935960592"/>
         </scene>
     </scenes>
     <resources>

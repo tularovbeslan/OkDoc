@@ -16,11 +16,14 @@ final class DialogsViewController: UIViewController, DialogsViewInput, Storyboar
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-
+	@IBOutlet weak var titlelb: UILabel!
+	@IBOutlet weak var segmentBar: SegmentBar!
+	
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+		segmentBar.createViewModel(titles: ["Записи", "Завершенные"])
     }
     
     // MARK: - IBActions
@@ -73,7 +76,8 @@ extension DialogsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension DialogsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let conversationVC = ConversationViewController.fromStoryboard()
+		navigationController?.pushViewController(conversationVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -16,10 +16,10 @@ class AppTabbarController: UITabBarController {
     }
     
     var controllers: [UIViewController] {
-        let categorySelection = CategorySelectionViewController.fromStoryboard().embedInNavigation(item: TabBarItems.home.item)
-        let dosctorsList = ConsultationViewController.fromStoryboard().embedInNavigation(item: TabBarItems.message.item)
+        let categories = CategoryViewController.fromStoryboard().embedInNavigation(item: TabBarItems.home.item)
+        let dialogs = DialogsViewController.fromStoryboard().embedInNavigation(item: TabBarItems.message.item)
         let profile = DrProfileViewController.fromStoryboard().embedInNavigation(item: TabBarItems.profile.item)
-        return [categorySelection, dosctorsList, profile]
+        return [categories, dialogs, profile]
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

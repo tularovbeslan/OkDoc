@@ -33,6 +33,8 @@ extension CategoryCell {
     func setup(viewModel: CategoryViewModel) {
         title.text = viewModel.title
         subTitle.text = viewModel.subTitle
-        photoView.image = UIImage.init(named: viewModel.photo)
+		if let photo = viewModel.photo {
+			photoView.image = UIImage.init(named: photo)
+		}
     }
 }

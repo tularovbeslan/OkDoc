@@ -7,20 +7,33 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkImplementation: Network {
+	
+	let base = "http://85.143.174.124:8002"
+	
     func loadCategories(completion: @escaping ([CategoryViewModel]) -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            var viewModels: [CategoryViewModel] = []
-            var titles = ["Логопед", "Физиотерапевт", "Гастроэнтеролог"]
-            var subTitles = ["Нарушения структурно–семантического оформления высказывания", "Применение физических факторов с лечебной и профилактической целью", "Лечение болезней желудочно–кишечного тракта"]
-            var photo = ["image1", "image2", "image3"]
-            for i in 0..<titles.count {
-                let model = CategoryViewModel(title: titles[i], subTitle: subTitles[i], photo: photo[i])
-                viewModels.append(model)
-            }
-            completion(viewModels)
-        }
+		let headers: HTTPHeaders = [ "Authorization": "Basic ZG9jdG9yQHRlc3QuY29tOnNlY3JldA=="]
+		var viewModels: [CategoryViewModel] = []
+		Alamofire.request(self.base + "/api/categories", headers: headers).responseData(completionHandler: { (response) in
+			let decoder = JSONDecoder()
+			do {
+				let results = try decoder.decode([Category].self, from: response.data!)
+				for i in 0..<results.count {
+					let model = CategoryViewModel(title: results[i].name, subTitle: nil, photo: nil)
+					viewModels.append(model)
+				}
+				completion(viewModels)
+				
+				print(results)
+			} catch let error {
+				print(error)
+				completion(viewModels)
+			}
+		})
+		
+		
     }
     
     func loadAppointmentInformation(completion: @escaping (ConsultationAppointmentViewModel) -> ()) {

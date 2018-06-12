@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.2)
   - GrowingTextView (0.5.6)
   - PhoneNumberKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
@@ -38,6 +39,7 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - GrowingTextView (~> 0.5)
   - PhoneNumberKit (~> 2.1)
   - Reachability
@@ -48,6 +50,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - GrowingTextView
     - PhoneNumberKit
     - PINCache
@@ -61,6 +64,7 @@ SPEC REPOS:
     - Texture
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
@@ -73,6 +77,6 @@ SPEC CHECKSUMS:
   SoundWave: 74af192045482ba1b881c6fd063655bb46162fa0
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
 
-PODFILE CHECKSUM: 95e0cd7cc43d3047765e508017a886d7fd7c6aed
+PODFILE CHECKSUM: 4c378fbd58eef3bbe87e16fe45803edc843caf78
 
 COCOAPODS: 1.5.3
